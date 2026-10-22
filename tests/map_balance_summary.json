@@ -1,0 +1,58 @@
+{
+  "before": {
+    "wins": [
+      7,
+      5,
+      0
+    ],
+    "unresolved": 3,
+    "draws": 0,
+    "first_eliminated": {
+      "Azure": 9,
+      "Amber": 3,
+      "Coral": 2
+    },
+    "games_with_elimination": 14
+  },
+  "wide_trial": {
+    "wins": [
+      2,
+      3,
+      0
+    ],
+    "unresolved": 10,
+    "draws": 0,
+    "first_eliminated": {
+      "Azure": 4,
+      "Coral": 1
+    },
+    "games_with_elimination": 5
+  },
+  "after": {
+    "wins": [
+      0,
+      8,
+      1
+    ],
+    "unresolved": 6,
+    "draws": 0,
+    "first_eliminated": {
+      "Amber": 6,
+      "Azure": 5
+    },
+    "games_with_elimination": 11
+  },
+  "seat_controls": {
+    "mean_living_by_color": [
+      526.3,
+      603.4,
+      573.8
+    ],
+    "mean_living_by_seat": [
+      524.6,
+      650.4,
+      528.6
+    ]
+  },
+  "performance_pass": true
+}

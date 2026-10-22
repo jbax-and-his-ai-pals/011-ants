@@ -1,0 +1,8 @@
+.godot/
+saves/*
+!saves/.gdignore
+*.tmp
+.tools/
+native/bin/*.pdb
+native/bin/*.lib
+native/bin/~*

@@ -1,0 +1,65 @@
+[
+	{
+		"death_causes": [
+			"invaders",
+			""
+		],
+		"peak_intruders": [
+			5,
+			1
+		],
+		"queen_health": [
+			0.0,
+			70.763264786555
+		],
+		"result": "defeat",
+		"seconds": 349.566666666729,
+		"seed": 81923,
+		"workers": [
+			0,
+			17
+		]
+	},
+	{
+		"death_causes": [
+			"",
+			"starvation"
+		],
+		"peak_intruders": [
+			1,
+			1
+		],
+		"queen_health": [
+			6.87561048126618,
+			0.0
+		],
+		"result": "victory",
+		"seconds": 459.70000000015,
+		"seed": 7,
+		"workers": [
+			0,
+			0
+		]
+	},
+	{
+		"death_causes": [
+			"starvation",
+			""
+		],
+		"peak_intruders": [
+			4,
+			0
+		],
+		"queen_health": [
+			0.0,
+			29.903016103075
+		],
+		"result": "defeat",
+		"seconds": 429.866666666793,
+		"seed": 42,
+		"workers": [
+			0,
+			0
+		]
+	}
+]

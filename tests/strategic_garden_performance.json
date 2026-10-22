@@ -1,0 +1,6392 @@
+{
+	"all_targets_met": true,
+	"complete": true,
+	"feature": "Strategic source pairs, terrain trip estimates, observed rival corridor risk; scouting panel and territory overlay open at full individual 4x.",
+	"note": "Natural Founding uses earned food/growth with a scripted Foraging player and real brood excavation. Supplied stress cases start 2000 workers per colony, legal stores/room cells and approximately 20% rival soldiers. No skipped individual ticks; actual battles reduce populations. Same twelve workloads as clarity, with scouting routes open instead of history.",
+	"renderer": "GL Compatibility",
+	"resolution": "1440x900",
+	"seed": 81923,
+	"starting_workers_per_colony": 2000,
+	"vsync_requested": "disabled",
+	"window_min_wall_seconds": 5,
+	"windows": [
+		{
+			"actual_speed": 4.0,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					1,
+					2,
+					0
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"brood_capacity": [
+					18,
+					18,
+					18
+				],
+				"buffered_protein": [
+					67,
+					67,
+					64
+				],
+				"combat_losses": [
+					101,
+					75,
+					80
+				],
+				"fighting": [
+					9,
+					10,
+					1
+				],
+				"food_remaining": 107515,
+				"harvest": [
+					804,
+					743,
+					756
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Recovering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 24,
+						"dug": 18,
+						"guard_cell": 7163,
+						"pending": 2,
+						"project": "Widen busy storage route; preserve inner guard corridor",
+						"projects": 1,
+						"reason": "Widen busy storage route; preserve inner guard corridor: 2 tiles left; 24 diggers.",
+						"widened": true
+					},
+					{
+						"diggers": 6,
+						"dug": 18,
+						"guard_cell": 17667,
+						"pending": 2,
+						"project": "Widen busy storage route; preserve inner guard corridor",
+						"projects": 1,
+						"reason": "Widen busy storage route; preserve inner guard corridor: 2 tiles left; 24 diggers.",
+						"widened": true
+					}
+				],
+				"nutrition_weights": [
+					0.40391627870826,
+					0.27027027027027,
+					0.461044619931802,
+					0.384615384615385,
+					0.387815597830608,
+					0.421052631578947
+				],
+				"population": [
+					1899,
+					1925,
+					1920
+				],
+				"protein_stores": [
+					279.0,
+					192.0,
+					173.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					10,
+					0,
+					0
+				],
+				"recovering": [
+					11,
+					0,
+					0
+				],
+				"reserved_protein": [
+					5,
+					5,
+					8
+				],
+				"resource_delivered": [
+					626,
+					178,
+					656,
+					87,
+					688,
+					68
+				],
+				"scent_cells": 9773,
+				"seconds": 21.43,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					1055.88749525916,
+					1059.44230666666,
+					1117.32013333333
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Azure: 30-second commitment.",
+					"Holding Amber: 30-second commitment."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.214080027835769,
+							"strength": 0.125913361169102,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.213393762436197,
+							"strength": 0.12522709576953,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.025,
+							"queen": 0.0,
+							"score": 0.288852942666587,
+							"strength": 0.125686274509804,
+							"threat": 0.0500000014901161,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.212939570897136,
+							"strength": 0.12477290423047,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						}
+					]
+				],
+				"underground": [
+					42,
+					72,
+					72
+				]
+			},
+			"frames": 1098,
+			"garden": {
+				"geometry_cache": 37,
+				"pairs": 3,
+				"rival_contacts": [
+					23,
+					23
+				],
+				"rival_max_think_ms": 7.669
+			},
+			"max_frame_ms": 35.94,
+			"mean_fps": 219.5,
+			"mean_frame_ms": 4.56,
+			"p95_ms": 8.15,
+			"p99_ms": 17.53,
+			"percent_frames_over_16_67ms": 1.6,
+			"post_player_game_end": false,
+			"scenario": "skirmish_orders_control",
+			"scouting": {
+				"contacts": 48,
+				"max_scan_ms": 3.403,
+				"panel_open": true,
+				"sectors_explored": 164,
+				"sites": 12,
+				"tracks": 0
+			},
+			"start": {
+				"ai_targets": [
+					1,
+					2,
+					0
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"brood_capacity": [
+					18,
+					18,
+					18
+				],
+				"buffered_protein": [
+					72,
+					72,
+					72
+				],
+				"combat_losses": [
+					0,
+					0,
+					0
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 114480,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Gathering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 0,
+						"dug": 0,
+						"guard_cell": 7163,
+						"pending": 0,
+						"project": "",
+						"projects": 0,
+						"reason": "Rooms have spare capacity; maintain the guarded inner corridor.",
+						"widened": false
+					},
+					{
+						"diggers": 0,
+						"dug": 0,
+						"guard_cell": 17667,
+						"pending": 0,
+						"project": "",
+						"projects": 0,
+						"reason": "Rooms have spare capacity; maintain the guarded inner corridor.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.676882421772213,
+					0.307692307692308,
+					0.760148918878359,
+					0.307692307692308,
+					0.676882421772213,
+					0.307692307692308
+				],
+				"population": [
+					2000,
+					2000,
+					2000
+				],
+				"protein_stores": [
+					120.0,
+					120.0,
+					120.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					12,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					0,
+					0,
+					0
+				],
+				"resource_delivered": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"scent_cells": 634,
+				"seconds": 1.43,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					588.447333333331,
+					586.714433333331,
+					588.447333333331
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Selected Azure: seeded choice within 0.08.",
+					"Selected Amber: seeded choice within 0.08."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.213166666666667,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.213166666666667,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.213166666666667,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.213166666666667,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						}
+					]
+				],
+				"underground": [
+					4,
+					0,
+					2
+				]
+			},
+			"synthetic": true,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.307,
+				"movement": 1.328,
+				"resolution_and_nursery": 0.279,
+				"scent_and_jobs": 0.733
+			},
+			"visible_ants": 5558,
+			"wall_seconds": 5.002,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.0,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					1,
+					0,
+					1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"brood_capacity": [
+					18,
+					18,
+					18
+				],
+				"buffered_protein": [
+					61,
+					64,
+					63
+				],
+				"combat_losses": [
+					85,
+					638,
+					348
+				],
+				"fighting": [
+					4,
+					6,
+					0
+				],
+				"food_remaining": 638108,
+				"harvest": [
+					854,
+					800,
+					791
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Recovering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 0,
+						"dug": 12,
+						"guard_cell": 7163,
+						"pending": 0,
+						"project": "",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 83%): 2 tiles left; 6 diggers.",
+						"widened": false
+					},
+					{
+						"diggers": 0,
+						"dug": 12,
+						"guard_cell": 17667,
+						"pending": 0,
+						"project": "",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 83%): 1 tiles left; 6 diggers.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25
+				],
+				"population": [
+					1915,
+					1362,
+					1652
+				],
+				"protein_stores": [
+					3064.0,
+					3317.0,
+					3010.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					11,
+					0,
+					0
+				],
+				"recovering": [
+					9,
+					0,
+					0
+				],
+				"reserved_protein": [
+					8,
+					5,
+					9
+				],
+				"resource_delivered": [
+					765,
+					89,
+					465,
+					335,
+					763,
+					28
+				],
+				"scent_cells": 6332,
+				"seconds": 22.23,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					36000,
+					36000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					12589.4708666666,
+					12305.7069066667,
+					12606.5622666667
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: 30-second commitment.",
+					"Holding Coral: 30-second commitment."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.025,
+							"queen": 0.0,
+							"score": 0.261732523350473,
+							"strength": 0.103823887873248,
+							"threat": 0.0447419688105583,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.201184908789386,
+							"strength": 0.11301824212272,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.15,
+							"queen": 0.0,
+							"score": 1.1232370204281,
+							"strength": 0.115653878465416,
+							"threat": 0.769416475296021,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 1.08498602811298,
+							"strength": 0.13698175787728,
+							"threat": 0.859837603569031,
+							"travel": 0.0881666666666667
+						}
+					]
+				],
+				"underground": [
+					42,
+					49,
+					52
+				]
+			},
+			"frames": 782,
+			"garden": {
+				"geometry_cache": 51,
+				"pairs": 3,
+				"rival_contacts": [
+					18,
+					7
+				],
+				"rival_max_think_ms": 8.391
+			},
+			"max_frame_ms": 37.75,
+			"mean_fps": 156.2,
+			"mean_frame_ms": 6.4,
+			"p95_ms": 12.23,
+			"p99_ms": 24.94,
+			"percent_frames_over_16_67ms": 3.2,
+			"post_player_game_end": false,
+			"scenario": "skirmish_battle_control",
+			"scouting": {
+				"contacts": 21,
+				"max_scan_ms": 3.963,
+				"panel_open": true,
+				"sectors_explored": 180,
+				"sites": 15,
+				"tracks": 0
+			},
+			"start": {
+				"ai_targets": [
+					1,
+					0,
+					1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"brood_capacity": [
+					18,
+					18,
+					18
+				],
+				"buffered_protein": [
+					72,
+					72,
+					72
+				],
+				"combat_losses": [
+					11,
+					141,
+					29
+				],
+				"fighting": [
+					0,
+					118,
+					262
+				],
+				"food_remaining": 643719,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Defending"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 24,
+						"dug": 0,
+						"guard_cell": 7163,
+						"pending": 12,
+						"project": "Storage expansion (reserves at 83%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 83%): 12 tiles queued for workers.",
+						"widened": false
+					},
+					{
+						"diggers": 6,
+						"dug": 0,
+						"guard_cell": 17667,
+						"pending": 12,
+						"project": "Storage expansion (reserves at 83%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 83%): 12 tiles queued for workers.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25
+				],
+				"population": [
+					1989,
+					1859,
+					1971
+				],
+				"protein_stores": [
+					3000.0,
+					3000.0,
+					3000.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					12,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					0,
+					0,
+					0
+				],
+				"resource_delivered": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"scent_cells": 1829,
+				"seconds": 2.27,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					11981.7737333333,
+					11979.6755133333,
+					11981.8145333333
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Selected Amber: seeded choice within 0.08.",
+					"Selected Coral: seeded choice within 0.08."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.212473622311828,
+							"strength": 0.124306955645161,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.212317182649551,
+							"strength": 0.124150515982884,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 2.01385971102151,
+							"strength": 0.125693044354839,
+							"threat": 1.2,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 2.01301022110972,
+							"strength": 0.124843554443054,
+							"threat": 1.2,
+							"travel": 0.0881666666666667
+						}
+					]
+				],
+				"underground": [
+					6,
+					36,
+					12
+				]
+			},
+			"synthetic": true,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.762,
+				"movement": 1.343,
+				"resolution_and_nursery": 0.39,
+				"scent_and_jobs": 0.82
+			},
+			"visible_ants": 4786,
+			"wall_seconds": 5.005,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.02,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					1,
+					0,
+					1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"brood_capacity": [
+					18,
+					18,
+					18
+				],
+				"buffered_protein": [
+					65,
+					68,
+					66
+				],
+				"combat_losses": [
+					86,
+					642,
+					348
+				],
+				"fighting": [
+					3,
+					2,
+					0
+				],
+				"food_remaining": 637928,
+				"harvest": [
+					926,
+					852,
+					858
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Recovering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 0,
+						"dug": 12,
+						"guard_cell": 7163,
+						"pending": 0,
+						"project": "",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 83%): 2 tiles left; 6 diggers.",
+						"widened": false
+					},
+					{
+						"diggers": 0,
+						"dug": 12,
+						"guard_cell": 17667,
+						"pending": 0,
+						"project": "",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 83%): 1 tiles left; 6 diggers.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25
+				],
+				"population": [
+					1914,
+					1358,
+					1652
+				],
+				"protein_stores": [
+					3067.0,
+					3339.0,
+					3019.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					11,
+					0,
+					0
+				],
+				"recovering": [
+					8,
+					0,
+					0
+				],
+				"reserved_protein": [
+					4,
+					4,
+					6
+				],
+				"resource_delivered": [
+					834,
+					92,
+					495,
+					357,
+					821,
+					37
+				],
+				"scent_cells": 6444,
+				"seconds": 23.5,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					36000,
+					36000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					12648.4453677927,
+					12327.6434133333,
+					12656.0705333333
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: 30-second commitment.",
+					"Holding Coral: 30-second commitment."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.025,
+							"queen": 0.0,
+							"score": 0.261732523350473,
+							"strength": 0.103823887873248,
+							"threat": 0.0447419688105583,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.201184908789386,
+							"strength": 0.11301824212272,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.15,
+							"queen": 0.0,
+							"score": 1.1232370204281,
+							"strength": 0.115653878465416,
+							"threat": 0.769416475296021,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 1.08498602811298,
+							"strength": 0.13698175787728,
+							"threat": 0.859837603569031,
+							"travel": 0.0881666666666667
+						}
+					]
+				],
+				"underground": [
+					42,
+					49,
+					52
+				]
+			},
+			"frames": 764,
+			"garden": {
+				"geometry_cache": 51,
+				"pairs": 3,
+				"rival_contacts": [
+					18,
+					7
+				],
+				"rival_max_think_ms": 8.54
+			},
+			"max_frame_ms": 44.11,
+			"mean_fps": 152.7,
+			"mean_frame_ms": 6.55,
+			"p95_ms": 15.46,
+			"p99_ms": 33.27,
+			"percent_frames_over_16_67ms": 4.3,
+			"post_player_game_end": false,
+			"scenario": "skirmish_detail_control",
+			"scouting": {
+				"contacts": 22,
+				"max_scan_ms": 3.996,
+				"panel_open": true,
+				"sectors_explored": 185,
+				"sites": 15,
+				"tracks": 0
+			},
+			"start": {
+				"ai_targets": [
+					1,
+					0,
+					1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"brood_capacity": [
+					18,
+					18,
+					18
+				],
+				"buffered_protein": [
+					71,
+					72,
+					72
+				],
+				"combat_losses": [
+					12,
+					227,
+					71
+				],
+				"fighting": [
+					6,
+					148,
+					254
+				],
+				"food_remaining": 642658,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Defending"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 24,
+						"dug": 0,
+						"guard_cell": 7163,
+						"pending": 12,
+						"project": "Storage expansion (reserves at 83%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 83%): 12 tiles queued for workers.",
+						"widened": false
+					},
+					{
+						"diggers": 6,
+						"dug": 0,
+						"guard_cell": 17667,
+						"pending": 12,
+						"project": "Storage expansion (reserves at 83%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 83%): 12 tiles queued for workers.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25
+				],
+				"population": [
+					1988,
+					1773,
+					1929
+				],
+				"protein_stores": [
+					2999.0,
+					3000.0,
+					3000.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					12,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					1,
+					0,
+					0
+				],
+				"resource_delivered": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"scent_cells": 2438,
+				"seconds": 3.37,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					11972.9544666666,
+					11970.39302,
+					11973.1681333333
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Selected Amber: seeded choice within 0.08.",
+					"Selected Coral: seeded choice within 0.08."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.212473622311828,
+							"strength": 0.124306955645161,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.212317182649551,
+							"strength": 0.124150515982884,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 2.01385971102151,
+							"strength": 0.125693044354839,
+							"threat": 1.2,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 2.01301022110972,
+							"strength": 0.124843554443054,
+							"threat": 1.2,
+							"travel": 0.0881666666666667
+						}
+					]
+				],
+				"underground": [
+					6,
+					36,
+					12
+				]
+			},
+			"synthetic": true,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.706,
+				"movement": 1.215,
+				"resolution_and_nursery": 0.383,
+				"scent_and_jobs": 0.795
+			},
+			"visible_ants": 1613,
+			"wall_seconds": 5.004,
+			"zoom": 1.3
+		},
+		{
+			"actual_speed": 4.0,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"brood_capacity": [
+					18,
+					18,
+					18
+				],
+				"buffered_protein": [
+					54,
+					58,
+					58
+				],
+				"combat_losses": [
+					0,
+					0,
+					0
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 3425,
+				"harvest": [
+					41,
+					50,
+					66
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Gathering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 0,
+						"dug": 0,
+						"guard_cell": -1,
+						"pending": 0,
+						"project": "",
+						"projects": 0,
+						"reason": "Food recovery takes priority over expansion.",
+						"widened": false
+					},
+					{
+						"diggers": 0,
+						"dug": 0,
+						"guard_cell": -1,
+						"pending": 0,
+						"project": "",
+						"projects": 0,
+						"reason": "Food recovery takes priority over expansion.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.727272727272727,
+					0.25,
+					0.672268907563025,
+					0.25,
+					0.769230769230769
+				],
+				"population": [
+					12,
+					12,
+					12
+				],
+				"protein_stores": [
+					90.0,
+					100.0,
+					84.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					0,
+					0,
+					0
+				],
+				"resource_delivered": [
+					29,
+					12,
+					32,
+					18,
+					64,
+					2
+				],
+				"scent_cells": 585,
+				"seconds": 20.43,
+				"slots": 36,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					106.435599999999,
+					109.12293,
+					141.498199999998
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: 30-second commitment.",
+					"Holding Amber: 30-second commitment."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.125,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					1,
+					2,
+					1
+				]
+			},
+			"frames": 4912,
+			"garden": {
+				"geometry_cache": 9,
+				"pairs": 3,
+				"rival_contacts": [
+					0,
+					0
+				],
+				"rival_max_think_ms": 0.293
+			},
+			"max_frame_ms": 4.58,
+			"mean_fps": 982.4,
+			"mean_frame_ms": 1.02,
+			"p95_ms": 1.18,
+			"p99_ms": 1.58,
+			"percent_frames_over_16_67ms": 0.0,
+			"post_player_game_end": false,
+			"scenario": "founding_natural_0s",
+			"scouting": {
+				"contacts": 0,
+				"max_scan_ms": 0.156,
+				"panel_open": true,
+				"sectors_explored": 43,
+				"sites": 3,
+				"tracks": 0
+			},
+			"start": {
+				"ai_targets": [
+					2,
+					-1,
+					-1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"brood_capacity": [
+					18,
+					18,
+					18
+				],
+				"buffered_protein": [
+					72,
+					72,
+					72
+				],
+				"combat_losses": [
+					0,
+					0,
+					0
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 3598,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Scouting",
+					"Scouting"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 0,
+						"dug": 0,
+						"guard_cell": -1,
+						"pending": 0,
+						"project": "",
+						"projects": 0,
+						"reason": "Starter rooms have spare capacity.",
+						"widened": false
+					},
+					{
+						"diggers": 0,
+						"dug": 0,
+						"guard_cell": -1,
+						"pending": 0,
+						"project": "",
+						"projects": 0,
+						"reason": "Starter rooms have spare capacity.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.377358490566038,
+					0.25,
+					0.377358490566038,
+					0.25,
+					0.377358490566038
+				],
+				"population": [
+					12,
+					12,
+					12
+				],
+				"protein_stores": [
+					96.0,
+					96.0,
+					96.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					0,
+					0,
+					0
+				],
+				"resource_delivered": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"scent_cells": 114,
+				"seconds": 0.43,
+				"slots": 36,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					79.9531999999999,
+					79.9461799999999,
+					79.9531999999999
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Waiting for scouts.",
+					"Waiting for scouts."
+				],
+				"target_scores": [
+					[],
+					[],
+					[]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"synthetic": false,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.015,
+				"movement": 0.122,
+				"resolution_and_nursery": 0.027,
+				"scent_and_jobs": 0.035
+			},
+			"visible_ants": 32,
+			"wall_seconds": 5.0,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.0,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					33,
+					29,
+					28
+				],
+				"brood_capacity": [
+					18,
+					18,
+					18
+				],
+				"buffered_protein": [
+					6,
+					14,
+					17
+				],
+				"combat_losses": [
+					0,
+					1,
+					1
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 2136,
+				"harvest": [
+					837,
+					779,
+					880
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Gathering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 0,
+						"dug": 0,
+						"guard_cell": 4878,
+						"pending": 0,
+						"project": "",
+						"projects": 0,
+						"reason": "Food recovery takes priority over expansion.",
+						"widened": false
+					},
+					{
+						"diggers": 0,
+						"dug": 0,
+						"guard_cell": -1,
+						"pending": 0,
+						"project": "",
+						"projects": 0,
+						"reason": "Food recovery takes priority over expansion.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.264900662251656,
+					0.25,
+					0.257234726688103,
+					0.25,
+					0.25
+				],
+				"population": [
+					45,
+					40,
+					39
+				],
+				"protein_stores": [
+					277.0,
+					298.0,
+					373.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					4,
+					4,
+					12
+				],
+				"resource_delivered": [
+					386,
+					451,
+					283,
+					496,
+					363,
+					517
+				],
+				"scent_cells": 3157,
+				"seconds": 200.73,
+				"slots": 124,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					420.187799999961,
+					276.434889999988,
+					403.996333333391
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: no challenger leads by 0.18.",
+					"Holding Amber: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.150337252846247,
+							"strength": 0.126582278481013,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.117647058823529,
+							"strength": 0.117647058823529,
+							"threat": 0.0,
+							"travel": 0.0
+						}
+					],
+					[
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.147172695884222,
+							"strength": 0.123417721518987,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.139826402936663,
+							"strength": 0.116071428571429,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					9,
+					14,
+					9
+				]
+			},
+			"frames": 5115,
+			"garden": {
+				"geometry_cache": 19,
+				"pairs": 3,
+				"rival_contacts": [
+					0,
+					2
+				],
+				"rival_max_think_ms": 0.384
+			},
+			"max_frame_ms": 4.61,
+			"mean_fps": 1022.9,
+			"mean_frame_ms": 0.98,
+			"p95_ms": 1.26,
+			"p99_ms": 1.81,
+			"percent_frames_over_16_67ms": 0.0,
+			"post_player_game_end": false,
+			"scenario": "founding_natural_180s",
+			"scouting": {
+				"contacts": 0,
+				"max_scan_ms": 0.224,
+				"panel_open": true,
+				"sectors_explored": 100,
+				"sites": 5,
+				"tracks": 0
+			},
+			"start": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					29,
+					25,
+					23
+				],
+				"brood_capacity": [
+					18,
+					18,
+					18
+				],
+				"buffered_protein": [
+					3,
+					13,
+					0
+				],
+				"combat_losses": [
+					0,
+					0,
+					0
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 2497,
+				"harvest": [
+					707,
+					686,
+					759
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Gathering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 0,
+						"dug": 0,
+						"guard_cell": -1,
+						"pending": 0,
+						"project": "",
+						"projects": 0,
+						"reason": "Food recovery takes priority over expansion.",
+						"widened": false
+					},
+					{
+						"diggers": 0,
+						"dug": 0,
+						"guard_cell": -1,
+						"pending": 0,
+						"project": "",
+						"projects": 0,
+						"reason": "Food recovery takes priority over expansion.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.33195020746888,
+					0.25,
+					0.296296296296296,
+					0.25,
+					0.282685512367491
+				],
+				"population": [
+					41,
+					37,
+					35
+				],
+				"protein_stores": [
+					219.0,
+					256.0,
+					267.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					8,
+					12,
+					4
+				],
+				"resource_delivered": [
+					351,
+					356,
+					283,
+					403,
+					363,
+					396
+				],
+				"scent_cells": 2789,
+				"seconds": 180.73,
+				"slots": 113,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					390.705933333299,
+					322.787796666659,
+					408.791266666713
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: no challenger leads by 0.18.",
+					"Holding Amber: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.152227196587457,
+							"strength": 0.128472222222222,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.123333333333333,
+							"strength": 0.123333333333333,
+							"threat": 0.0,
+							"travel": 0.0
+						}
+					],
+					[
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.145282752143012,
+							"strength": 0.121527777777778,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.143617988063865,
+							"strength": 0.11986301369863,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					12,
+					5,
+					6
+				]
+			},
+			"synthetic": false,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.019,
+				"movement": 0.21,
+				"resolution_and_nursery": 0.042,
+				"scent_and_jobs": 0.05
+			},
+			"visible_ants": 92,
+			"wall_seconds": 5.0,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 3.99,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					84,
+					77,
+					68
+				],
+				"brood_capacity": [
+					36,
+					36,
+					36
+				],
+				"buffered_protein": [
+					64,
+					58,
+					26
+				],
+				"combat_losses": [
+					2,
+					1,
+					1
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 2019,
+				"harvest": [
+					1732,
+					1496,
+					1520
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Probing",
+					"Gathering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 0,
+						"dug": 29,
+						"guard_cell": 4878,
+						"pending": 0,
+						"project": "",
+						"projects": 2,
+						"reason": "Rooms have spare capacity; maintain the guarded inner corridor.",
+						"widened": true
+					},
+					{
+						"diggers": 0,
+						"dug": 29,
+						"guard_cell": 21645,
+						"pending": 0,
+						"project": "",
+						"projects": 2,
+						"reason": "Rooms have spare capacity; maintain the guarded inner corridor.",
+						"widened": true
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.412903225806452,
+					0.25,
+					1.02564102564103,
+					0.25,
+					0.683760683760684
+				],
+				"population": [
+					94,
+					88,
+					79
+				],
+				"protein_stores": [
+					139.0,
+					58.0,
+					96.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": true,
+						"budget": 2,
+						"deadline": 409.077777777831,
+						"hard_deadline": 409.077777777831,
+						"inside": 0,
+						"living_party": 2,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "probe",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 1,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": 374.166666666749,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 2,
+						"started": 1,
+						"status": "Probe: 2 active / 0 inside / 0 lost; 2/2 recruited."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					2,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					4,
+					0,
+					12
+				],
+				"resource_delivered": [
+					1049,
+					683,
+					858,
+					638,
+					897,
+					623
+				],
+				"scent_cells": 9635,
+				"seconds": 381.23,
+				"slots": 261,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					883.097399999933,
+					697.275066666645,
+					835.236533333395
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber until the current raid ends.",
+					"Holding Amber: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.155491501311342,
+							"strength": 0.131736526946108,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.120879120879121,
+							"strength": 0.120879120879121,
+							"threat": 0.0,
+							"travel": 0.0
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.14847042918567,
+							"strength": 0.114161849710983,
+							"threat": 0.0105536051094532,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.142018447419127,
+							"strength": 0.118263473053892,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					13,
+					50,
+					46
+				]
+			},
+			"frames": 3436,
+			"garden": {
+				"geometry_cache": 34,
+				"pairs": 3,
+				"rival_contacts": [
+					3,
+					0
+				],
+				"rival_max_think_ms": 1.451
+			},
+			"max_frame_ms": 5.95,
+			"mean_fps": 687.2,
+			"mean_frame_ms": 1.46,
+			"p95_ms": 2.12,
+			"p99_ms": 4.18,
+			"percent_frames_over_16_67ms": 0.0,
+			"post_player_game_end": false,
+			"scenario": "founding_natural_360s",
+			"scouting": {
+				"contacts": 1,
+				"max_scan_ms": 0.554,
+				"panel_open": true,
+				"sectors_explored": 396,
+				"sites": 16,
+				"tracks": 2
+			},
+			"start": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					82,
+					72,
+					62
+				],
+				"brood_capacity": [
+					36,
+					36,
+					36
+				],
+				"buffered_protein": [
+					48,
+					36,
+					24
+				],
+				"combat_losses": [
+					2,
+					1,
+					1
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 2668,
+				"harvest": [
+					1480,
+					1282,
+					1365
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Probing",
+					"Gathering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 0,
+						"dug": 29,
+						"guard_cell": 4878,
+						"pending": 0,
+						"project": "",
+						"projects": 2,
+						"reason": "Rooms have spare capacity; maintain the guarded inner corridor.",
+						"widened": true
+					},
+					{
+						"diggers": 0,
+						"dug": 29,
+						"guard_cell": 21645,
+						"pending": 0,
+						"project": "",
+						"projects": 2,
+						"reason": "Rooms have spare capacity; maintain the guarded inner corridor.",
+						"widened": true
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.523809523809524,
+					0.25,
+					0.97196261682243,
+					0.25,
+					0.467836257309941
+				],
+				"population": [
+					92,
+					83,
+					73
+				],
+				"protein_stores": [
+					147.0,
+					81.0,
+					148.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": true,
+						"budget": 2,
+						"deadline": 409.077777777831,
+						"hard_deadline": 409.077777777831,
+						"inside": 0,
+						"living_party": 2,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "probe",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 1,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 2,
+						"started": 1,
+						"status": "Probe: 2 active / 0 inside / 0 lost; 2/2 recruited."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					2,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					12,
+					12,
+					19
+				],
+				"resource_delivered": [
+					801,
+					679,
+					645,
+					637,
+					743,
+					622
+				],
+				"scent_cells": 10841,
+				"seconds": 361.27,
+				"slots": 248,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					661.819933333278,
+					506.121596666646,
+					690.089266666735
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber until the current raid ends.",
+					"Holding Amber: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.156767794878055,
+							"strength": 0.133012820512821,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.025,
+							"queen": 0.0,
+							"score": 0.144252873563218,
+							"strength": 0.119252873563218,
+							"threat": 0.0,
+							"travel": 0.0
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.15559107834028,
+							"strength": 0.111280487804878,
+							"threat": 0.0205556161701679,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.140742153852414,
+							"strength": 0.116987179487179,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					8,
+					44,
+					42
+				]
+			},
+			"synthetic": false,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.026,
+				"movement": 0.669,
+				"resolution_and_nursery": 0.047,
+				"scent_and_jobs": 0.086
+			},
+			"visible_ants": 152,
+			"wall_seconds": 5.0,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.0,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					84,
+					79,
+					79
+				],
+				"brood_capacity": [
+					36,
+					36,
+					36
+				],
+				"buffered_protein": [
+					68,
+					62,
+					54
+				],
+				"combat_losses": [
+					37,
+					16,
+					5
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 4911,
+				"harvest": [
+					2237,
+					2114,
+					2207
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Probing",
+					"Gathering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 0,
+						"dug": 29,
+						"guard_cell": 4878,
+						"pending": 0,
+						"project": "",
+						"projects": 2,
+						"reason": "Rooms have spare capacity; maintain the guarded inner corridor.",
+						"widened": true
+					},
+					{
+						"diggers": 0,
+						"dug": 29,
+						"guard_cell": 21645,
+						"pending": 0,
+						"project": "",
+						"projects": 2,
+						"reason": "Rooms have spare capacity; maintain the guarded inner corridor.",
+						"widened": true
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25
+				],
+				"population": [
+					59,
+					75,
+					86
+				],
+				"protein_stores": [
+					358.0,
+					412.0,
+					390.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": true,
+						"budget": 2,
+						"deadline": 629.077777777928,
+						"hard_deadline": 629.077777777928,
+						"inside": 0,
+						"living_party": 2,
+						"lost_party": 0,
+						"next_attack": 555.833333333524,
+						"phase": "probe",
+						"phase_counts": {
+							"invasions": 1,
+							"probes": 2,
+							"probes_completed": 1
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {
+							"Party exhausted": 1,
+							"Probe complete": 1
+						},
+						"recruited": 2,
+						"started": 3,
+						"status": "Probe: 2 active / 0 inside / 0 lost; 2/2 recruited."
+					},
+					{
+						"active": false,
+						"budget": 3,
+						"deadline": 0.0,
+						"hard_deadline": 558.832006836123,
+						"inside": 0,
+						"living_party": 1,
+						"lost_party": 0,
+						"next_attack": 585.833333333499,
+						"phase": "probe",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 2,
+							"probes_completed": 1
+						},
+						"probe_arrived_at": 530.833333333508,
+						"progress": 0,
+						"recalls": {
+							"Probe complete": 1,
+							"Probe repelled": 1
+						},
+						"recruited": 3,
+						"started": 2,
+						"status": "Withdrawing: Probe complete. Response interval: 45s."
+					}
+				],
+				"raiders": [
+					0,
+					2,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					1
+				],
+				"reserved_protein": [
+					0,
+					4,
+					4
+				],
+				"resource_delivered": [
+					1247,
+					990,
+					1046,
+					1068,
+					1141,
+					1066
+				],
+				"scent_cells": 14080,
+				"seconds": 561.27,
+				"slots": 274,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					882.964999999915,
+					688.006778145919,
+					824.974833187774
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber until the current raid ends.",
+					"Holding Amber: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.140214601694427,
+							"strength": 0.116459627329193,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.139925373134328,
+							"strength": 0.139925373134328,
+							"threat": 0.0,
+							"travel": 0.0
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.172850313942976,
+							"strength": 0.148275862068966,
+							"threat": 0.00081947750877589,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.157295347036042,
+							"strength": 0.133540372670807,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					11,
+					14,
+					44
+				]
+			},
+			"frames": 3451,
+			"garden": {
+				"geometry_cache": 44,
+				"pairs": 3,
+				"rival_contacts": [
+					0,
+					5
+				],
+				"rival_max_think_ms": 1.752
+			},
+			"max_frame_ms": 6.05,
+			"mean_fps": 690.1,
+			"mean_frame_ms": 1.45,
+			"p95_ms": 2.0,
+			"p99_ms": 4.92,
+			"percent_frames_over_16_67ms": 0.0,
+			"post_player_game_end": false,
+			"scenario": "founding_natural_540s",
+			"scouting": {
+				"contacts": 0,
+				"max_scan_ms": 0.723,
+				"panel_open": true,
+				"sectors_explored": 400,
+				"sites": 17,
+				"tracks": 0
+			},
+			"start": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					84,
+					79,
+					79
+				],
+				"brood_capacity": [
+					36,
+					36,
+					36
+				],
+				"buffered_protein": [
+					64,
+					66,
+					54
+				],
+				"combat_losses": [
+					37,
+					16,
+					5
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 5207,
+				"harvest": [
+					2069,
+					2041,
+					2144
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Gathering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 0,
+						"dug": 29,
+						"guard_cell": 4878,
+						"pending": 0,
+						"project": "",
+						"projects": 2,
+						"reason": "Rooms have spare capacity; maintain the guarded inner corridor.",
+						"widened": true
+					},
+					{
+						"diggers": 0,
+						"dug": 29,
+						"guard_cell": 21645,
+						"pending": 0,
+						"project": "",
+						"projects": 2,
+						"reason": "Rooms have spare capacity; maintain the guarded inner corridor.",
+						"widened": true
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.303317535545024,
+					0.25,
+					0.25,
+					0.25,
+					0.25
+				],
+				"population": [
+					59,
+					75,
+					86
+				],
+				"protein_stores": [
+					199.0,
+					369.0,
+					357.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 24,
+						"deadline": 0.0,
+						"hard_deadline": 610.83333333346,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 13,
+						"next_attack": 555.833333333524,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 1,
+							"probes": 1,
+							"probes_completed": 1
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {
+							"Party exhausted": 1,
+							"Probe complete": 1
+						},
+						"recruited": 24,
+						"started": 2,
+						"status": "Withdrawing: Party exhausted. Response interval: 45s."
+					},
+					{
+						"active": false,
+						"budget": 3,
+						"deadline": 0.0,
+						"hard_deadline": 558.832006836123,
+						"inside": 0,
+						"living_party": 1,
+						"lost_party": 0,
+						"next_attack": 585.833333333499,
+						"phase": "probe",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 2,
+							"probes_completed": 1
+						},
+						"probe_arrived_at": 530.833333333508,
+						"progress": 0,
+						"recalls": {
+							"Probe complete": 1,
+							"Probe repelled": 1
+						},
+						"recruited": 3,
+						"started": 2,
+						"status": "Withdrawing: Probe complete. Response interval: 45s."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					3,
+					2
+				],
+				"reserved_protein": [
+					4,
+					0,
+					4
+				],
+				"resource_delivered": [
+					1246,
+					823,
+					1028,
+					1013,
+					1123,
+					1021
+				],
+				"scent_cells": 15255,
+				"seconds": 541.3,
+				"slots": 274,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					899.87513333324,
+					696.573554915232,
+					833.964399808224
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: no challenger leads by 0.18.",
+					"Holding Amber until the current raid ends."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.140214601694427,
+							"strength": 0.116459627329193,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.139925373134328,
+							"strength": 0.139925373134328,
+							"threat": 0.0,
+							"travel": 0.0
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.173626960764735,
+							"strength": 0.148275862068966,
+							"threat": 0.00159612433053553,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.157295347036042,
+							"strength": 0.133540372670807,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					11,
+					17,
+					41
+				]
+			},
+			"synthetic": false,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.026,
+				"movement": 0.499,
+				"resolution_and_nursery": 0.044,
+				"scent_and_jobs": 0.101
+			},
+			"visible_ants": 151,
+			"wall_seconds": 5.001,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.0,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					1988,
+					1988,
+					1988
+				],
+				"brood_capacity": [
+					26,
+					26,
+					26
+				],
+				"buffered_protein": [
+					61,
+					77,
+					74
+				],
+				"combat_losses": [
+					0,
+					1,
+					0
+				],
+				"fighting": [
+					3,
+					0,
+					4
+				],
+				"food_remaining": 393,
+				"harvest": [
+					815,
+					621,
+					765
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Scouting",
+					"Contesting"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 24,
+						"dug": 18,
+						"guard_cell": 4878,
+						"pending": 2,
+						"project": "Widen busy storage route; preserve inner guard corridor",
+						"projects": 1,
+						"reason": "Widen busy storage route; preserve inner guard corridor: 2 tiles left; 24 diggers.",
+						"widened": true
+					},
+					{
+						"diggers": 24,
+						"dug": 18,
+						"guard_cell": 21645,
+						"pending": 2,
+						"project": "Widen busy storage route; preserve inner guard corridor",
+						"projects": 1,
+						"reason": "Widen busy storage route; preserve inner guard corridor: 2 tiles left; 24 diggers.",
+						"widened": true
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25
+				],
+				"population": [
+					2000,
+					1999,
+					2000
+				],
+				"protein_stores": [
+					345.0,
+					323.0,
+					313.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					2,
+					0,
+					2
+				],
+				"resource_delivered": [
+					531,
+					284,
+					350,
+					271,
+					504,
+					261
+				],
+				"scent_cells": 20180,
+				"seconds": 21.3,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					12318.9314,
+					12007.4522833333,
+					12192.3910000002
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: 30-second commitment.",
+					"Holding Amber: 30-second commitment."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.125,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.1,
+							"queen": 0.0,
+							"score": 0.248754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					9,
+					46,
+					36
+				]
+			},
+			"frames": 1663,
+			"garden": {
+				"geometry_cache": 15,
+				"pairs": 3,
+				"rival_contacts": [
+					5,
+					15
+				],
+				"rival_max_think_ms": 6.824
+			},
+			"max_frame_ms": 34.7,
+			"mean_fps": 332.5,
+			"mean_frame_ms": 3.01,
+			"p95_ms": 5.93,
+			"p99_ms": 13.89,
+			"percent_frames_over_16_67ms": 0.5,
+			"post_player_game_end": false,
+			"progression": {
+				"paths": [
+					1,
+					2,
+					2
+				],
+				"soldiers": [
+					0,
+					398,
+					397
+				]
+			},
+			"scenario": "founding_2000_preparing_overview",
+			"scouting": {
+				"contacts": 15,
+				"max_scan_ms": 3.171,
+				"panel_open": true,
+				"sectors_explored": 235,
+				"sites": 5,
+				"tracks": 0
+			},
+			"start": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					1988,
+					1988,
+					1988
+				],
+				"brood_capacity": [
+					26,
+					26,
+					26
+				],
+				"buffered_protein": [
+					72,
+					72,
+					72
+				],
+				"combat_losses": [
+					0,
+					0,
+					0
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 2728,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Gathering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 0,
+						"dug": 0,
+						"guard_cell": 4878,
+						"pending": 0,
+						"project": "",
+						"projects": 0,
+						"reason": "Rooms have spare capacity; maintain the guarded inner corridor.",
+						"widened": false
+					},
+					{
+						"diggers": 0,
+						"dug": 0,
+						"guard_cell": 21645,
+						"pending": 0,
+						"project": "",
+						"projects": 0,
+						"reason": "Rooms have spare capacity; maintain the guarded inner corridor.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.444444444444444,
+					0.25,
+					0.444444444444444,
+					0.25,
+					0.444444444444444
+				],
+				"population": [
+					2000,
+					2000,
+					2000
+				],
+				"protein_stores": [
+					80.0,
+					80.0,
+					80.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					0,
+					0,
+					0
+				],
+				"resource_delivered": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"scent_cells": 485,
+				"seconds": 1.33,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					11949.2533333333,
+					11945.2002666667,
+					11947.136
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Selected Amber: seeded choice within 0.08.",
+					"Selected Amber: seeded choice within 0.08."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.125,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					0,
+					1,
+					2
+				]
+			},
+			"synthetic": true,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.299,
+				"movement": 1.537,
+				"resolution_and_nursery": 0.309,
+				"scent_and_jobs": 0.675
+			},
+			"visible_ants": 5908,
+			"wall_seconds": 5.001,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.0,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					1988,
+					1988,
+					1988
+				],
+				"brood_capacity": [
+					26,
+					26,
+					26
+				],
+				"buffered_protein": [
+					84,
+					84,
+					84
+				],
+				"combat_losses": [
+					1,
+					1,
+					0
+				],
+				"fighting": [
+					1,
+					0,
+					2
+				],
+				"food_remaining": 719,
+				"harvest": [
+					819,
+					249,
+					261
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Contesting"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 24,
+						"dug": 10,
+						"guard_cell": 4878,
+						"pending": 2,
+						"project": "Storage expansion (reserves at 82%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 2 tiles left; 24 diggers.",
+						"widened": false
+					},
+					{
+						"diggers": 24,
+						"dug": 10,
+						"guard_cell": 21645,
+						"pending": 2,
+						"project": "Storage expansion (reserves at 82%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 2 tiles left; 24 diggers.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25
+				],
+				"population": [
+					1999,
+					1999,
+					2000
+				],
+				"protein_stores": [
+					3248.0,
+					3020.0,
+					3016.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					0,
+					0,
+					0
+				],
+				"resource_delivered": [
+					531,
+					288,
+					189,
+					60,
+					205,
+					56
+				],
+				"scent_cells": 20218,
+				"seconds": 21.43,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					32000,
+					32000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					12246.2478666666,
+					11839.0955133331,
+					11886.2112000004
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: 30-second commitment.",
+					"Holding Amber: 30-second commitment."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.125,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.125,
+							"queen": 0.0,
+							"score": 0.273754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					10,
+					60,
+					61
+				]
+			},
+			"frames": 1395,
+			"garden": {
+				"geometry_cache": 15,
+				"pairs": 3,
+				"rival_contacts": [
+					3,
+					15
+				],
+				"rival_max_think_ms": 6.363
+			},
+			"max_frame_ms": 33.84,
+			"mean_fps": 278.7,
+			"mean_frame_ms": 3.59,
+			"p95_ms": 6.42,
+			"p99_ms": 15.12,
+			"percent_frames_over_16_67ms": 0.6,
+			"post_player_game_end": false,
+			"progression": {
+				"paths": [
+					1,
+					2,
+					2
+				],
+				"soldiers": [
+					0,
+					398,
+					397
+				]
+			},
+			"scenario": "founding_2000_queen_overview",
+			"scouting": {
+				"contacts": 16,
+				"max_scan_ms": 3.16,
+				"panel_open": true,
+				"sectors_explored": 235,
+				"sites": 5,
+				"tracks": 0
+			},
+			"start": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					1988,
+					1988,
+					1988
+				],
+				"brood_capacity": [
+					26,
+					26,
+					26
+				],
+				"buffered_protein": [
+					72,
+					72,
+					72
+				],
+				"combat_losses": [
+					0,
+					0,
+					0
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 2728,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Gathering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 24,
+						"dug": 0,
+						"guard_cell": 4878,
+						"pending": 12,
+						"project": "Storage expansion (reserves at 82%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 12 tiles queued for workers.",
+						"widened": false
+					},
+					{
+						"diggers": 24,
+						"dug": 0,
+						"guard_cell": 21645,
+						"pending": 12,
+						"project": "Storage expansion (reserves at 82%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 12 tiles queued for workers.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25
+				],
+				"population": [
+					2000,
+					2000,
+					2000
+				],
+				"protein_stores": [
+					2968.0,
+					2968.0,
+					2968.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					0,
+					0,
+					0
+				],
+				"resource_delivered": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"scent_cells": 502,
+				"seconds": 1.37,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					11888.9846666667,
+					11884.8302733333,
+					11886.8144
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Selected Amber: seeded choice within 0.08.",
+					"Selected Amber: seeded choice within 0.08."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.125,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					0,
+					25,
+					23
+				]
+			},
+			"synthetic": true,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.298,
+				"movement": 2.287,
+				"resolution_and_nursery": 0.352,
+				"scent_and_jobs": 0.629
+			},
+			"visible_ants": 5867,
+			"wall_seconds": 5.005,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 3.99,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					0,
+					1
+				],
+				"births": [
+					1988,
+					1988,
+					1988
+				],
+				"brood_capacity": [
+					26,
+					26,
+					26
+				],
+				"buffered_protein": [
+					84,
+					84,
+					84
+				],
+				"combat_losses": [
+					565,
+					609,
+					332
+				],
+				"fighting": [
+					12,
+					3,
+					7
+				],
+				"food_remaining": 49758,
+				"harvest": [
+					802,
+					288,
+					803
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Recovering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 0,
+						"dug": 12,
+						"guard_cell": 4878,
+						"pending": 0,
+						"project": "",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 3 tiles left; 6 diggers.",
+						"widened": false
+					},
+					{
+						"diggers": 0,
+						"dug": 12,
+						"guard_cell": 21645,
+						"pending": 0,
+						"project": "",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 2 tiles left; 6 diggers.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25
+				],
+				"population": [
+					1435,
+					1391,
+					1668
+				],
+				"protein_stores": [
+					3244.0,
+					3078.0,
+					3252.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					0,
+					0,
+					0
+				],
+				"resource_delivered": [
+					518,
+					284,
+					170,
+					118,
+					511,
+					292
+				],
+				"scent_cells": 20215,
+				"seconds": 21.53,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					36000,
+					36000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					12264.3941333334,
+					11868.5281466667,
+					12212.9492
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: 30-second commitment.",
+					"Holding Coral: 30-second commitment."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.025,
+							"queen": 0.0,
+							"score": 0.147619887165021,
+							"strength": 0.122619887165021,
+							"threat": 0.0,
+							"travel": 0.0
+						},
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.13743591584938,
+							"strength": 0.113680941484145,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					],
+					[
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.848578132726975,
+							"strength": 0.136319058515855,
+							"threat": 0.688504099845886,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.15,
+							"queen": 0.0,
+							"score": 0.307709359203011,
+							"strength": 0.133954384837777,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					13,
+					45,
+					52
+				]
+			},
+			"frames": 968,
+			"garden": {
+				"geometry_cache": 28,
+				"pairs": 3,
+				"rival_contacts": [
+					30,
+					27
+				],
+				"rival_max_think_ms": 6.707
+			},
+			"max_frame_ms": 32.58,
+			"mean_fps": 193.4,
+			"mean_frame_ms": 5.17,
+			"p95_ms": 9.82,
+			"p99_ms": 19.36,
+			"percent_frames_over_16_67ms": 2.5,
+			"post_player_game_end": false,
+			"progression": {
+				"paths": [
+					1,
+					2,
+					2
+				],
+				"soldiers": [
+					0,
+					276,
+					348
+				]
+			},
+			"scenario": "founding_2000_soldier_battle",
+			"scouting": {
+				"contacts": 97,
+				"max_scan_ms": 3.864,
+				"panel_open": true,
+				"sectors_explored": 361,
+				"sites": 10,
+				"tracks": 0
+			},
+			"start": {
+				"ai_targets": [
+					2,
+					0,
+					1
+				],
+				"births": [
+					1988,
+					1988,
+					1988
+				],
+				"brood_capacity": [
+					26,
+					26,
+					26
+				],
+				"buffered_protein": [
+					72,
+					72,
+					72
+				],
+				"combat_losses": [
+					12,
+					4,
+					5
+				],
+				"fighting": [
+					58,
+					48,
+					49
+				],
+				"food_remaining": 52455,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Contesting",
+					"Defending"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 24,
+						"dug": 0,
+						"guard_cell": 4878,
+						"pending": 12,
+						"project": "Storage expansion (reserves at 82%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 12 tiles queued for workers.",
+						"widened": false
+					},
+					{
+						"diggers": 6,
+						"dug": 0,
+						"guard_cell": 21645,
+						"pending": 12,
+						"project": "Storage expansion (reserves at 82%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 12 tiles queued for workers.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25
+				],
+				"population": [
+					1988,
+					1996,
+					1995
+				],
+				"protein_stores": [
+					2968.0,
+					2968.0,
+					2968.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					0,
+					0,
+					0
+				],
+				"resource_delivered": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"scent_cells": 1436,
+				"seconds": 1.53,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					11887.6538666667,
+					11882.9846,
+					11885.2125333334
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Selected Amber: seeded choice within 0.08.",
+					"Selected Coral: highest score."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.748754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.725,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0
+						}
+					],
+					[
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 1.94875497436523,
+							"strength": 0.125,
+							"threat": 1.2,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.748754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					0,
+					27,
+					9
+				]
+			},
+			"synthetic": true,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.588,
+				"movement": 1.669,
+				"resolution_and_nursery": 0.545,
+				"scent_and_jobs": 0.728
+			},
+			"visible_ants": 4384,
+			"wall_seconds": 5.005,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.01,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					0,
+					1
+				],
+				"births": [
+					1988,
+					1988,
+					1988
+				],
+				"brood_capacity": [
+					26,
+					26,
+					26
+				],
+				"buffered_protein": [
+					84,
+					84,
+					84
+				],
+				"combat_losses": [
+					569,
+					609,
+					335
+				],
+				"fighting": [
+					8,
+					2,
+					7
+				],
+				"food_remaining": 49750,
+				"harvest": [
+					807,
+					294,
+					822
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Recovering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 0,
+						"dug": 12,
+						"guard_cell": 4878,
+						"pending": 0,
+						"project": "",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 3 tiles left; 6 diggers.",
+						"widened": false
+					},
+					{
+						"diggers": 0,
+						"dug": 12,
+						"guard_cell": 21645,
+						"pending": 0,
+						"project": "",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 2 tiles left; 6 diggers.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25
+				],
+				"population": [
+					1431,
+					1391,
+					1665
+				],
+				"protein_stores": [
+					3244.0,
+					3078.0,
+					3252.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					0,
+					0,
+					0
+				],
+				"resource_delivered": [
+					523,
+					284,
+					176,
+					118,
+					530,
+					292
+				],
+				"scent_cells": 20396,
+				"seconds": 21.87,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					36000,
+					36000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					12267.4642666667,
+					11871.94908,
+					12229.244
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: 30-second commitment.",
+					"Holding Coral: 30-second commitment."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.025,
+							"queen": 0.0,
+							"score": 0.147619887165021,
+							"strength": 0.122619887165021,
+							"threat": 0.0,
+							"travel": 0.0
+						},
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.13743591584938,
+							"strength": 0.113680941484145,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					],
+					[
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.848578132726975,
+							"strength": 0.136319058515855,
+							"threat": 0.688504099845886,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.15,
+							"queen": 0.0,
+							"score": 0.307709359203011,
+							"strength": 0.133954384837777,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					22,
+					45,
+					51
+				]
+			},
+			"frames": 666,
+			"garden": {
+				"geometry_cache": 28,
+				"pairs": 3,
+				"rival_contacts": [
+					30,
+					27
+				],
+				"rival_max_think_ms": 6.781
+			},
+			"max_frame_ms": 37.12,
+			"mean_fps": 133.2,
+			"mean_frame_ms": 7.51,
+			"p95_ms": 16.71,
+			"p99_ms": 29.33,
+			"percent_frames_over_16_67ms": 5.1,
+			"post_player_game_end": false,
+			"progression": {
+				"paths": [
+					1,
+					2,
+					2
+				],
+				"soldiers": [
+					0,
+					276,
+					348
+				]
+			},
+			"scenario": "founding_2000_soldier_detail",
+			"scouting": {
+				"contacts": 100,
+				"max_scan_ms": 3.949,
+				"panel_open": true,
+				"sectors_explored": 364,
+				"sites": 10,
+				"tracks": 0
+			},
+			"start": {
+				"ai_targets": [
+					2,
+					0,
+					1
+				],
+				"births": [
+					1988,
+					1988,
+					1988
+				],
+				"brood_capacity": [
+					26,
+					26,
+					26
+				],
+				"buffered_protein": [
+					72,
+					72,
+					72
+				],
+				"combat_losses": [
+					19,
+					6,
+					6
+				],
+				"fighting": [
+					71,
+					64,
+					67
+				],
+				"food_remaining": 52028,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Contesting",
+					"Defending"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 24,
+						"dug": 0,
+						"guard_cell": 4878,
+						"pending": 12,
+						"project": "Storage expansion (reserves at 82%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 12 tiles queued for workers.",
+						"widened": false
+					},
+					{
+						"diggers": 6,
+						"dug": 0,
+						"guard_cell": 21645,
+						"pending": 12,
+						"project": "Storage expansion (reserves at 82%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 12 tiles queued for workers.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25
+				],
+				"population": [
+					1981,
+					1994,
+					1994
+				],
+				"protein_stores": [
+					2968.0,
+					2968.0,
+					2968.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					0,
+					12,
+					12
+				],
+				"resource_delivered": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"scent_cells": 1609,
+				"seconds": 1.8,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					11885.5217333333,
+					11880.0306333333,
+					11882.646
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Selected Amber: seeded choice within 0.08.",
+					"Selected Coral: highest score."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.748754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.725,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0
+						}
+					],
+					[
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 1.94875497436523,
+							"strength": 0.125,
+							"threat": 1.2,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.748754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					6,
+					36,
+					18
+				]
+			},
+			"synthetic": true,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.577,
+				"movement": 1.624,
+				"resolution_and_nursery": 0.556,
+				"scent_and_jobs": 0.724
+			},
+			"visible_ants": 361,
+			"wall_seconds": 5.001,
+			"zoom": 1.3
+		},
+		{
+			"actual_speed": 4.01,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					1988,
+					1988,
+					1988
+				],
+				"brood_capacity": [
+					26,
+					26,
+					26
+				],
+				"buffered_protein": [
+					84,
+					84,
+					84
+				],
+				"combat_losses": [
+					1,
+					1,
+					0
+				],
+				"fighting": [
+					1,
+					0,
+					2
+				],
+				"food_remaining": 717,
+				"harvest": [
+					819,
+					253,
+					261
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Contesting"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 24,
+						"dug": 10,
+						"guard_cell": 4878,
+						"pending": 2,
+						"project": "Storage expansion (reserves at 82%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 2 tiles left; 24 diggers.",
+						"widened": false
+					},
+					{
+						"diggers": 24,
+						"dug": 10,
+						"guard_cell": 21645,
+						"pending": 2,
+						"project": "Storage expansion (reserves at 82%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 2 tiles left; 24 diggers.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25
+				],
+				"population": [
+					1999,
+					1999,
+					2000
+				],
+				"protein_stores": [
+					3248.0,
+					3021.0,
+					3016.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					0,
+					0,
+					0
+				],
+				"resource_delivered": [
+					531,
+					288,
+					192,
+					61,
+					205,
+					56
+				],
+				"scent_cells": 20257,
+				"seconds": 21.47,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					32000,
+					32000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					12245.9793333332,
+					11841.7256733331,
+					11885.8896000004
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: 30-second commitment.",
+					"Holding Amber: 30-second commitment."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.125,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.125,
+							"queen": 0.0,
+							"score": 0.273754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					11,
+					59,
+					61
+				]
+			},
+			"frames": 1322,
+			"garden": {
+				"geometry_cache": 15,
+				"pairs": 3,
+				"rival_contacts": [
+					3,
+					15
+				],
+				"rival_max_think_ms": 6.348
+			},
+			"max_frame_ms": 34.21,
+			"mean_fps": 264.2,
+			"mean_frame_ms": 3.79,
+			"p95_ms": 6.29,
+			"p99_ms": 15.33,
+			"percent_frames_over_16_67ms": 0.5,
+			"post_player_game_end": false,
+			"progression": {
+				"paths": [
+					1,
+					2,
+					2
+				],
+				"soldiers": [
+					0,
+					398,
+					397
+				]
+			},
+			"scenario": "underground_founding_queen",
+			"scouting": {
+				"contacts": 16,
+				"max_scan_ms": 3.256,
+				"panel_open": true,
+				"sectors_explored": 235,
+				"sites": 5,
+				"tracks": 0
+			},
+			"start": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					1988,
+					1988,
+					1988
+				],
+				"brood_capacity": [
+					26,
+					26,
+					26
+				],
+				"buffered_protein": [
+					72,
+					72,
+					72
+				],
+				"combat_losses": [
+					0,
+					0,
+					0
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 2728,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Gathering"
+				],
+				"nest_plans": [
+					{},
+					{
+						"diggers": 24,
+						"dug": 0,
+						"guard_cell": 4878,
+						"pending": 12,
+						"project": "Storage expansion (reserves at 82%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 12 tiles queued for workers.",
+						"widened": false
+					},
+					{
+						"diggers": 24,
+						"dug": 0,
+						"guard_cell": 21645,
+						"pending": 12,
+						"project": "Storage expansion (reserves at 82%)",
+						"projects": 1,
+						"reason": "Storage expansion (reserves at 82%): 12 tiles queued for workers.",
+						"widened": false
+					}
+				],
+				"nutrition_weights": [
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25,
+					0.25
+				],
+				"population": [
+					2000,
+					2000,
+					2000
+				],
+				"protein_stores": [
+					2968.0,
+					2968.0,
+					2968.0
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"next_attack": 90.0,
+						"phase": "invasion",
+						"phase_counts": {
+							"invasions": 0,
+							"probes": 0,
+							"probes_completed": 0
+						},
+						"probe_arrived_at": -1.0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"reserved_protein": [
+					0,
+					0,
+					0
+				],
+				"resource_delivered": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"scent_cells": 515,
+				"seconds": 1.4,
+				"slots": 6000,
+				"starting_seat_offset": 0,
+				"storage_capacity": [
+					18000,
+					18000,
+					18000
+				],
+				"storage_released": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"stores": [
+					11888.716,
+					11884.46028,
+					11886.4928
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Selected Amber: seeded choice within 0.08.",
+					"Selected Amber: seeded choice within 0.08."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.125,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						},
+						{
+							"colony": 1,
+							"finish": 0.0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.148754974365234,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0237549743652344
+						}
+					]
+				],
+				"underground": [
+					0,
+					26,
+					24
+				]
+			},
+			"synthetic": true,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.299,
+				"movement": 2.231,
+				"resolution_and_nursery": 0.352,
+				"scent_and_jobs": 0.629
+			},
+			"visible_ants": 11,
+			"wall_seconds": 5.004,
+			"zoom": 1.5
+		}
+	]
+}

@@ -1,0 +1,81 @@
+{
+	"note": "Local wall-clock renderer measurements; not a cross-hardware guarantee. Brood and automatic raids disabled; combat remains active.",
+	"renderer": "GL Compatibility",
+	"resolution": "1440x900",
+	"results": [
+		{
+			"frames": 240,
+			"mean_fps": 10.9,
+			"mean_frame_ms": 92.04,
+			"p95_frame_ms": 110.84,
+			"scenario": "surface",
+			"simulated_seconds_per_wall_second": 1.0,
+			"tick_ms_by_phase": {
+				"encounters": 5.127,
+				"movement": 10.257,
+				"resolution_and_nursery": 0.47,
+				"scent_and_jobs": 1.421
+			},
+			"visible_ants": 375,
+			"workers": 1376,
+			"world_tiles": 29484,
+			"zoom": 1.0
+		},
+		{
+			"frames": 240,
+			"mean_fps": 17.8,
+			"mean_frame_ms": 56.26,
+			"p95_frame_ms": 69.91,
+			"scenario": "overview",
+			"simulated_seconds_per_wall_second": 1.0,
+			"tick_ms_by_phase": {
+				"encounters": 4.634,
+				"movement": 9.58,
+				"resolution_and_nursery": 0.444,
+				"scent_and_jobs": 1.474
+			},
+			"visible_ants": 1294,
+			"workers": 1294,
+			"world_tiles": 29484,
+			"zoom": 0.33333334
+		},
+		{
+			"frames": 240,
+			"mean_fps": 134.2,
+			"mean_frame_ms": 7.45,
+			"p95_frame_ms": 22.77,
+			"scenario": "underground_overview",
+			"simulated_seconds_per_wall_second": 1.01,
+			"tick_ms_by_phase": {
+				"encounters": 4.173,
+				"movement": 9.01,
+				"resolution_and_nursery": 0.427,
+				"scent_and_jobs": 1.516
+			},
+			"visible_ants": 12,
+			"workers": 1234,
+			"world_tiles": 29484,
+			"zoom": 0.33333334
+		},
+		{
+			"frames": 240,
+			"mean_fps": 5.3,
+			"mean_frame_ms": 188.24,
+			"p95_frame_ms": 232.24,
+			"scenario": "inspection_4x",
+			"simulated_seconds_per_wall_second": 2.85,
+			"tick_ms_by_phase": {
+				"encounters": 2.799,
+				"movement": 6.001,
+				"resolution_and_nursery": 0.352,
+				"scent_and_jobs": 1.421
+			},
+			"visible_ants": 14,
+			"workers": 696,
+			"world_tiles": 29484,
+			"zoom": 2.0
+		}
+	],
+	"starting_workers": 2000,
+	"vsync_requested": "disabled"
+}

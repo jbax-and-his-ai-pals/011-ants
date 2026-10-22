@@ -1,0 +1,50 @@
+{
+	"native_kernel": true,
+	"note": "Three colonies, 2000 workers each, both AIs enabled. All workers update at 30 Hz per simulated second; requested 4x. Full starting population in every case; combat changes counts during warmup and measurement. Established case warms up 90 simulated seconds. Local GL renderer, 1440x900, VSync requested off; target mean 60 FPS, p95 33.3ms and 97.5% requested simulation speed.",
+	"renderer": "GL Compatibility",
+	"resolution": "1440x900",
+	"results": [
+		{
+			"births": 0,
+			"brood": 13,
+			"completed_ticks_seconds_per_wall_second": 4.01,
+			"diggers": 24,
+			"fps_target_met": true,
+			"frames": 240,
+			"mean_fps": 71.3,
+			"mean_frame_ms": 14.03,
+			"orders": 8,
+			"p95_frame_ms": 22.76,
+			"p95_target_met": true,
+			"peak_rival_guards": 0,
+			"peak_rival_raiders": 0,
+			"raiders": 22,
+			"rival_ai_enabled": true,
+			"rival_decisions": 5,
+			"rival_max_think_ms": 4.067,
+			"rival_mode": "Gathering",
+			"rival_modes": [
+				"Gathering"
+			],
+			"rival_orders": 2,
+			"scenario": "max_orders_4x",
+			"simulated_seconds_per_wall_second": 4.0,
+			"third_decisions": 5,
+			"third_max_think_ms": 6.61,
+			"third_mode": "Recovering",
+			"tick_ms_by_phase": {
+				"encounters": 0.331,
+				"movement": 2.574,
+				"resolution_and_nursery": 0.293,
+				"scent_and_jobs": 0.472
+			},
+			"visible_ants": 5619,
+			"workers": 5643,
+			"workers_start": 6000,
+			"world_tiles": 29484,
+			"zoom": 0.33333334
+		}
+	],
+	"starting_workers": 6000,
+	"vsync_requested": "disabled"
+}

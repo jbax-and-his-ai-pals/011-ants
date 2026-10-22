@@ -1,0 +1,129 @@
+{
+	"note": "Local wall-clock renderer measurements; not a cross-hardware guarantee. Each case resets to 4000 workers. Brood and automatic raids disabled; combat remains active. Fresh cases warm up 10 simulated seconds; crowded start has no simulated warmup; mature overview warms up 60 seconds.",
+	"renderer": "GL Compatibility",
+	"resolution": "1440x900",
+	"results": [
+		{
+			"fps_target_met": true,
+			"frames": 240,
+			"mean_fps": 131.0,
+			"mean_frame_ms": 7.64,
+			"p95_frame_ms": 18.91,
+			"scenario": "crowded_start",
+			"simulated_seconds_per_wall_second": 1.0,
+			"tick_ms_by_phase": {
+				"encounters": 1.414,
+				"movement": 11.277,
+				"resolution_and_nursery": 0.794,
+				"scent_and_jobs": 0.313
+			},
+			"visible_ants": 2000,
+			"workers": 4000,
+			"workers_start": 4000,
+			"world_tiles": 29484,
+			"zoom": 1.0
+		},
+		{
+			"fps_target_met": true,
+			"frames": 240,
+			"mean_fps": 108.8,
+			"mean_frame_ms": 9.19,
+			"p95_frame_ms": 20.98,
+			"scenario": "surface",
+			"simulated_seconds_per_wall_second": 1.0,
+			"tick_ms_by_phase": {
+				"encounters": 2.786,
+				"movement": 10.838,
+				"resolution_and_nursery": 0.789,
+				"scent_and_jobs": 0.539
+			},
+			"visible_ants": 1772,
+			"workers": 3988,
+			"workers_start": 4000,
+			"world_tiles": 29484,
+			"zoom": 1.0
+		},
+		{
+			"fps_target_met": true,
+			"frames": 240,
+			"mean_fps": 62.2,
+			"mean_frame_ms": 16.08,
+			"p95_frame_ms": 27.3,
+			"scenario": "overview",
+			"simulated_seconds_per_wall_second": 1.0,
+			"tick_ms_by_phase": {
+				"encounters": 2.793,
+				"movement": 10.536,
+				"resolution_and_nursery": 0.788,
+				"scent_and_jobs": 0.553
+			},
+			"visible_ants": 3972,
+			"workers": 3972,
+			"workers_start": 3999,
+			"world_tiles": 29484,
+			"zoom": 0.33333334
+		},
+		{
+			"fps_target_met": true,
+			"frames": 240,
+			"mean_fps": 136.4,
+			"mean_frame_ms": 7.33,
+			"p95_frame_ms": 20.4,
+			"scenario": "underground_overview",
+			"simulated_seconds_per_wall_second": 1.0,
+			"tick_ms_by_phase": {
+				"encounters": 2.906,
+				"movement": 10.348,
+				"resolution_and_nursery": 0.813,
+				"scent_and_jobs": 0.646
+			},
+			"visible_ants": 12,
+			"workers": 3895,
+			"workers_start": 3920,
+			"world_tiles": 29484,
+			"zoom": 0.33333334
+		},
+		{
+			"fps_target_met": false,
+			"frames": 240,
+			"mean_fps": 4.9,
+			"mean_frame_ms": 204.91,
+			"p95_frame_ms": 233.81,
+			"scenario": "inspection_4x",
+			"simulated_seconds_per_wall_second": 2.61,
+			"tick_ms_by_phase": {
+				"encounters": 2.536,
+				"movement": 8.0,
+				"resolution_and_nursery": 0.753,
+				"scent_and_jobs": 1.002
+			},
+			"visible_ants": 468,
+			"workers": 2452,
+			"workers_start": 3580,
+			"world_tiles": 29484,
+			"zoom": 2.0
+		},
+		{
+			"fps_target_met": true,
+			"frames": 240,
+			"mean_fps": 68.0,
+			"mean_frame_ms": 14.7,
+			"p95_frame_ms": 25.07,
+			"scenario": "mature_overview",
+			"simulated_seconds_per_wall_second": 1.0,
+			"tick_ms_by_phase": {
+				"encounters": 2.599,
+				"movement": 9.142,
+				"resolution_and_nursery": 0.798,
+				"scent_and_jobs": 0.951
+			},
+			"visible_ants": 3325,
+			"workers": 3325,
+			"workers_start": 3356,
+			"world_tiles": 29484,
+			"zoom": 0.33333334
+		}
+	],
+	"starting_workers": 4000,
+	"vsync_requested": "disabled"
+}

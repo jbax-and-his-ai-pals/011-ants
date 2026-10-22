@@ -1,0 +1,4671 @@
+{
+	"complete": true,
+	"invalid_state": false,
+	"note": "Headless balance runs, not FPS measurements. Same fixed map and colony-specific worker RNG streams. Equal-AI cases give Amber the same strategy class as rivals and suppress its legacy automatic raid timer. Observer continues after player defeat until one queen remains; game_result/game_end_seconds preserve when ordinary play would stop. Censored runs have winner=-2; worker leads are not wins. Traits 0 Balanced / 1 Stewards / 2 Raiders. Nest/food positions unchanged.",
+	"runs": [
+		{
+			"censored": false,
+			"eliminations": [
+				{
+					"cause": "invaders",
+					"colony": 2,
+					"seconds": 693.53,
+					"workers": 6
+				},
+				{
+					"cause": "invaders",
+					"colony": 0,
+					"seconds": 1017.87,
+					"workers": 4
+				}
+			],
+			"equal_ai": false,
+			"final": {
+				"births": [
+					329,
+					278,
+					196
+				],
+				"combat_losses": [
+					2325,
+					1861,
+					2196
+				],
+				"fighting": [
+					1,
+					1,
+					0
+				],
+				"food_remaining": 16615,
+				"harvest": [
+					15549,
+					26097,
+					20421
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Raiding",
+					"Eliminated"
+				],
+				"population": [
+					4,
+					417,
+					0
+				],
+				"queens": [
+					0.0,
+					100.0,
+					0.0
+				],
+				"raiders": [
+					0,
+					24,
+					0
+				],
+				"recovering": [
+					0,
+					4,
+					0
+				],
+				"scent_cells": 15543,
+				"seconds": 1017.87,
+				"slots": 6000,
+				"stores": [
+					11715.4422925273,
+					20565.3154195005,
+					17911.5593064791
+				],
+				"underground": [
+					2,
+					20,
+					0
+				]
+			},
+			"game_end_seconds": 1017.8666666664,
+			"game_result": "defeat",
+			"group": "default_unattended",
+			"peak_fighting_sampled": 86,
+			"peak_population": [
+				2000,
+				2000,
+				2000
+			],
+			"peak_slots": 6000,
+			"samples": [
+				{
+					"births": [
+						0,
+						0,
+						0
+					],
+					"combat_losses": [
+						0,
+						0,
+						0
+					],
+					"fighting": [
+						0,
+						0,
+						0
+					],
+					"food_remaining": 78800,
+					"harvest": [
+						0,
+						0,
+						0
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Scouting",
+						"Scouting"
+					],
+					"population": [
+						2000,
+						2000,
+						2000
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						0
+					],
+					"scent_cells": 0,
+					"seconds": 0.0,
+					"slots": 6000,
+					"stores": [
+						600.0,
+						600.0,
+						600.0
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						0,
+						0,
+						0
+					],
+					"combat_losses": [
+						40,
+						30,
+						200
+					],
+					"fighting": [
+						45,
+						24,
+						17
+					],
+					"food_remaining": 71849,
+					"harvest": [
+						804,
+						1039,
+						2819
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Gathering",
+						"Defending"
+					],
+					"population": [
+						1960,
+						1970,
+						1800
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						0
+					],
+					"scent_cells": 12361,
+					"seconds": 15.0,
+					"slots": 6000,
+					"stores": [
+						1272.46106666666,
+						1493.20588666666,
+						3293.77373333333
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						0,
+						0,
+						0
+					],
+					"combat_losses": [
+						231,
+						145,
+						340
+					],
+					"fighting": [
+						13,
+						13,
+						21
+					],
+					"food_remaining": 64191,
+					"harvest": [
+						2527,
+						3178,
+						6414
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						1769,
+						1855,
+						1660
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						0
+					],
+					"scent_cells": 20303,
+					"seconds": 30.0,
+					"slots": 6000,
+					"stores": [
+						2853.83866666666,
+						3471.68184,
+						6757.66253333332
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						5,
+						3,
+						3
+					],
+					"combat_losses": [
+						316,
+						217,
+						419
+					],
+					"fighting": [
+						13,
+						5,
+						11
+					],
+					"food_remaining": 57421,
+					"harvest": [
+						3862,
+						5578,
+						9955
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						1689,
+						1786,
+						1584
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						0
+					],
+					"scent_cells": 24239,
+					"seconds": 45.0,
+					"slots": 6000,
+					"stores": [
+						4048.9024,
+						5712.12943666667,
+						10167.7764666667
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						10,
+						7,
+						7
+					],
+					"combat_losses": [
+						402,
+						274,
+						470
+					],
+					"fighting": [
+						7,
+						1,
+						6
+					],
+					"food_remaining": 51886,
+					"harvest": [
+						5033,
+						7940,
+						12906
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						1608,
+						1733,
+						1537
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						0
+					],
+					"scent_cells": 26455,
+					"seconds": 60.0,
+					"slots": 6000,
+					"stores": [
+						5084.38106666667,
+						7918.68721000002,
+						12991.5132666666
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						15,
+						11,
+						11
+					],
+					"combat_losses": [
+						514,
+						354,
+						591
+					],
+					"fighting": [
+						15,
+						24,
+						38
+					],
+					"food_remaining": 48681,
+					"harvest": [
+						6093,
+						8514,
+						13208
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						1501,
+						1657,
+						1420
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						3
+					],
+					"scent_cells": 27161,
+					"seconds": 75.0,
+					"slots": 6000,
+					"stores": [
+						6013.9764,
+						8340.3831433334,
+						13168.7968459725
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						20,
+						15,
+						15
+					],
+					"combat_losses": [
+						600,
+						448,
+						752
+					],
+					"fighting": [
+						21,
+						14,
+						20
+					],
+					"food_remaining": 46309,
+					"harvest": [
+						7098,
+						9871,
+						13987
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						1420,
+						1567,
+						1263
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						7
+					],
+					"scent_cells": 27372,
+					"seconds": 90.0,
+					"slots": 6000,
+					"stores": [
+						6894.78093333333,
+						9545.41619000009,
+						13826.5195343858
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						25,
+						20,
+						20
+					],
+					"combat_losses": [
+						680,
+						532,
+						872
+					],
+					"fighting": [
+						15,
+						5,
+						10
+					],
+					"food_remaining": 44060,
+					"harvest": [
+						8086,
+						11166,
+						14552
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						1345,
+						1488,
+						1148
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						3
+					],
+					"scent_cells": 27697,
+					"seconds": 105.0,
+					"slots": 6000,
+					"stores": [
+						7763.22841033377,
+						10701.2045266668,
+						14284.8622639874
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						30,
+						24,
+						24
+					],
+					"combat_losses": [
+						778,
+						603,
+						973
+					],
+					"fighting": [
+						13,
+						17,
+						20
+					],
+					"food_remaining": 41803,
+					"harvest": [
+						9020,
+						12218,
+						14745
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						1252,
+						1421,
+						1051
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						3
+					],
+					"scent_cells": 28098,
+					"seconds": 120.0,
+					"slots": 6000,
+					"stores": [
+						8582.13147700047,
+						11618.8749200001,
+						14377.8490295036
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						35,
+						28,
+						28
+					],
+					"combat_losses": [
+						863,
+						679,
+						1071
+					],
+					"fighting": [
+						27,
+						14,
+						13
+					],
+					"food_remaining": 40074,
+					"harvest": [
+						9543,
+						12349,
+						15384
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						1172,
+						1349,
+						957
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						5
+					],
+					"scent_cells": 28472,
+					"seconds": 135.0,
+					"slots": 6000,
+					"stores": [
+						8995.90907700043,
+						11619.5832333335,
+						14921.3151179271
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						40,
+						32,
+						32
+					],
+					"combat_losses": [
+						923,
+						748,
+						1140
+					],
+					"fighting": [
+						14,
+						13,
+						10
+					],
+					"food_remaining": 39138,
+					"harvest": [
+						10071,
+						13211,
+						15919
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						1117,
+						1284,
+						892
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						3
+					],
+					"scent_cells": 28297,
+					"seconds": 150.0,
+					"slots": 6000,
+					"stores": [
+						9418.58641033376,
+						12349.7073933335,
+						15359.6536007543
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						45,
+						37,
+						37
+					],
+					"combat_losses": [
+						999,
+						812,
+						1228
+					],
+					"fighting": [
+						22,
+						7,
+						6
+					],
+					"food_remaining": 37446,
+					"harvest": [
+						10511,
+						13511,
+						16028
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						1046,
+						1225,
+						809
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						3,
+						0,
+						1
+					],
+					"scent_cells": 28183,
+					"seconds": 165.0,
+					"slots": 6000,
+					"stores": [
+						9756.86687700038,
+						12528.8672100001,
+						15383.394714188
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						50,
+						41,
+						41
+					],
+					"combat_losses": [
+						1050,
+						869,
+						1285
+					],
+					"fighting": [
+						16,
+						12,
+						22
+					],
+					"food_remaining": 35946,
+					"harvest": [
+						10948,
+						14113,
+						16516
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						1000,
+						1172,
+						756
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						1
+					],
+					"scent_cells": 28259,
+					"seconds": 180.0,
+					"slots": 6000,
+					"stores": [
+						10095.20001349,
+						13014.1862700001,
+						15790.5247480489
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						55,
+						45,
+						45
+					],
+					"combat_losses": [
+						1092,
+						930,
+						1350
+					],
+					"fighting": [
+						4,
+						4,
+						10
+					],
+					"food_remaining": 35244,
+					"harvest": [
+						11370,
+						14814,
+						16976
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						963,
+						1115,
+						695
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						3
+					],
+					"scent_cells": 28274,
+					"seconds": 195.0,
+					"slots": 6000,
+					"stores": [
+						10421.4634801567,
+						13601.1554300002,
+						16172.193751175
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						60,
+						49,
+						49
+					],
+					"combat_losses": [
+						1162,
+						972,
+						1395
+					],
+					"fighting": [
+						2,
+						3,
+						3
+					],
+					"food_remaining": 33772,
+					"harvest": [
+						11801,
+						14920,
+						17032
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						898,
+						1077,
+						654
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						3
+					],
+					"scent_cells": 28080,
+					"seconds": 210.0,
+					"slots": 6000,
+					"stores": [
+						10759.8978801566,
+						13590.3677433335,
+						16147.0372845083
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						65,
+						54,
+						54
+					],
+					"combat_losses": [
+						1225,
+						1003,
+						1450
+					],
+					"fighting": [
+						6,
+						7,
+						8
+					],
+					"food_remaining": 32937,
+					"harvest": [
+						12170,
+						15577,
+						17464
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						840,
+						1051,
+						604
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						3,
+						0,
+						0
+					],
+					"scent_cells": 27918,
+					"seconds": 225.0,
+					"slots": 6000,
+					"stores": [
+						11039.5918801566,
+						14139.8928600002,
+						16507.2298364513
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						70,
+						58,
+						58
+					],
+					"combat_losses": [
+						1290,
+						1035,
+						1504
+					],
+					"fighting": [
+						10,
+						3,
+						8
+					],
+					"food_remaining": 31990,
+					"harvest": [
+						12514,
+						16167,
+						17777
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						780,
+						1023,
+						554
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						4
+					],
+					"scent_cells": 27745,
+					"seconds": 240.0,
+					"slots": 6000,
+					"stores": [
+						11298.0234878597,
+						14624.2333666669,
+						16751.6853697846
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						75,
+						62,
+						62
+					],
+					"combat_losses": [
+						1352,
+						1071,
+						1548
+					],
+					"fighting": [
+						5,
+						9,
+						1
+					],
+					"food_remaining": 31219,
+					"harvest": [
+						12812,
+						16310,
+						17795
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						723,
+						991,
+						514
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						2,
+						5
+					],
+					"scent_cells": 27756,
+					"seconds": 255.0,
+					"slots": 6000,
+					"stores": [
+						11514.074021193,
+						14662.7239133335,
+						16702.55764112
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						80,
+						66,
+						66
+					],
+					"combat_losses": [
+						1403,
+						1114,
+						1581
+					],
+					"fighting": [
+						7,
+						10,
+						24
+					],
+					"food_remaining": 30374,
+					"harvest": [
+						12977,
+						16427,
+						18097
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						677,
+						952,
+						485
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						2,
+						9
+					],
+					"scent_cells": 27904,
+					"seconds": 270.0,
+					"slots": 6000,
+					"stores": [
+						11600.463621193,
+						14671.2083792687,
+						16933.1546951502
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						85,
+						71,
+						71
+					],
+					"combat_losses": [
+						1461,
+						1153,
+						1617
+					],
+					"fighting": [
+						7,
+						1,
+						6
+					],
+					"food_remaining": 29733,
+					"harvest": [
+						13135,
+						17027,
+						18350
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						624,
+						918,
+						454
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						2,
+						2,
+						7
+					],
+					"scent_cells": 27721,
+					"seconds": 285.0,
+					"slots": 6000,
+					"stores": [
+						11682.8438878596,
+						15172.4322092687,
+						17123.1199777549
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						90,
+						75,
+						75
+					],
+					"combat_losses": [
+						1504,
+						1187,
+						1646
+					],
+					"fighting": [
+						4,
+						4,
+						11
+					],
+					"food_remaining": 29091,
+					"harvest": [
+						13277,
+						17511,
+						18398
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						586,
+						888,
+						429
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						2,
+						2
+					],
+					"scent_cells": 27623,
+					"seconds": 300.0,
+					"slots": 6000,
+					"stores": [
+						11751.5375619492,
+						15559.9068306824,
+						17110.14897393
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						95,
+						79,
+						79
+					],
+					"combat_losses": [
+						1557,
+						1213,
+						1680
+					],
+					"fighting": [
+						13,
+						5,
+						10
+					],
+					"food_remaining": 28337,
+					"harvest": [
+						13398,
+						17824,
+						18659
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						538,
+						866,
+						399
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						1,
+						4
+					],
+					"scent_cells": 27594,
+					"seconds": 315.0,
+					"slots": 6000,
+					"stores": [
+						11801.8668952825,
+						15777.0304906823,
+						17311.0804405967
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						100,
+						83,
+						83
+					],
+					"combat_losses": [
+						1589,
+						1236,
+						1712
+					],
+					"fighting": [
+						5,
+						4,
+						1
+					],
+					"food_remaining": 27874,
+					"harvest": [
+						13524,
+						18001,
+						18871
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						511,
+						847,
+						371
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						2
+					],
+					"scent_cells": 27878,
+					"seconds": 330.0,
+					"slots": 6000,
+					"stores": [
+						11859.5118286158,
+						15853.7633946394,
+						17458.6337310902
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						105,
+						87,
+						87
+					],
+					"combat_losses": [
+						1650,
+						1269,
+						1756
+					],
+					"fighting": [
+						9,
+						1,
+						11
+					],
+					"food_remaining": 27545,
+					"harvest": [
+						13625,
+						18207,
+						19044
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						455,
+						818,
+						331
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						3,
+						0,
+						5
+					],
+					"scent_cells": 28024,
+					"seconds": 345.0,
+					"slots": 6000,
+					"stores": [
+						11894.6609619492,
+						15968.4414879728,
+						17576.4682239394
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						110,
+						92,
+						92
+					],
+					"combat_losses": [
+						1690,
+						1296,
+						1796
+					],
+					"fighting": [
+						6,
+						2,
+						14
+					],
+					"food_remaining": 27005,
+					"harvest": [
+						13722,
+						18450,
+						19095
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						420,
+						796,
+						296
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						5
+					],
+					"scent_cells": 28208,
+					"seconds": 360.0,
+					"slots": 6000,
+					"stores": [
+						11928.328739146,
+						16121.4732846393,
+						17574.317795126
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						115,
+						96,
+						96
+					],
+					"combat_losses": [
+						1729,
+						1323,
+						1847
+					],
+					"fighting": [
+						6,
+						7,
+						10
+					],
+					"food_remaining": 26504,
+					"harvest": [
+						13812,
+						18731,
+						19278
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						386,
+						773,
+						249
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						3
+					],
+					"scent_cells": 28135,
+					"seconds": 375.0,
+					"slots": 6000,
+					"stores": [
+						11957.492739146,
+						16313.113931306,
+						17705.5092019964
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						120,
+						100,
+						100
+					],
+					"combat_losses": [
+						1760,
+						1354,
+						1868
+					],
+					"fighting": [
+						2,
+						2,
+						6
+					],
+					"food_remaining": 26034,
+					"harvest": [
+						13921,
+						18970,
+						19418
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						360,
+						746,
+						232
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						9
+					],
+					"scent_cells": 27767,
+					"seconds": 390.0,
+					"slots": 6000,
+					"stores": [
+						12007.5734058127,
+						16458.6433379726,
+						17789.9945473011
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						125,
+						104,
+						104
+					],
+					"combat_losses": [
+						1789,
+						1373,
+						1892
+					],
+					"fighting": [
+						2,
+						4,
+						4
+					],
+					"food_remaining": 25708,
+					"harvest": [
+						13993,
+						19232,
+						19551
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						336,
+						731,
+						212
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						2,
+						0,
+						6
+					],
+					"scent_cells": 27442,
+					"seconds": 405.0,
+					"slots": 6000,
+					"stores": [
+						12021.8288058126,
+						16635.6531779726,
+						17874.5830692893
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						130,
+						109,
+						109
+					],
+					"combat_losses": [
+						1814,
+						1399,
+						1916
+					],
+					"fighting": [
+						2,
+						0,
+						4
+					],
+					"food_remaining": 25280,
+					"harvest": [
+						14066,
+						19466,
+						19669
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						316,
+						710,
+						193
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						8
+					],
+					"scent_cells": 27131,
+					"seconds": 420.0,
+					"slots": 6000,
+					"stores": [
+						12038.4966074822,
+						16785.9415879726,
+						17946.0198688769
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						135,
+						113,
+						113
+					],
+					"combat_losses": [
+						1837,
+						1414,
+						1941
+					],
+					"fighting": [
+						5,
+						6,
+						7
+					],
+					"food_remaining": 24868,
+					"harvest": [
+						14132,
+						19629,
+						19770
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						298,
+						699,
+						172
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						3
+					],
+					"scent_cells": 27310,
+					"seconds": 435.0,
+					"slots": 6000,
+					"stores": [
+						12049.4690074821,
+						16865.2483613059,
+						18000.6294480528
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						140,
+						117,
+						117
+					],
+					"combat_losses": [
+						1855,
+						1430,
+						1961
+					],
+					"fighting": [
+						0,
+						1,
+						3
+					],
+					"food_remaining": 24644,
+					"harvest": [
+						14205,
+						19793,
+						19801
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						285,
+						687,
+						156
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						7
+					],
+					"scent_cells": 27042,
+					"seconds": 450.0,
+					"slots": 6000,
+					"stores": [
+						12068.2731408154,
+						16940.3862013059,
+						17980.7978480527
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						145,
+						121,
+						121
+					],
+					"combat_losses": [
+						1865,
+						1451,
+						1977
+					],
+					"fighting": [
+						0,
+						2,
+						2
+					],
+					"food_remaining": 24258,
+					"harvest": [
+						14275,
+						19987,
+						19899
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						280,
+						670,
+						144
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						2,
+						0,
+						5
+					],
+					"scent_cells": 26849,
+					"seconds": 465.0,
+					"slots": 6000,
+					"stores": [
+						12084.2246741487,
+						17053.4745546392,
+						18035.1171797312
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						150,
+						126,
+						126
+					],
+					"combat_losses": [
+						1875,
+						1475,
+						1992
+					],
+					"fighting": [
+						1,
+						4,
+						3
+					],
+					"food_remaining": 23929,
+					"harvest": [
+						14352,
+						20213,
+						19988
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						275,
+						651,
+						134
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						7
+					],
+					"scent_cells": 26855,
+					"seconds": 480.0,
+					"slots": 6000,
+					"stores": [
+						12107.7824830737,
+						17199.8391779726,
+						18081.4765046378
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						155,
+						130,
+						130
+					],
+					"combat_losses": [
+						1888,
+						1498,
+						2009
+					],
+					"fighting": [
+						2,
+						1,
+						3
+					],
+					"food_remaining": 23619,
+					"harvest": [
+						14409,
+						20409,
+						20057
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						267,
+						632,
+						121
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						6
+					],
+					"scent_cells": 26626,
+					"seconds": 495.0,
+					"slots": 6000,
+					"stores": [
+						12111.6440830738,
+						17316.5027646394,
+						18107.4265991468
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						160,
+						134,
+						134
+					],
+					"combat_losses": [
+						1900,
+						1518,
+						2023
+					],
+					"fighting": [
+						1,
+						2,
+						3
+					],
+					"food_remaining": 23294,
+					"harvest": [
+						14481,
+						20629,
+						20122
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						260,
+						616,
+						111
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						7
+					],
+					"scent_cells": 26258,
+					"seconds": 510.0,
+					"slots": 6000,
+					"stores": [
+						12131.0412830738,
+						17452.3916379729,
+						18124.0385617865
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						165,
+						138,
+						138
+					],
+					"combat_losses": [
+						1916,
+						1543,
+						2041
+					],
+					"fighting": [
+						0,
+						3,
+						1
+					],
+					"food_remaining": 22975,
+					"harvest": [
+						14558,
+						20821,
+						20169
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						249,
+						595,
+						97
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						2,
+						0,
+						6
+					],
+					"scent_cells": 26145,
+					"seconds": 525.0,
+					"slots": 6000,
+					"stores": [
+						12155.7651497403,
+						17568.5108579728,
+						18130.3480757327
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						170,
+						143,
+						143
+					],
+					"combat_losses": [
+						1929,
+						1551,
+						2058
+					],
+					"fighting": [
+						0,
+						1,
+						1
+					],
+					"food_remaining": 22654,
+					"harvest": [
+						14609,
+						20975,
+						20192
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						241,
+						592,
+						85
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						1
+					],
+					"scent_cells": 25757,
+					"seconds": 540.0,
+					"slots": 6000,
+					"stores": [
+						12154.9200191114,
+						17647.6177746396,
+						18113.4592035374
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						175,
+						147,
+						147
+					],
+					"combat_losses": [
+						1942,
+						1561,
+						2069
+					],
+					"fighting": [
+						2,
+						4,
+						4
+					],
+					"food_remaining": 22551,
+					"harvest": [
+						14670,
+						21110,
+						20254
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Raiding",
+						"Defending"
+					],
+					"population": [
+						233,
+						586,
+						78
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						24,
+						0
+					],
+					"recovering": [
+						0,
+						4,
+						2
+					],
+					"scent_cells": 25680,
+					"seconds": 555.0,
+					"slots": 6000,
+					"stores": [
+						12164.7724191114,
+						17706.8873013062,
+						18135.4799816849
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						180,
+						151,
+						151
+					],
+					"combat_losses": [
+						1957,
+						1580,
+						2089
+					],
+					"fighting": [
+						0,
+						0,
+						0
+					],
+					"food_remaining": 22272,
+					"harvest": [
+						14732,
+						21253,
+						20287
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Defending"
+					],
+					"population": [
+						223,
+						571,
+						62
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						4,
+						1
+					],
+					"scent_cells": 25191,
+					"seconds": 570.0,
+					"slots": 6000,
+					"stores": [
+						12176.4226857782,
+						17768.7700719838,
+						18123.127791881
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						185,
+						155,
+						155
+					],
+					"combat_losses": [
+						1977,
+						1588,
+						2101
+					],
+					"fighting": [
+						0,
+						0,
+						0
+					],
+					"food_remaining": 22004,
+					"harvest": [
+						14799,
+						21425,
+						20306
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Defending"
+					],
+					"population": [
+						208,
+						567,
+						54
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						1,
+						0,
+						0
+					],
+					"recovering": [
+						2,
+						0,
+						1
+					],
+					"scent_cells": 25292,
+					"seconds": 585.0,
+					"slots": 6000,
+					"stores": [
+						12193.3665524448,
+						17867.1868967173,
+						18104.4007247428
+					],
+					"underground": [
+						1,
+						0,
+						3
+					]
+				},
+				{
+					"births": [
+						190,
+						160,
+						160
+					],
+					"combat_losses": [
+						1991,
+						1603,
+						2105
+					],
+					"fighting": [
+						2,
+						2,
+						1
+					],
+					"food_remaining": 21778,
+					"harvest": [
+						14845,
+						21620,
+						20339
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						199,
+						557,
+						55
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						2,
+						0
+					],
+					"scent_cells": 25099,
+					"seconds": 600.0,
+					"slots": 6000,
+					"stores": [
+						12190.040147243,
+						17989.3720067174,
+						18100.0413086507
+					],
+					"underground": [
+						0,
+						0,
+						6
+					]
+				},
+				{
+					"births": [
+						195,
+						164,
+						164
+					],
+					"combat_losses": [
+						1999,
+						1613,
+						2113
+					],
+					"fighting": [
+						3,
+						4,
+						1
+					],
+					"food_remaining": 21553,
+					"harvest": [
+						14906,
+						21786,
+						20363
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Defending"
+					],
+					"population": [
+						196,
+						551,
+						51
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						1,
+						1
+					],
+					"scent_cells": 24695,
+					"seconds": 615.0,
+					"slots": 6000,
+					"stores": [
+						12202.4374805764,
+						18081.9128441456,
+						18085.995241984
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						200,
+						168,
+						168
+					],
+					"combat_losses": [
+						2020,
+						1638,
+						2123
+					],
+					"fighting": [
+						1,
+						2,
+						3
+					],
+					"food_remaining": 21278,
+					"harvest": [
+						14956,
+						21849,
+						20379
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						180,
+						530,
+						45
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						0
+					],
+					"scent_cells": 24445,
+					"seconds": 630.0,
+					"slots": 6000,
+					"stores": [
+						12204.3069472431,
+						18066.478937479,
+						18058.0307735186
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						205,
+						172,
+						172
+					],
+					"combat_losses": [
+						2035,
+						1652,
+						2137
+					],
+					"fighting": [
+						3,
+						5,
+						10
+					],
+					"food_remaining": 21186,
+					"harvest": [
+						14999,
+						22077,
+						20405
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						170,
+						520,
+						35
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						5,
+						3,
+						3
+					],
+					"scent_cells": 24325,
+					"seconds": 645.0,
+					"slots": 6000,
+					"stores": [
+						12199.7730805764,
+						18223.9991708122,
+						18047.7645735187
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						210,
+						177,
+						177
+					],
+					"combat_losses": [
+						2056,
+						1666,
+						2163
+					],
+					"fighting": [
+						1,
+						2,
+						0
+					],
+					"food_remaining": 20875,
+					"harvest": [
+						15048,
+						22156,
+						20417
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						154,
+						511,
+						14
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						8,
+						0
+					],
+					"scent_cells": 23885,
+					"seconds": 660.0,
+					"slots": 6000,
+					"stores": [
+						12201.9216715827,
+						18233.2334135299,
+						18024.5037501194
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						215,
+						181,
+						181
+					],
+					"combat_losses": [
+						2069,
+						1677,
+						2173
+					],
+					"fighting": [
+						1,
+						0,
+						1
+					],
+					"food_remaining": 20710,
+					"harvest": [
+						15086,
+						22427,
+						20420
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Recovering"
+					],
+					"population": [
+						146,
+						504,
+						8
+					],
+					"queens": [
+						100.0,
+						100.0,
+						100.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						3,
+						0
+					],
+					"scent_cells": 24124,
+					"seconds": 675.0,
+					"slots": 6000,
+					"stores": [
+						12194.2668715827,
+						18433.3383610604,
+						17992.189216786
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						220,
+						185,
+						185
+					],
+					"combat_losses": [
+						2082,
+						1683,
+						2180
+					],
+					"fighting": [
+						1,
+						3,
+						2
+					],
+					"food_remaining": 20476,
+					"harvest": [
+						15120,
+						22653,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Raiding",
+						"Defending"
+					],
+					"population": [
+						138,
+						502,
+						5
+					],
+					"queens": [
+						100.0,
+						100.0,
+						85.6090227901937
+					],
+					"raiders": [
+						0,
+						24,
+						0
+					],
+					"recovering": [
+						0,
+						5,
+						2
+					],
+					"scent_cells": 23813,
+					"seconds": 690.0,
+					"slots": 6000,
+					"stores": [
+						12183.045804916,
+						18583.2269867353,
+						17951.9402834524
+					],
+					"underground": [
+						0,
+						21,
+						2
+					]
+				},
+				{
+					"births": [
+						225,
+						189,
+						189
+					],
+					"combat_losses": [
+						2090,
+						1694,
+						2189
+					],
+					"fighting": [
+						0,
+						0,
+						0
+					],
+					"food_remaining": 20252,
+					"harvest": [
+						15163,
+						22783,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Gathering",
+						"Eliminated"
+					],
+					"population": [
+						135,
+						495,
+						0
+					],
+					"queens": [
+						100.0,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						1,
+						0,
+						0
+					],
+					"recovering": [
+						2,
+						1,
+						0
+					],
+					"scent_cells": 23151,
+					"seconds": 705.0,
+					"slots": 6000,
+					"stores": [
+						12181.0619382493,
+						18644.4024345637,
+						17924.2780398128
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						230,
+						194,
+						194
+					],
+					"combat_losses": [
+						2098,
+						1705,
+						2191
+					],
+					"fighting": [
+						0,
+						0,
+						0
+					],
+					"food_remaining": 20018,
+					"harvest": [
+						15210,
+						22930,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Eliminated"
+					],
+					"population": [
+						132,
+						489,
+						3
+					],
+					"queens": [
+						100.0,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						0
+					],
+					"scent_cells": 23071,
+					"seconds": 720.0,
+					"slots": 6000,
+					"stores": [
+						12183.1129382493,
+						18723.2912076615,
+						17911.7793064794
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						235,
+						198,
+						196
+					],
+					"combat_losses": [
+						2107,
+						1711,
+						2194
+					],
+					"fighting": [
+						3,
+						4,
+						1
+					],
+					"food_remaining": 19849,
+					"harvest": [
+						15254,
+						23141,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Contesting",
+						"Eliminated"
+					],
+					"population": [
+						128,
+						487,
+						2
+					],
+					"queens": [
+						100.0,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						1,
+						0
+					],
+					"scent_cells": 23179,
+					"seconds": 735.0,
+					"slots": 6000,
+					"stores": [
+						12182.5906715826,
+						18865.4153009944,
+						17911.5789064793
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						240,
+						202,
+						196
+					],
+					"combat_losses": [
+						2119,
+						1717,
+						2196
+					],
+					"fighting": [
+						2,
+						3,
+						0
+					],
+					"food_remaining": 19679,
+					"harvest": [
+						15289,
+						23280,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Raiding",
+						"Eliminated"
+					],
+					"population": [
+						121,
+						485,
+						0
+					],
+					"queens": [
+						100.0,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						0,
+						24,
+						0
+					],
+					"recovering": [
+						0,
+						3,
+						0
+					],
+					"scent_cells": 23514,
+					"seconds": 750.0,
+					"slots": 6000,
+					"stores": [
+						12173.4437382492,
+						18932.945907661,
+						17911.5593064791
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						245,
+						206,
+						196
+					],
+					"combat_losses": [
+						2142,
+						1733,
+						2196
+					],
+					"fighting": [
+						6,
+						8,
+						0
+					],
+					"food_remaining": 19503,
+					"harvest": [
+						15324,
+						23381,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Eliminated"
+					],
+					"population": [
+						103,
+						473,
+						0
+					],
+					"queens": [
+						100.0,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						1,
+						0,
+						0
+					],
+					"recovering": [
+						2,
+						11,
+						0
+					],
+					"scent_cells": 23212,
+					"seconds": 765.0,
+					"slots": 6000,
+					"stores": [
+						12164.5562984338,
+						18963.5939456012,
+						17911.5593064791
+					],
+					"underground": [
+						4,
+						6,
+						0
+					]
+				},
+				{
+					"births": [
+						250,
+						211,
+						196
+					],
+					"combat_losses": [
+						2155,
+						1742,
+						2196
+					],
+					"fighting": [
+						2,
+						1,
+						0
+					],
+					"food_remaining": 19276,
+					"harvest": [
+						15351,
+						23570,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Eliminated"
+					],
+					"population": [
+						95,
+						469,
+						0
+					],
+					"queens": [
+						100.0,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						2,
+						0
+					],
+					"scent_cells": 22572,
+					"seconds": 780.0,
+					"slots": 6000,
+					"stores": [
+						12148.7161651005,
+						19085.1346008982,
+						17911.5593064791
+					],
+					"underground": [
+						6,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						255,
+						215,
+						196
+					],
+					"combat_losses": [
+						2162,
+						1748,
+						2196
+					],
+					"fighting": [
+						0,
+						0,
+						0
+					],
+					"food_remaining": 19078,
+					"harvest": [
+						15367,
+						23770,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Gathering",
+						"Eliminated"
+					],
+					"population": [
+						93,
+						467,
+						0
+					],
+					"queens": [
+						100.0,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						0
+					],
+					"scent_cells": 22228,
+					"seconds": 795.0,
+					"slots": 6000,
+					"stores": [
+						12122.3081651005,
+						19217.7889532816,
+						17911.5593064791
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						260,
+						219,
+						196
+					],
+					"combat_losses": [
+						2171,
+						1756,
+						2196
+					],
+					"fighting": [
+						2,
+						2,
+						0
+					],
+					"food_remaining": 18889,
+					"harvest": [
+						15386,
+						23953,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Raiding",
+						"Eliminated"
+					],
+					"population": [
+						89,
+						463,
+						0
+					],
+					"queens": [
+						100.0,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						0,
+						24,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						0
+					],
+					"scent_cells": 21894,
+					"seconds": 810.0,
+					"slots": 6000,
+					"stores": [
+						12099.1706984338,
+						19330.6931399482,
+						17911.5593064791
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						265,
+						223,
+						196
+					],
+					"combat_losses": [
+						2184,
+						1768,
+						2196
+					],
+					"fighting": [
+						1,
+						1,
+						0
+					],
+					"food_remaining": 18717,
+					"harvest": [
+						15418,
+						24079,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Eliminated"
+					],
+					"population": [
+						81,
+						455,
+						0
+					],
+					"queens": [
+						78.9605923517546,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						3,
+						0,
+						0
+					],
+					"recovering": [
+						3,
+						5,
+						0
+					],
+					"scent_cells": 21516,
+					"seconds": 825.0,
+					"slots": 6000,
+					"stores": [
+						12089.1735651004,
+						19387.8981666146,
+						17911.5593064791
+					],
+					"underground": [
+						6,
+						15,
+						0
+					]
+				},
+				{
+					"births": [
+						270,
+						228,
+						196
+					],
+					"combat_losses": [
+						2209,
+						1782,
+						2196
+					],
+					"fighting": [
+						3,
+						5,
+						0
+					],
+					"food_remaining": 18507,
+					"harvest": [
+						15450,
+						24222,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Eliminated"
+					],
+					"population": [
+						61,
+						446,
+						0
+					],
+					"queens": [
+						84.9605923517556,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						2,
+						0
+					],
+					"scent_cells": 20822,
+					"seconds": 840.0,
+					"slots": 6000,
+					"stores": [
+						12079.8656634512,
+						19465.2920930305,
+						17911.5593064791
+					],
+					"underground": [
+						5,
+						3,
+						0
+					]
+				},
+				{
+					"births": [
+						275,
+						232,
+						196
+					],
+					"combat_losses": [
+						2213,
+						1788,
+						2196
+					],
+					"fighting": [
+						0,
+						0,
+						0
+					],
+					"food_remaining": 18315,
+					"harvest": [
+						15465,
+						24451,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Eliminated"
+					],
+					"population": [
+						62,
+						444,
+						0
+					],
+					"queens": [
+						90.9605923517565,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						0
+					],
+					"scent_cells": 20400,
+					"seconds": 855.0,
+					"slots": 6000,
+					"stores": [
+						12054.4980634512,
+						19629.5663815999,
+						17911.5593064791
+					],
+					"underground": [
+						6,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						280,
+						236,
+						196
+					],
+					"combat_losses": [
+						2221,
+						1794,
+						2196
+					],
+					"fighting": [
+						1,
+						1,
+						0
+					],
+					"food_remaining": 18126,
+					"harvest": [
+						15484,
+						24617,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Gathering",
+						"Eliminated"
+					],
+					"population": [
+						59,
+						442,
+						0
+					],
+					"queens": [
+						96.9605923517575,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						0
+					],
+					"scent_cells": 20098,
+					"seconds": 870.0,
+					"slots": 6000,
+					"stores": [
+						12033.0751301179,
+						19729.9479349333,
+						17911.5593064791
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						285,
+						240,
+						196
+					],
+					"combat_losses": [
+						2234,
+						1801,
+						2196
+					],
+					"fighting": [
+						4,
+						1,
+						0
+					],
+					"food_remaining": 18000,
+					"harvest": [
+						15490,
+						24754,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Raiding",
+						"Eliminated"
+					],
+					"population": [
+						51,
+						439,
+						0
+					],
+					"queens": [
+						100.0,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						4,
+						24,
+						0
+					],
+					"recovering": [
+						2,
+						4,
+						0
+					],
+					"scent_cells": 19839,
+					"seconds": 885.0,
+					"slots": 6000,
+					"stores": [
+						11998.8830634512,
+						19795.4446416001,
+						17911.5593064791
+					],
+					"underground": [
+						4,
+						16,
+						0
+					]
+				},
+				{
+					"births": [
+						290,
+						245,
+						196
+					],
+					"combat_losses": [
+						2254,
+						1819,
+						2196
+					],
+					"fighting": [
+						3,
+						6,
+						0
+					],
+					"food_remaining": 17829,
+					"harvest": [
+						15505,
+						24903,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Eliminated"
+					],
+					"population": [
+						36,
+						426,
+						0
+					],
+					"queens": [
+						79.9464635431775,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						2,
+						0
+					],
+					"scent_cells": 19951,
+					"seconds": 900.0,
+					"slots": 6000,
+					"stores": [
+						11974.3625591936,
+						19880.3157884427,
+						17911.5593064791
+					],
+					"underground": [
+						4,
+						4,
+						0
+					]
+				},
+				{
+					"births": [
+						295,
+						249,
+						196
+					],
+					"combat_losses": [
+						2258,
+						1825,
+						2196
+					],
+					"fighting": [
+						1,
+						1,
+						0
+					],
+					"food_remaining": 17661,
+					"harvest": [
+						15515,
+						25075,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Eliminated"
+					],
+					"population": [
+						37,
+						424,
+						0
+					],
+					"queens": [
+						85.9464635431785,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						0
+					],
+					"scent_cells": 19294,
+					"seconds": 915.0,
+					"slots": 6000,
+					"stores": [
+						11945.3335591937,
+						19989.0599151093,
+						17911.5593064791
+					],
+					"underground": [
+						6,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						300,
+						253,
+						196
+					],
+					"combat_losses": [
+						2264,
+						1828,
+						2196
+					],
+					"fighting": [
+						0,
+						0,
+						0
+					],
+					"food_remaining": 17449,
+					"harvest": [
+						15520,
+						25235,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Gathering",
+						"Eliminated"
+					],
+					"population": [
+						36,
+						425,
+						0
+					],
+					"queens": [
+						91.9464635431794,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						0
+					],
+					"scent_cells": 18906,
+					"seconds": 930.0,
+					"slots": 6000,
+					"stores": [
+						11911.3927591938,
+						20084.7567617762,
+						17911.5593064791
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						305,
+						257,
+						196
+					],
+					"combat_losses": [
+						2279,
+						1836,
+						2196
+					],
+					"fighting": [
+						2,
+						5,
+						0
+					],
+					"food_remaining": 17338,
+					"harvest": [
+						15532,
+						25410,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Raiding",
+						"Eliminated"
+					],
+					"population": [
+						26,
+						421,
+						0
+					],
+					"queens": [
+						97.9464635431803,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						1,
+						23,
+						0
+					],
+					"recovering": [
+						0,
+						8,
+						0
+					],
+					"scent_cells": 18132,
+					"seconds": 945.0,
+					"slots": 6000,
+					"stores": [
+						11884.5013591938,
+						20189.5124884429,
+						17911.5593064791
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						310,
+						262,
+						196
+					],
+					"combat_losses": [
+						2291,
+						1846,
+						2196
+					],
+					"fighting": [
+						3,
+						13,
+						0
+					],
+					"food_remaining": 17222,
+					"harvest": [
+						15541,
+						25526,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Eliminated"
+					],
+					"population": [
+						19,
+						416,
+						0
+					],
+					"queens": [
+						14.5644630593064,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						7,
+						0
+					],
+					"scent_cells": 17271,
+					"seconds": 960.0,
+					"slots": 6000,
+					"stores": [
+						11855.2889591939,
+						20242.1903227135,
+						17911.5593064791
+					],
+					"underground": [
+						4,
+						12,
+						0
+					]
+				},
+				{
+					"births": [
+						315,
+						266,
+						196
+					],
+					"combat_losses": [
+						2310,
+						1854,
+						2196
+					],
+					"fighting": [
+						1,
+						1,
+						0
+					],
+					"food_remaining": 17006,
+					"harvest": [
+						15545,
+						25654,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Recovering",
+						"Eliminated"
+					],
+					"population": [
+						5,
+						412,
+						0
+					],
+					"queens": [
+						20.5644630593059,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						1,
+						0
+					],
+					"scent_cells": 16493,
+					"seconds": 975.0,
+					"slots": 6000,
+					"stores": [
+						11821.857559194,
+						20307.0535676682,
+						17911.5593064791
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						320,
+						270,
+						196
+					],
+					"combat_losses": [
+						2313,
+						1857,
+						2196
+					],
+					"fighting": [
+						0,
+						0,
+						0
+					],
+					"food_remaining": 16843,
+					"harvest": [
+						15546,
+						25817,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Gathering",
+						"Eliminated"
+					],
+					"population": [
+						7,
+						413,
+						0
+					],
+					"queens": [
+						26.5644630593052,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						0,
+						0,
+						0
+					],
+					"recovering": [
+						0,
+						0,
+						0
+					],
+					"scent_cells": 15672,
+					"seconds": 990.0,
+					"slots": 6000,
+					"stores": [
+						11785.7447591939,
+						20406.5614795003,
+						17911.5593064791
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"births": [
+						325,
+						274,
+						196
+					],
+					"combat_losses": [
+						2315,
+						1859,
+						2196
+					],
+					"fighting": [
+						0,
+						0,
+						0
+					],
+					"food_remaining": 16742,
+					"harvest": [
+						15546,
+						26022,
+						20421
+					],
+					"hunger_losses": [
+						0,
+						0,
+						0
+					],
+					"invalid_state": 0,
+					"modes": [
+						"player_autonomous",
+						"Raiding",
+						"Eliminated"
+					],
+					"population": [
+						10,
+						415,
+						0
+					],
+					"queens": [
+						32.5644630593047,
+						100.0,
+						0.0
+					],
+					"raiders": [
+						1,
+						24,
+						0
+					],
+					"recovering": [
+						0,
+						3,
+						0
+					],
+					"scent_cells": 15822,
+					"seconds": 1005.0,
+					"slots": 6000,
+					"stores": [
+						11748.457959194,
+						20541.9014061671,
+						17911.5593064791
+					],
+					"underground": [
+						0,
+						0,
+						0
+					]
+				}
+			],
+			"seed": 81923,
+			"traits": [
+				1,
+				2,
+				0
+			],
+			"wall_seconds": 41.515,
+			"winner": 1
+		}
+	],
+	"sample_interval_seconds": 15,
+	"simulated_horizon_seconds": 1800,
+	"starting_workers_per_colony": 2000
+}

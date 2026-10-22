@@ -1,0 +1,18 @@
+{
+  "passed_suites": 23,
+  "passed_renderer_windows": 14,
+  "panel_open_in_every_window": true,
+  "all_sampled_worker_population_and_inventory_invariants_passed": true,
+  "skirmish_mean_fps_range": [
+    94.6,
+    255.5
+  ],
+  "founding_mean_fps_range": [
+    533.9,
+    1028.2
+  ],
+  "actual_speed_range": [
+    3.99,
+    4.03
+  ]
+}

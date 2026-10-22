@@ -1,0 +1,176 @@
+{
+  "matches": 15,
+  "groups": {
+    "default_unattended": {
+      "runs": 3,
+      "wins": [
+        0,
+        3,
+        0
+      ],
+      "censored": 0,
+      "draws": 0
+    },
+    "equal_ai_neutral": {
+      "runs": 3,
+      "wins": [
+        1,
+        1,
+        0
+      ],
+      "censored": 1,
+      "draws": 0
+    },
+    "equal_ai_rotated_traits": {
+      "runs": 6,
+      "wins": [
+        2,
+        1,
+        0
+      ],
+      "censored": 3,
+      "draws": 0
+    },
+    "equal_ai_neutral_mirrored": {
+      "runs": 3,
+      "wins": [
+        0,
+        2,
+        0
+      ],
+      "censored": 1,
+      "draws": 0
+    }
+  },
+  "first_eliminated": {
+    "Azure": 14
+  },
+  "all_invariants_pass": true,
+  "natural_peak_total_workers": 6000,
+  "largest_fighting_sample": 200,
+  "queen_death_causes": {
+    "invaders": 24
+  },
+  "performance_windows": [
+    {
+      "scenario": "natural_0s",
+      "mean_fps": 99.6,
+      "p95_ms": 14.11,
+      "p99_ms": 20.71,
+      "actual_speed": 4.0,
+      "target_met": true
+    },
+    {
+      "scenario": "natural_60s",
+      "mean_fps": 104.8,
+      "p95_ms": 14.55,
+      "p99_ms": 19.91,
+      "actual_speed": 4.0,
+      "target_met": true
+    },
+    {
+      "scenario": "natural_180s",
+      "mean_fps": 148.6,
+      "p95_ms": 10.46,
+      "p99_ms": 14.78,
+      "actual_speed": 4.0,
+      "target_met": true
+    },
+    {
+      "scenario": "natural_360s",
+      "mean_fps": 206.9,
+      "p95_ms": 7.07,
+      "p99_ms": 10.7,
+      "actual_speed": 4.0,
+      "target_met": true
+    },
+    {
+      "scenario": "natural_600s",
+      "mean_fps": 251.7,
+      "p95_ms": 5.67,
+      "p99_ms": 9.15,
+      "actual_speed": 4.01,
+      "target_met": true
+    },
+    {
+      "scenario": "natural_900s",
+      "mean_fps": 240.4,
+      "p95_ms": 6.19,
+      "p99_ms": 9.09,
+      "actual_speed": 3.99,
+      "target_met": true
+    },
+    {
+      "scenario": "growth_cap_overview",
+      "mean_fps": 59.2,
+      "p95_ms": 23.66,
+      "p99_ms": 38.27,
+      "actual_speed": 4.01,
+      "target_met": false
+    },
+    {
+      "scenario": "growth_cap_battle_overview",
+      "mean_fps": 42.7,
+      "p95_ms": 36.38,
+      "p99_ms": 46.99,
+      "actual_speed": 4.02,
+      "target_met": false
+    },
+    {
+      "scenario": "growth_cap_battle_detail",
+      "mean_fps": 54.6,
+      "p95_ms": 38.63,
+      "p99_ms": 51.25,
+      "actual_speed": 4.01,
+      "target_met": false
+    },
+    {
+      "scenario": "growth_cap_overview (2000/colony)",
+      "mean_fps": 103.2,
+      "p95_ms": 14.37,
+      "p99_ms": 19.86,
+      "actual_speed": 4.0,
+      "target_met": true
+    },
+    {
+      "scenario": "growth_cap_battle_overview (2000/colony)",
+      "mean_fps": 81.4,
+      "p95_ms": 20.58,
+      "p99_ms": 26.08,
+      "actual_speed": 3.99,
+      "target_met": true
+    },
+    {
+      "scenario": "growth_cap_battle_detail (2000/colony)",
+      "mean_fps": 90.5,
+      "p95_ms": 20.4,
+      "p99_ms": 26.45,
+      "actual_speed": 4.01,
+      "target_met": true
+    },
+    {
+      "scenario": "growth_cap_overview (2400/colony)",
+      "mean_fps": 96.0,
+      "p95_ms": 15.19,
+      "p99_ms": 22.85,
+      "actual_speed": 4.0,
+      "target_met": true
+    },
+    {
+      "scenario": "growth_cap_battle_overview (2400/colony)",
+      "mean_fps": 68.9,
+      "p95_ms": 20.81,
+      "p99_ms": 30.47,
+      "actual_speed": 4.01,
+      "target_met": true
+    },
+    {
+      "scenario": "growth_cap_battle_detail (2400/colony)",
+      "mean_fps": 78.6,
+      "p95_ms": 25.75,
+      "p99_ms": 31.98,
+      "actual_speed": 4.0,
+      "target_met": true
+    }
+  ]
+}

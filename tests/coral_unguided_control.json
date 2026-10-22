@@ -1,0 +1,1059 @@
+{
+	"complete": true,
+	"note": "300s surface-only controls. No colony orders, invasions or births. Individual food/scent/combat unchanged.",
+	"runs": [
+		{
+			"offset": 0,
+			"seed": 81923,
+			"state": {
+				"ai_targets": [
+					1,
+					-1,
+					-1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1653,
+					1718,
+					1863
+				],
+				"fighting": [
+					1,
+					0,
+					1
+				],
+				"food_remaining": 26871,
+				"harvest": [
+					18528,
+					17492,
+					15841
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Scouting",
+					"Scouting"
+				],
+				"population": [
+					347,
+					282,
+					137
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 27381,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					19128.0,
+					18092.0,
+					16441.0
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Waiting for scouts.",
+					"Waiting for scouts."
+				],
+				"target_scores": [
+					[],
+					[],
+					[]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 1,
+			"seed": 81923,
+			"state": {
+				"ai_targets": [
+					1,
+					-1,
+					-1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1639,
+					1828,
+					1818
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 28282,
+				"harvest": [
+					17790,
+					16277,
+					16371
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Scouting",
+					"Scouting"
+				],
+				"population": [
+					361,
+					172,
+					182
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 27228,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					18390.0,
+					16877.0,
+					16971.0
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Waiting for scouts.",
+					"Waiting for scouts."
+				],
+				"target_scores": [
+					[],
+					[],
+					[]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 2,
+			"seed": 81923,
+			"state": {
+				"ai_targets": [
+					1,
+					-1,
+					-1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1761,
+					1846,
+					1770
+				],
+				"fighting": [
+					5,
+					5,
+					4
+				],
+				"food_remaining": 28632,
+				"harvest": [
+					16869,
+					16045,
+					17200
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Scouting",
+					"Scouting"
+				],
+				"population": [
+					239,
+					154,
+					230
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 26670,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					17469.0,
+					16645.0,
+					17800.0
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Waiting for scouts.",
+					"Waiting for scouts."
+				],
+				"target_scores": [
+					[],
+					[],
+					[]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 0,
+			"seed": 7,
+			"state": {
+				"ai_targets": [
+					1,
+					-1,
+					-1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1800,
+					1872,
+					1427
+				],
+				"fighting": [
+					4,
+					4,
+					4
+				],
+				"food_remaining": 26434,
+				"harvest": [
+					16953,
+					15609,
+					19692
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Scouting",
+					"Scouting"
+				],
+				"population": [
+					200,
+					128,
+					573
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 26988,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					17553.0,
+					16209.0,
+					20292.0
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Waiting for scouts.",
+					"Waiting for scouts."
+				],
+				"target_scores": [
+					[],
+					[],
+					[]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 1,
+			"seed": 7,
+			"state": {
+				"ai_targets": [
+					1,
+					-1,
+					-1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1782,
+					1840,
+					1617
+				],
+				"fighting": [
+					0,
+					2,
+					2
+				],
+				"food_remaining": 27766,
+				"harvest": [
+					16718,
+					16326,
+					17902
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Scouting",
+					"Scouting"
+				],
+				"population": [
+					218,
+					160,
+					383
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 27876,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					17318.0,
+					16926.0,
+					18502.0
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Waiting for scouts.",
+					"Waiting for scouts."
+				],
+				"target_scores": [
+					[],
+					[],
+					[]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 2,
+			"seed": 7,
+			"state": {
+				"ai_targets": [
+					1,
+					-1,
+					-1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1866,
+					1539,
+					1834
+				],
+				"fighting": [
+					0,
+					2,
+					1
+				],
+				"food_remaining": 27580,
+				"harvest": [
+					16033,
+					18785,
+					16343
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Scouting",
+					"Scouting"
+				],
+				"population": [
+					134,
+					461,
+					166
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 28154,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					16633.0,
+					19385.0,
+					16943.0
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Waiting for scouts.",
+					"Waiting for scouts."
+				],
+				"target_scores": [
+					[],
+					[],
+					[]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 0,
+			"seed": 42,
+			"state": {
+				"ai_targets": [
+					1,
+					-1,
+					-1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1831,
+					1442,
+					1858
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 27043,
+				"harvest": [
+					16276,
+					19390,
+					15966
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Scouting",
+					"Scouting"
+				],
+				"population": [
+					169,
+					558,
+					142
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 26555,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					16876.0,
+					19990.0,
+					16566.0
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Waiting for scouts.",
+					"Waiting for scouts."
+				],
+				"target_scores": [
+					[],
+					[],
+					[]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 1,
+			"seed": 42,
+			"state": {
+				"ai_targets": [
+					1,
+					-1,
+					-1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1617,
+					1815,
+					1833
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 27339,
+				"harvest": [
+					18328,
+					16713,
+					16329
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Scouting",
+					"Scouting"
+				],
+				"population": [
+					383,
+					185,
+					167
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 26369,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					18928.0,
+					17313.0,
+					16929.0
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Waiting for scouts.",
+					"Waiting for scouts."
+				],
+				"target_scores": [
+					[],
+					[],
+					[]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 2,
+			"seed": 42,
+			"state": {
+				"ai_targets": [
+					1,
+					-1,
+					-1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1809,
+					1835,
+					1548
+				],
+				"fighting": [
+					6,
+					3,
+					3
+				],
+				"food_remaining": 27117,
+				"harvest": [
+					17066,
+					16077,
+					18448
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Scouting",
+					"Scouting"
+				],
+				"population": [
+					191,
+					165,
+					452
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raid_telemetry": [
+					{},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					},
+					{
+						"active": false,
+						"budget": 0,
+						"deadline": 0.0,
+						"hard_deadline": 0.0,
+						"inside": 0,
+						"living_party": 0,
+						"lost_party": 0,
+						"progress": 0,
+						"recalls": {},
+						"recruited": 0,
+						"started": 0,
+						"status": "No raid yet."
+					}
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 27903,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					17666.0,
+					16677.0,
+					19048.0
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Waiting for scouts.",
+					"Waiting for scouts."
+				],
+				"target_scores": [
+					[],
+					[],
+					[]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		}
+	]
+}

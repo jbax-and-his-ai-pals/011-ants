@@ -1,0 +1,555 @@
+{
+	"all_targets_met": true,
+	"complete": true,
+	"growth_start": {
+		"births": [
+			0,
+			0,
+			0
+		],
+		"combat_losses": [
+			0,
+			0,
+			0
+		],
+		"fighting": [
+			0,
+			0,
+			0
+		],
+		"food_remaining": 438800,
+		"harvest": [
+			0,
+			0,
+			0
+		],
+		"hunger_losses": [
+			0,
+			0,
+			0
+		],
+		"invalid_state": 0,
+		"modes": [
+			"player_autonomous",
+			"Scouting",
+			"Scouting"
+		],
+		"population": [
+			2000,
+			2000,
+			2000
+		],
+		"queens": [
+			100.0,
+			100.0,
+			100.0
+		],
+		"raiders": [
+			0,
+			0,
+			0
+		],
+		"recovering": [
+			0,
+			0,
+			0
+		],
+		"scent_cells": 0,
+		"seconds": 0.0,
+		"slots": 6000,
+		"stores": [
+			60000.0,
+			60000.0,
+			60000.0
+		],
+		"underground": [
+			0,
+			0,
+			0
+		]
+	},
+	"growth_target_per_colony": 2000,
+	"note": "Natural checkpoints are reached by full fixed ticks between live 4x renderer windows, not continuous real-time playback of the whole match. Observer may continue after player defeat, labeled in each row. Growth-cap and battle fixtures explicitly add workers through the real spawn path and food to isolate capacity; these are not naturally achieved populations. No aggregate ants or skipped off-screen updates.",
+	"renderer": "GL Compatibility",
+	"resolution": "1440x900",
+	"seed": 81923,
+	"starting_workers_per_colony": 2000,
+	"vsync_requested": "disabled",
+	"window_min_wall_seconds": 5,
+	"windows": [
+		{
+			"actual_speed": 4.01,
+			"complete_window": true,
+			"end": {
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					157,
+					83,
+					298
+				],
+				"fighting": [
+					22,
+					24,
+					31
+				],
+				"food_remaining": 427989,
+				"harvest": [
+					1603,
+					2063,
+					4495
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Defending"
+				],
+				"population": [
+					1843,
+					1917,
+					1702
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 16790,
+				"seconds": 22.07,
+				"slots": 6000,
+				"stores": [
+					61402.9141333339,
+					61845.2968599999,
+					64311.8742666671
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"frames": 430,
+			"max_frame_ms": 34.04,
+			"mean_fps": 86.0,
+			"mean_frame_ms": 11.63,
+			"p95_ms": 19.5,
+			"p99_ms": 24.94,
+			"percent_frames_over_16_67ms": 8.6,
+			"post_player_game_end": false,
+			"scenario": "growth_cap_overview",
+			"start": {
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					0,
+					0,
+					0
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 438800,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Gathering"
+				],
+				"population": [
+					2000,
+					2000,
+					2000
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 933,
+				"seconds": 2.03,
+				"slots": 6000,
+				"stores": [
+					59983.6113333335,
+					59981.1530333335,
+					59983.6113333335
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"synthetic": true,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.347,
+				"movement": 2.0,
+				"resolution_and_nursery": 0.323,
+				"scent_and_jobs": 0.302
+			},
+			"visible_ants": 5462,
+			"wall_seconds": 5.001,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.0,
+			"complete_window": true,
+			"end": {
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					667,
+					503,
+					691
+				],
+				"fighting": [
+					9,
+					1,
+					142
+				],
+				"food_remaining": 481265,
+				"harvest": [
+					1123,
+					2224,
+					2526
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Defending"
+				],
+				"population": [
+					1333,
+					1497,
+					1309
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 14191,
+				"seconds": 21.53,
+				"slots": 6000,
+				"stores": [
+					60964.3153333334,
+					62039.9483133334,
+					62378.8001333337
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"frames": 306,
+			"max_frame_ms": 39.34,
+			"mean_fps": 61.2,
+			"mean_frame_ms": 16.34,
+			"p95_ms": 26.96,
+			"p99_ms": 34.8,
+			"percent_frames_over_16_67ms": 30.1,
+			"post_player_game_end": false,
+			"scenario": "growth_cap_battle_overview",
+			"start": {
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					8,
+					8,
+					0
+				],
+				"fighting": [
+					48,
+					52,
+					0
+				],
+				"food_remaining": 488469,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Defending",
+					"Defending"
+				],
+				"population": [
+					1992,
+					1992,
+					2000
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 1416,
+				"seconds": 1.57,
+				"slots": 6000,
+				"stores": [
+					59987.3808000001,
+					59985.4877666668,
+					59987.3726666668
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"synthetic": true,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.923,
+				"movement": 1.728,
+				"resolution_and_nursery": 0.681,
+				"scent_and_jobs": 0.333
+			},
+			"visible_ants": 4139,
+			"wall_seconds": 5.001,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.0,
+			"complete_window": true,
+			"end": {
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					663,
+					502,
+					690
+				],
+				"fighting": [
+					8,
+					4,
+					140
+				],
+				"food_remaining": 481504,
+				"harvest": [
+					1098,
+					2218,
+					2525
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Defending"
+				],
+				"population": [
+					1337,
+					1498,
+					1310
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 13966,
+				"seconds": 21.0,
+				"slots": 6000,
+				"stores": [
+					60942.2164000001,
+					62038.6804466668,
+					62381.644266667
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"frames": 367,
+			"max_frame_ms": 42.86,
+			"mean_fps": 73.4,
+			"mean_frame_ms": 13.63,
+			"p95_ms": 25.58,
+			"p99_ms": 35.28,
+			"percent_frames_over_16_67ms": 23.7,
+			"post_player_game_end": false,
+			"scenario": "growth_cap_battle_detail",
+			"start": {
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					0,
+					0,
+					0
+				],
+				"fighting": [
+					5,
+					10,
+					0
+				],
+				"food_remaining": 488595,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Defending",
+					"Defending"
+				],
+				"population": [
+					2000,
+					2000,
+					2000
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 1082,
+				"seconds": 1.0,
+				"slots": 6000,
+				"stores": [
+					59991.9400000001,
+					59990.7310000001,
+					59991.9400000001
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"synthetic": true,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.912,
+				"movement": 1.731,
+				"resolution_and_nursery": 0.669,
+				"scent_and_jobs": 0.323
+			},
+			"visible_ants": 628,
+			"wall_seconds": 5.001,
+			"zoom": 1.3
+		}
+	]
+}

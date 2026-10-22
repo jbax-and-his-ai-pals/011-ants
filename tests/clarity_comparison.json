@@ -1,0 +1,120 @@
+{
+  "note": "First winner is actual match outcome; later launches are diagnostic observations sampled every 3 seconds, not additional wins. No-start or unfinished projects at 1800 seconds are censored, not guaranteed permanent stalls.",
+  "summaries": {
+    "before": {
+      "configurations": 16,
+      "complete": true,
+      "paths": {
+        "1": {
+          "matches": 8,
+          "wins": 5,
+          "unresolved": 0,
+          "median_match_seconds": 713.0,
+          "daughter_starts_by_horizon": 8,
+          "diagnostic_launches_by_horizon": 8,
+          "median_start_seconds": 358.5,
+          "median_diagnostic_launch_seconds": 714.0,
+          "mean_start_protein_wait_seconds": 17.2
+        },
+        "2": {
+          "matches": 8,
+          "wins": 4,
+          "unresolved": 0,
+          "median_match_seconds": 721.9,
+          "daughter_starts_by_horizon": 8,
+          "diagnostic_launches_by_horizon": 8,
+          "median_start_seconds": 352.5,
+          "median_diagnostic_launch_seconds": 727.5,
+          "mean_start_protein_wait_seconds": 11.6
+        }
+      },
+      "rivals": {
+        "1": {
+          "colonies": 16,
+          "real_match_wins": 5,
+          "started_before_match_end": 11,
+          "diagnostic_launches_by_horizon": 16,
+          "still_developing_at_horizon": 0,
+          "never_started_alive": 0,
+          "eliminated_before_launch": 0,
+          "median_start_seconds": 624.0,
+          "median_diagnostic_launch_seconds": 963.0
+        },
+        "2": {
+          "colonies": 16,
+          "real_match_wins": 2,
+          "started_before_match_end": 10,
+          "diagnostic_launches_by_horizon": 13,
+          "still_developing_at_horizon": 2,
+          "never_started_alive": 1,
+          "eliminated_before_launch": 0,
+          "median_start_seconds": 630.0,
+          "median_diagnostic_launch_seconds": 936.0
+        }
+      },
+      "invalid_samples": 0,
+      "total_start_protein_wait_seconds": 837.0,
+      "never_started_colonies": 1
+    },
+    "after": {
+      "configurations": 16,
+      "complete": true,
+      "paths": {
+        "1": {
+          "matches": 8,
+          "wins": 7,
+          "unresolved": 0,
+          "median_match_seconds": 698.8,
+          "daughter_starts_by_horizon": 8,
+          "diagnostic_launches_by_horizon": 8,
+          "median_start_seconds": 354.0,
+          "median_diagnostic_launch_seconds": 705.0,
+          "mean_start_protein_wait_seconds": 15.8
+        },
+        "2": {
+          "matches": 8,
+          "wins": 5,
+          "unresolved": 0,
+          "median_match_seconds": 709.9,
+          "daughter_starts_by_horizon": 8,
+          "diagnostic_launches_by_horizon": 8,
+          "median_start_seconds": 352.5,
+          "median_diagnostic_launch_seconds": 717.0,
+          "mean_start_protein_wait_seconds": 3.0
+        }
+      },
+      "rivals": {
+        "1": {
+          "colonies": 16,
+          "real_match_wins": 4,
+          "started_before_match_end": 12,
+          "diagnostic_launches_by_horizon": 16,
+          "still_developing_at_horizon": 0,
+          "never_started_alive": 0,
+          "eliminated_before_launch": 0,
+          "median_start_seconds": 591.0,
+          "median_diagnostic_launch_seconds": 882.0
+        },
+        "2": {
+          "colonies": 16,
+          "real_match_wins": 0,
+          "started_before_match_end": 11,
+          "diagnostic_launches_by_horizon": 14,
+          "still_developing_at_horizon": 1,
+          "never_started_alive": 1,
+          "eliminated_before_launch": 0,
+          "median_start_seconds": 612.0,
+          "median_diagnostic_launch_seconds": 859.5
+        }
+      },
+      "invalid_samples": 0,
+      "total_start_protein_wait_seconds": 849.0,
+      "never_started_colonies": 1
+    }
+  },
+  "paired": {
+    "same_first_winners": 13,
+    "new_daughter_starts": 0,
+    "lost_daughter_starts": 0
+  }
+}

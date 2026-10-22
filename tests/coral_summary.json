@@ -1,0 +1,118 @@
+{
+  "before": {
+    "wins": [
+      4,
+      9,
+      2
+    ],
+    "unresolved": 0,
+    "draws": 0,
+    "first_eliminated": {
+      "Azure": 10,
+      "Amber": 4,
+      "Coral": 1
+    },
+    "games_with_elimination": 15
+  },
+  "fixed_seat_trial": {
+    "wins": [
+      2,
+      7,
+      4
+    ],
+    "unresolved": 2,
+    "draws": 0,
+    "first_eliminated": {
+      "Azure": 5,
+      "Coral": 3,
+      "Amber": 6
+    },
+    "games_with_elimination": 14
+  },
+  "after": {
+    "wins": [
+      6,
+      4,
+      3
+    ],
+    "unresolved": 2,
+    "draws": 0,
+    "first_eliminated": {
+      "Azure": 4,
+      "Coral": 7,
+      "Amber": 4
+    },
+    "games_with_elimination": 15
+  },
+  "neutral_seat_controls_before": {
+    "color_wins": {
+      "Amber": 3,
+      "Azure": 4,
+      "Coral": 2
+    },
+    "seat_wins": {
+      "Right": 7,
+      "Left": 2
+    },
+    "unresolved": 0
+  },
+  "neutral_seat_controls_after": {
+    "color_wins": {
+      "Amber": 3,
+      "Azure": 3,
+      "Coral": 2
+    },
+    "seat_wins": {
+      "Left": 4,
+      "Lower": 2,
+      "Right": 2
+    },
+    "unresolved": 1
+  },
+  "trait_wins_before": {
+    "Raiders": 6,
+    "Stewards": 2,
+    "Balanced": 1
+  },
+  "trait_wins_after": {
+    "Raiders": 3,
+    "Stewards": 3,
+    "Balanced": 3
+  },
+  "surface_mean_survivors_by_left_right_lower": {
+    "old_guided": [
+      524.6,
+      650.4,
+      528.6
+    ],
+    "unguided": [
+      247.6,
+      308.7,
+      214.8
+    ],
+    "three_route_guided": [
+      445.7,
+      556.7,
+      488.8
+    ]
+  },
+  "holdouts": {
+    "before": {
+      "wins": [
+        0,
+        2,
+        1
+      ],
+      "unresolved": 0
+    },
+    "after": {
+      "wins": [
+        1,
+        2,
+        0
+      ],
+      "unresolved": 0
+    }
+  },
+  "performance_pass": true
+}

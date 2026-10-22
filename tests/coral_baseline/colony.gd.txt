@@ -1,0 +1,2535 @@
+extends Node2D
+## The simulation owns plain arrays. Drawing and UI only observe that state.
+
+const COLS := 234
+const ROWS := 126
+const TILE := 14.0
+const CELLS := COLS * ROWS
+const COUNT := 2000
+const TOTAL := COUNT * 3
+const SPEEDS := [0.25, 0.5, 1.0, 2.0, 4.0]
+const COLONY_NAMES := ["Amber", "Coral", "Azure"]
+var THIRD_HOME := Vector2(1638, 1400)
+const AZURE := Color("85bde5")
+var colony_count := 3
+var legacy_map_layout := false # Diagnostic controls; ordinary play uses the compact triad.
+var wide_map_layout := false
+var workers_per_colony := COUNT
+const POPULATION_CAP := COUNT * 8 / 5
+const BROOD_CAP := 20
+const INITIAL_STORES := COUNT * 0.3
+const FOOD_SCALE := COUNT / 100
+const EGG_INTERVAL := 3.5
+const STAGE_TIMES := [8.0, 14.0, 12.0]
+const PROFILE_NAMES := ["Balanced", "Stewards", "Raiders"]
+const MAX_DIGGERS := 12
+const ORIGIN := Vector2(314, 168)
+const VIEW_SIZE := Vector2(1092, 588)
+const MAP_RECT := Rect2(ORIGIN, VIEW_SIZE)
+const MINI_RECT := Rect2(1208, 184, 182, 126)
+const MINI_MAP := Rect2(8, 28, 166, 166.0 * ROWS / COLS)
+const SIZE := Vector2(COLS * TILE, ROWS * TILE)
+var HOME_CELL := Vector2i(80, 63)
+var HOME := (Vector2(HOME_CELL) + Vector2(0.5, 0.5)) * TILE
+var RIVAL_HOME := Vector2(SIZE.x - HOME.x, HOME.y)
+const RIVAL := Color("ef907f")
+const ENCOUNTER_RADIUS := 30.0
+const ATTACK_RANGE := 12.0
+const BUCKET_SIZE := 32.0
+const STEP := 1.0 / 30.0
+const FORAGER := 0
+const DIGGER := 1
+const INVADER := 2
+const GUARD := 3
+const RETURNING := 4
+const WARDEN := 5
+const RECOVERING := 6
+const SURFACE := -1
+const INK := Color("e9eee0")
+const MUTED := Color("9cafa3")
+const ACCENT := Color("edb76c")
+const GREEN := Color("bee27c")
+
+var rng := RandomNumberGenerator.new()
+var ant_rng: Array[RandomNumberGenerator] = []
+var world_seed := 81923
+var swapped_sides := false # Used by paired balance trials; colors keep their rules.
+var tick_number := 0
+var movement_snapshot := PackedVector2Array()
+var layer_snapshot := PackedInt32Array()
+var layers := PackedInt32Array() # -1 surface; 0 amber tunnels; 1 coral tunnels
+var route_goals := PackedInt32Array()
+var invasions_enabled := true
+var next_raids := PackedFloat64Array([90, 90, 90])
+var nest_quiet := PackedFloat64Array([30, 30, 30])
+var queen_damage := PackedFloat64Array([0, 0, 0])
+var queen_flashes := PackedFloat32Array([0, 0, 0])
+var queen_death_causes: Array[String] = ["", "", ""]
+var match_result := ""
+var result_dismissed := false
+var raid_button: Button
+var result_panel: Panel
+var result_title: Label
+var result_detail: Label
+var doctrines := PackedInt32Array([1, 2, 0])
+var food_stores := PackedFloat64Array([INITIAL_STORES, INITIAL_STORES, INITIAL_STORES])
+var upkeep_spent := PackedFloat64Array([0, 0, 0])
+var brood_spent := PackedFloat64Array([0, 0, 0])
+var queen_health := PackedFloat64Array([100, 100, 100])
+var queen_hungry := PackedByteArray([0, 0, 0])
+var egg_clocks := PackedFloat64Array([0, 0, 0])
+var births := PackedInt32Array([0, 0, 0])
+var starvation_losses := PackedInt32Array([0, 0, 0])
+var brood: Array = [[], [], []]
+var reproduction_enabled := true
+var inspected_colony := 0
+var inspect_button: Button
+var doctrine_button: Button
+var rival_doctrine_button: Button
+var profile_details: Label
+var positions := PackedVector2Array()
+var headings := PackedFloat32Array()
+var carrying := PackedByteArray()
+var roles := PackedByteArray()
+var trips := PackedFloat32Array()
+var targets := PackedInt32Array()
+var paths: Array = []
+var colonies := PackedByteArray()
+var colony_workers: Array[PackedInt32Array] = [PackedInt32Array(), PackedInt32Array(), PackedInt32Array()]
+var health := PackedFloat32Array()
+var attack_cooldowns := PackedFloat32Array()
+var opponents := PackedInt32Array()
+var hit_flashes := PackedFloat32Array()
+var combat_damage := PackedFloat32Array()
+const BUCKET_COLS := ceili(SIZE.x / BUCKET_SIZE)
+const BUCKET_ROWS := ceili(SIZE.y / BUCKET_SIZE)
+const BUCKET_CELLS := BUCKET_COLS * BUCKET_ROWS
+var bucket_heads := PackedInt32Array()
+var bucket_next := PackedInt32Array()
+var encounter_neighbors: Dictionary = {}
+var remains: Array = []
+var casualties := PackedInt32Array([0, 0, 0])
+var rival_delivered := 0
+var combat_enabled := true
+var food_scent := PackedFloat32Array()
+var home_scent := PackedFloat32Array()
+var rival_food_scent := PackedFloat32Array()
+var rival_home_scent := PackedFloat32Array()
+var third_food_scent := PackedFloat32Array()
+var third_home_scent := PackedFloat32Array()
+var third_delivered := 0
+var third_earth := PackedByteArray()
+var earth := PackedByteArray() # 0 dirt, 1 open, 2 rock
+var rival_earth := PackedByteArray()
+var orders := PackedByteArray()
+var excavation := PackedFloat32Array()
+var foods: Array = []
+var food_buckets: Dictionary = {}
+var food_index_size := -1
+var food_neighbors: Dictionary = {}
+const FOOD_BUCKET_SIZE := 96.0
+var flecks: Array = []
+var stones: Array = []
+var delivered := 0
+var dug := 0
+var elapsed := 0.0
+var underground := false
+var paused := false
+var trails_visible := true
+var speed := 1.0
+var accumulator := 0.0
+var scent_clock := 0.0
+var allocation_clock := 0.0
+var ui_clock := 0.0
+var painting := false
+var erasing := false
+var last_painted := Vector2i(-1, -1)
+var message := "Scouts are leaving the nest. Food discoveries will become trails."
+var ui: Control
+var stats: Dictionary = {}
+var surface_button: Button
+var underground_button: Button
+var pause_button: Button
+var trail_button: Button
+var speed_buttons: Array[Button] = []
+var scene_title: Label
+var scene_subtitle: Label
+var hint_label: Label
+var status_label: Label
+var work_bar: ColorRect
+var regular_font: Font
+var bold_font: Font
+var world_clip: Control
+var world_canvas: Node2D
+var decor_canvas: Node2D
+var mini_canvas: Node2D
+var camera_center := HOME
+var camera_zoom := 1.0
+var active_camera_layer := SURFACE
+var camera_centers: Array[Vector2] = []
+var camera_zooms := [1.0, 1.3, 1.3]
+var dig_mode := false
+var dragging := false
+var drag_moved := false
+var drag_start := Vector2.ZERO
+var drag_last := Vector2.ZERO
+var drag_button := MOUSE_BUTTON_NONE
+var dig_button: Button
+var inspector_panel: Panel
+var inspector_title: Label
+var inspector_text: Label
+var follow_button: Button
+var selected_ant := -1
+var selected_info: Dictionary = {}
+var following := false
+var worker_ids := PackedInt32Array()
+var born_at := PackedFloat64Array()
+var deliveries := PackedInt32Array()
+var worker_kills := PackedInt32Array()
+var walked := PackedFloat32Array()
+var last_attackers := PackedInt32Array()
+var next_worker_id := TOTAL + 1
+var active_scent := PackedInt32Array()
+var scent_active := PackedByteArray()
+var designated_cells: Dictionary = {}
+var open_cells: Array = [{}, {}, {}]
+var terrain_images: Array[Image] = []
+var terrain_textures: Array[ImageTexture] = []
+var terrain_dirty := PackedByteArray([0, 0, 0])
+var trail_image: Image
+var trail_texture: ImageTexture
+var trails_dirty := true
+var visual_clock := 0.0
+var smoothed_frame_ms := 16.7
+var last_sim_ms := 0.0
+var visible_ant_count := 0
+var profiling := false
+var profile_usec := PackedInt64Array([0, 0, 0, 0])
+var profile_ticks := 0
+var native_enabled := true
+var native_kernel: RefCounted
+var ant_batches: Array[MultiMesh] = []
+var ant_buffers: Array[PackedFloat32Array] = []
+var batch_counts := PackedInt32Array([0, 0, 0])
+var command_system = preload("res://scripts/colony_commands.gd").new()
+var rival_ai = preload("res://scripts/rival_strategy.gd").new()
+var third_ai = preload("res://scripts/rival_strategy.gd").new()
+var rival_ai_enabled := true
+var inspected_ai := 1
+var rival_panel: Panel
+var rival_plan_button: Button
+var rival_plan_text: Label
+var command_tool := 0
+var worker_order_ids := PackedInt32Array()
+var worker_order_kinds := PackedByteArray()
+var worker_order_goals := PackedVector2Array()
+var avoid_points := PackedVector2Array()
+var command_buttons: Array[Button] = []
+var priority_buttons: Array[Button] = []
+var labor_panel: Panel
+var priority_details: Label
+var hotspot_button: Button
+var command_clear_button: Button
+var show_loss_hotspot := false
+
+func _ready() -> void:
+	command_system.setup(self)
+	rival_ai.setup(self)
+	third_ai.setup(self, 2)
+	# Direct CLI runs also load the extension without requiring an editor import.
+	if not ClassDB.class_exists("AntKernel") and OS.has_feature("windows") and FileAccess.file_exists("res://native/bin/ant_kernel.dll"):
+		GDExtensionManager.load_extension("res://native/ant_kernel.gdextension")
+	if ClassDB.class_exists("AntKernel"):
+		native_kernel = ClassDB.instantiate("AntKernel")
+	var normal := SystemFont.new()
+	normal.font_names = PackedStringArray(["Segoe UI", "Noto Sans", "Arial"])
+	regular_font = normal
+	var semibold := SystemFont.new()
+	semibold.font_names = normal.font_names
+	semibold.font_weight = 600
+	bold_font = semibold
+	_build_map_view()
+	_build_ant_batches()
+	_build_ui()
+	reset_colony(randi())
+	get_viewport().size_changed.connect(_layout_ui)
+	_layout_ui()
+	if "--speed=4" in OS.get_cmdline_user_args():
+		_set_speed(4)
+
+func reset_colony(seed_value: int = 81923) -> void:
+	preload("res://scripts/colony_map.gd").configure_nests(self)
+	world_seed = seed_value
+	rng.seed = seed_value
+	tick_number = 0
+	next_worker_id = starting_total() + 1
+	selected_ant = -1
+	selected_info.clear()
+	following = false
+	dig_mode = false
+	dragging = false
+	designated_cells.clear()
+	active_scent.clear()
+	scent_active.resize(CELLS)
+	scent_active.fill(0)
+	invasions_enabled = true
+	next_raids.fill(90)
+	nest_quiet.fill(30)
+	queen_damage.fill(0)
+	queen_flashes.fill(0)
+	queen_death_causes = ["", "", ""]
+	match_result = ""
+	result_dismissed = false
+	food_stores.fill(INITIAL_STORES)
+	upkeep_spent.fill(0)
+	brood_spent.fill(0)
+	queen_health.fill(100)
+	queen_hungry.fill(0)
+	egg_clocks.fill(0)
+	births.fill(0)
+	starvation_losses.fill(0)
+	brood = [[], [], []]
+	reproduction_enabled = true
+	inspected_colony = 0
+	underground = false
+	positions.resize(starting_total())
+	worker_ids.resize(starting_total())
+	born_at.resize(starting_total())
+	deliveries.resize(starting_total())
+	worker_kills.resize(starting_total())
+	walked.resize(starting_total())
+	last_attackers.resize(starting_total())
+	born_at.fill(0)
+	deliveries.fill(0)
+	worker_kills.fill(0)
+	walked.fill(0)
+	last_attackers.fill(-1)
+	layers.resize(starting_total())
+	layers.fill(SURFACE)
+	route_goals.resize(starting_total())
+	route_goals.fill(-1)
+	headings.resize(starting_total())
+	carrying.resize(starting_total())
+	roles.resize(starting_total())
+	trips.resize(starting_total())
+	targets.resize(starting_total())
+	colonies.resize(starting_total())
+	health.resize(starting_total())
+	attack_cooldowns.resize(starting_total())
+	opponents.resize(starting_total())
+	hit_flashes.resize(starting_total())
+	combat_damage.resize(starting_total())
+	remains.clear()
+	encounter_neighbors.clear()
+	casualties.fill(0)
+	rival_delivered = 0
+	combat_enabled = true
+	paths.clear()
+	ant_rng.clear()
+	colony_workers[0].clear()
+	colony_workers[1].clear()
+	colony_workers[2].clear()
+	for i in starting_total():
+		worker_ids[i] = i + 1
+		colonies[i] = i / workers_per_colony
+		colony_workers[colonies[i]].append(i)
+		var worker_rng := RandomNumberGenerator.new()
+		worker_rng.seed = seed_value + i * 104729 + 17
+		ant_rng.append(worker_rng)
+		var angle := worker_rng.randf() * TAU
+		if swapped_sides: angle = PI - angle
+		positions[i] = nest_for(i) + Vector2.from_angle(angle) * worker_rng.randf_range(4, 24)
+		health[i] = 3.0
+		attack_cooldowns[i] = worker_rng.randf_range(0.1, 0.7)
+		opponents[i] = -1
+		hit_flashes[i] = 0
+		headings[i] = worker_rng.randf() * TAU
+		if swapped_sides: headings[i] = PI - headings[i]
+		carrying[i] = 0
+		roles[i] = 0
+		trips[i] = 0.0
+		targets[i] = -1
+		paths.append([])
+	food_scent.resize(CELLS)
+	home_scent.resize(CELLS)
+	rival_food_scent.resize(CELLS)
+	rival_home_scent.resize(CELLS)
+	earth.resize(CELLS)
+	orders.resize(CELLS)
+	excavation.resize(CELLS)
+	food_scent.fill(0)
+	home_scent.fill(0)
+	rival_food_scent.fill(0)
+	rival_home_scent.fill(0)
+	third_food_scent.resize(CELLS)
+	third_home_scent.resize(CELLS)
+	third_food_scent.fill(0)
+	third_home_scent.fill(0)
+	third_delivered = 0
+	earth.fill(0)
+	orders.fill(0)
+	excavation.fill(0)
+	for y in ROWS:
+		for x in COLS:
+			var c := Vector2i(x, y)
+			if (Vector2(x, y) - Vector2(48, 19)).length() < 3.0 or (Vector2(x, y) - Vector2(61, 33)).length() < 3.5:
+				earth[_idx(c)] = 2
+			if ((x / 14) * 37 + (y / 12) * 19) % 11 == 0 and Vector2(x % 14 - 7, y % 12 - 6).length_squared() < 11:
+				earth[_idx(c)] = 2
+			if pow((x - float(HOME_CELL.x)) / 4.8, 2) + pow((y - float(HOME_CELL.y)) / 3.7, 2) < 1.0:
+				earth[_idx(c)] = 1
+			if absi(x - HOME_CELL.x) <= 1 and y >= HOME_CELL.y - 17 and y <= HOME_CELL.y:
+				earth[_idx(c)] = 1
+	foods = preload("res://scripts/colony_map.gd").food_patches(self)
+	food_index_size = -1
+	rival_earth.resize(CELLS)
+	for y in ROWS:
+		for x in COLS:
+			rival_earth[y * COLS + x] = earth[y * COLS + (COLS - 1 - x)]
+	third_earth = earth.duplicate()
+	# Independent third nest: stone/dirt with a connected chamber and shaft.
+	third_earth.fill(0)
+	var third_cell := _cell(THIRD_HOME)
+	for y in range(third_cell.y - 17, third_cell.y + 5):
+		for x in range(third_cell.x - 5, third_cell.x + 6):
+			if pow((x - float(third_cell.x)) / 4.8, 2) + pow((y - float(third_cell.y)) / 3.7, 2) < 1 or (absi(x - third_cell.x) <= 1 and y <= third_cell.y): third_earth[y * COLS + x] = 1
+	flecks.clear()
+	for i in 3600:
+		flecks.append([Vector2(rng.randf_range(8, SIZE.x - 8), rng.randf_range(8, SIZE.y - 8)), rng.randf_range(1, 3), rng.randf()])
+	stones = [Vector2(615, 175), Vector2(640, 190), Vector2(690, 495), Vector2(145, 440), Vector2(960, 320)]
+	for i in 36:
+		stones.append(Vector2(rng.randf_range(30, SIZE.x - 30), rng.randf_range(30, SIZE.y - 30)))
+	delivered = 0
+	dug = 0
+	elapsed = 0
+	scent_clock = 0
+	allocation_clock = 0
+	accumulator = 0
+	paused = false
+	painting = false
+	message = "Colonies are scouting the same meadow. Protect your queen and contest the food routes."
+	command_tool = 0
+	show_loss_hotspot = false
+	command_system.reset()
+	rival_ai.reset()
+	third_ai.reset()
+	inspected_ai = 1
+	if is_instance_valid(rival_panel): rival_panel.visible = false
+	if is_instance_valid(labor_panel): labor_panel.visible = false
+	_rebuild_map_images()
+	camera_centers = [HOME + Vector2(180, -30), _center(chamber_cell(0)) + Vector2(180, -70), _center(chamber_cell(1)) + Vector2(-180, -70)]
+	camera_centers.append(THIRD_HOME + Vector2(0, -70))
+	camera_zooms = [1.0, 1.3, 1.3, 1.3]
+	active_camera_layer = SURFACE
+	camera_center = camera_centers[0]
+	camera_zoom = 1.0
+	_sync_camera()
+	decor_canvas.queue_redraw()
+	_update_ui()
+	queue_redraw()
+
+func _process(delta: float) -> void:
+	var sim_start := Time.get_ticks_usec()
+	if not paused and match_result.is_empty():
+		accumulator += minf(delta, 0.15) * speed
+		while accumulator >= STEP:
+			simulate(STEP)
+			accumulator -= STEP
+			if not match_result.is_empty():
+				accumulator = 0
+				break
+	last_sim_ms = float(Time.get_ticks_usec() - sim_start) / 1000.0
+	smoothed_frame_ms = lerpf(smoothed_frame_ms, delta * 1000, 0.08)
+	if following and selected_ant >= 0 and health[selected_ant] > 0:
+		underground = layers[selected_ant] >= 0
+		if underground: inspected_colony = layers[selected_ant]
+		_activate_camera_view()
+		camera_center = positions[selected_ant]
+		_sync_camera()
+	visual_clock += delta
+	if visual_clock >= 0.15:
+		_refresh_map_images()
+		mini_canvas.queue_redraw()
+		visual_clock = 0
+	ui_clock += delta
+	if ui_clock > 0.15:
+		_update_ui()
+		ui_clock = 0
+	world_canvas.queue_redraw()
+
+func simulate(dt: float) -> void:
+	_check_outcome()
+	if not match_result.is_empty():
+		return
+	var profile_start := Time.get_ticks_usec() if profiling else 0
+	elapsed += dt
+	tick_number += 1
+	scent_clock += dt
+	allocation_clock += dt
+	if scent_clock >= 0.15:
+		if native_enabled and native_kernel:
+			native_kernel.decay_scent(self)
+		else:
+			for slot in range(active_scent.size() - 1, -1, -1):
+				var j := active_scent[slot]
+				food_scent[j] *= 0.993
+				home_scent[j] *= 0.99
+				rival_food_scent[j] *= 0.993
+				rival_home_scent[j] *= 0.99
+				third_food_scent[j] *= 0.993
+				third_home_scent[j] *= 0.99
+				if maxf(maxf(food_scent[j], home_scent[j]), maxf(maxf(rival_food_scent[j], rival_home_scent[j]), maxf(third_food_scent[j], third_home_scent[j]))) < 0.008:
+					food_scent[j] = 0
+					home_scent[j] = 0
+					rival_food_scent[j] = 0
+					rival_home_scent[j] = 0
+					third_food_scent[j] = 0
+					third_home_scent[j] = 0
+					scent_active[j] = 0
+					active_scent[slot] = active_scent[active_scent.size() - 1]
+					active_scent.resize(active_scent.size() - 1)
+					if trail_image: trail_image.set_pixel(j % COLS, j / COLS, Color.TRANSPARENT)
+		trails_dirty = true
+		scent_clock = 0
+	if allocation_clock >= 0.8:
+		_allocate_workers()
+		command_system.allocate()
+		if rival_ai_enabled:
+			rival_ai.update()
+			if colony_count == 3: third_ai.update()
+		if invasions_enabled:
+			_update_defenses()
+			for colony in colony_count:
+				if elapsed >= next_raids[colony] and not (colony == 0 and command_system.has_raid()) and not (colony > 0 and rival_ai_enabled):
+					launch_raid(colony, 8)
+					next_raids[colony] = elapsed + 60
+		allocation_clock = 0
+	for colony in colony_count:
+		nest_quiet[colony] = 0 if invaders_in(colony) > 0 else nest_quiet[colony] + dt
+		queen_flashes[colony] = maxf(0, queen_flashes[colony] - dt)
+	var encounter_start := Time.get_ticks_usec() if profiling else 0
+	_prepare_encounters(dt)
+	var movement_start := Time.get_ticks_usec() if profiling else 0
+	var processed := PackedByteArray()
+	if native_enabled and native_kernel:
+		# Free surface foragers do not read other workers' movement. They retain
+		# their original relative food/scent order; fighters use the shared snapshot.
+		# Mission workers cannot change forager eligibility within this tick.
+		processed = native_kernel.forage_batch(self, dt)
+	else:
+		_rebuild_food_index()
+	# Alternate the leading colony for shared-food pickup as well.
+	var movers := PackedInt32Array()
+	if not processed.is_empty(): movers = native_kernel.mission_workers(self, processed)
+	else:
+		for phase in colony_count: movers.append_array(colony_workers[(tick_number + phase) % colony_count])
+	for i in movers:
+		if health[i] <= 0:
+			continue
+		if not processed.is_empty() and processed[i]:
+			continue
+		var was_recovering: bool = roles[i] == RECOVERING
+		if roles[i] != FORAGER:
+			_recover_worker(i, dt)
+		# Finish the rest tick at home; forage from the next tick in both kernels.
+		if was_recovering and roles[i] == FORAGER: continue
+		if opponents[i] >= 0:
+			_fight(i, dt)
+		elif layers[i] == SURFACE:
+			if roles[i] == FORAGER:
+				_forage(i, dt)
+			else:
+				_surface_mission(i, dt)
+		else:
+			if roles[i] == DIGGER:
+				_dig(i, dt)
+			else:
+				_tunnel_mission(i, dt)
+	var resolution_start := Time.get_ticks_usec() if profiling else 0
+	if native_enabled and native_kernel:
+		var dead: PackedInt32Array = native_kernel.resolve_tick(self)
+		for i in dead: _kill_ant(i)
+	else:
+		_resolve_attacks()
+		for i in health.size():
+			if health[i] > 0 and layers[i] == layer_snapshot[i]:
+				walked[i] += positions[i].distance_to(movement_snapshot[i])
+		# Resolve damage together so neither colony gains a turn-order advantage.
+		for i in health.size():
+			if health[i] > 0 and combat_damage[i] > 0:
+				health[i] = maxf(0, health[i] - combat_damage[i])
+				hit_flashes[i] = 0.16
+				if health[i] <= 0:
+					_kill_ant(i)
+	for colony in colony_count:
+		if queen_health[colony] > 0 and queen_damage[colony] > 0:
+			queen_health[colony] = maxf(0, queen_health[colony] - queen_damage[colony])
+			queen_flashes[colony] = 0.2
+			if queen_health[colony] == 0:
+				queen_death_causes[colony] = "invaders"
+	for k in range(remains.size() - 1, -1, -1):
+		remains[k].time -= dt
+		if remains[k].time <= 0:
+			remains.remove_at(k)
+	if reproduction_enabled:
+		_update_nurseries(dt)
+	command_system.tick()
+	_check_outcome()
+	if profiling:
+		profile_usec[0] += encounter_start - profile_start
+		profile_usec[1] += movement_start - encounter_start
+		profile_usec[2] += resolution_start - movement_start
+		profile_usec[3] += Time.get_ticks_usec() - resolution_start
+		profile_ticks += 1
+
+func starting_total() -> int:
+	return workers_per_colony * colony_count
+
+func colony_color(colony: int) -> Color:
+	return [ACCENT, RIVAL, AZURE][colony]
+
+func enemy_for(colony: int) -> int:
+	var best := -1
+	var distance := INF
+	for candidate in colony_count:
+		if candidate == colony or queen_health[candidate] <= 0: continue
+		var d := nest_position(colony).distance_squared_to(nest_position(candidate))
+		if d < distance: best = candidate; distance = d
+	return best if best >= 0 else (1 if colony == 0 else 0)
+
+func nest_for(i: int) -> Vector2:
+	return nest_position(colonies[i])
+
+func nest_position(colony: int) -> Vector2:
+	if colony == 2: return THIRD_HOME
+	return HOME if (colony == 0) != swapped_sides else RIVAL_HOME
+
+func living_count(colony: int) -> int:
+	if native_enabled and native_kernel: return native_kernel.living_count(self, colony)
+	var result := 0
+	for i in health.size():
+		if colonies[i] == colony and health[i] > 0:
+			result += 1
+	return result
+
+func _prepare_encounters(dt: float) -> void:
+	if native_enabled and native_kernel:
+		native_kernel.prepare_encounters(self, dt)
+	else:
+		_prepare_encounters_reference(dt)
+
+func _prepare_encounters_reference(dt: float) -> void:
+	movement_snapshot = positions.duplicate()
+	layer_snapshot = layers.duplicate()
+	encounter_neighbors.clear()
+	opponents.fill(-1)
+	combat_damage.fill(0)
+	last_attackers.fill(-1)
+	queen_damage.fill(0)
+	bucket_heads.resize(BUCKET_CELLS * colony_count * (colony_count + 1))
+	bucket_heads.fill(-1)
+	bucket_next.resize(health.size())
+	# Reverse insertion makes each linked bucket iterate in original slot order.
+	for i in range(health.size() - 1, -1, -1):
+		if attack_cooldowns[i] > 0: attack_cooldowns[i] = maxf(0, attack_cooldowns[i] - dt)
+		if hit_flashes[i] > 0: hit_flashes[i] = maxf(0, hit_flashes[i] - dt)
+		if health[i] <= 0:
+			continue
+		var cell := Vector2i(positions[i] / BUCKET_SIZE)
+		var bucket := cell.x + cell.y * BUCKET_COLS + ((layers[i] + 1) * colony_count + colonies[i]) * BUCKET_CELLS
+		bucket_next[i] = bucket_heads[bucket]
+		bucket_heads[bucket] = i
+	if not combat_enabled:
+		return
+	# Query only adjacent spatial buckets, rather than every ant against every other.
+	for i in health.size():
+		if health[i] <= 0:
+			continue
+		var p := positions[i]
+		var radius := 34.0 if doctrines[colonies[i]] == 2 else ENCOUNTER_RADIUS
+		if doctrines[colonies[i]] == 1 and carrying[i]:
+			# Steward carriers prioritize getting food home over chasing an enemy.
+			radius = ATTACK_RANGE
+		var nearest := radius * radius
+		var cell := Vector2i(p / BUCKET_SIZE)
+		for enemy_colony in colony_count:
+			if enemy_colony == colonies[i]: continue
+			var enemy_base := ((layers[i] + 1) * colony_count + enemy_colony) * BUCKET_CELLS
+			var key := cell.x + cell.y * BUCKET_COLS + enemy_base
+			if not encounter_neighbors.has(key):
+				var nearby: Array[int] = []
+				# Dense heads avoid hashing vectors or allocating per-bucket arrays.
+				# This broad phase is shared; target choice remains per ant, every tick.
+				for y in range(maxi(0, cell.y - 2), mini(BUCKET_ROWS, cell.y + 3)):
+					for x in range(maxi(0, cell.x - 2), mini(BUCKET_COLS, cell.x + 3)):
+						var other := bucket_heads[x + y * BUCKET_COLS + enemy_base]
+						while other >= 0:
+							nearby.append(other)
+							other = bucket_next[other]
+				encounter_neighbors[key] = nearby
+			for other in encounter_neighbors[key]:
+				var distance := p.distance_squared_to(positions[other])
+				if roles[i] == RECOVERING and distance > ATTACK_RANGE * ATTACK_RANGE: continue
+				if colonies[i] == 0 and layers[i] == SURFACE and distance > ATTACK_RANGE * ATTACK_RANGE:
+					if command_system.is_avoided(p) or command_system.is_avoided(positions[other]): continue
+				if roles[i] == WARDEN and distance > ATTACK_RANGE * ATTACK_RANGE and positions[other].distance_squared_to(worker_order_goals[i]) > 110 * 110: continue
+				if distance < nearest and (layers[i] == SURFACE or _tunnel_line_clear(p, positions[other], layers[i])):
+					nearest = distance
+					opponents[i] = other
+
+func _fight(i: int, dt: float) -> void:
+	var enemy := opponents[i]
+	if layers[i] != layers[enemy] or layers[i] != layer_snapshot[i]:
+		return
+	var direction := movement_snapshot[enemy] - movement_snapshot[i]
+	if direction.length_squared() > 0.01:
+		headings[i] = lerp_angle(headings[i], direction.angle(), minf(1, dt * 10))
+	if direction.length_squared() > 9.0 * 9.0:
+		var destination := movement_snapshot[i].move_toward(movement_snapshot[enemy], 46 * dt)
+		if colonies[i] == 0 and layers[i] == SURFACE: destination = command_system.safe_step(positions[i], destination)
+		if layers[i] == SURFACE or _tunnel_line_clear(positions[i], destination, layers[i]):
+			positions[i] = destination
+	if roles[i] == DIGGER:
+		targets[i] = -1
+		paths[i] = []
+	else:
+		paths[i] = []
+		route_goals[i] = -1
+	trips[i] = 0
+
+func _resolve_attacks() -> void:
+	if not combat_enabled:
+		return
+	# All movement is complete before either side tests reach or deals damage.
+	for i in health.size():
+		var enemy := opponents[i]
+		if health[i] <= 0 or attack_cooldowns[i] > 0 or layers[i] != layer_snapshot[i]:
+			continue
+		if enemy < 0 and (roles[i] != INVADER or layers[i] == SURFACE):
+			continue
+		var bite_bonus := 1.05 if doctrines[colonies[i]] == 2 else 1.0
+		if enemy >= 0 and layers[enemy] == layers[i] and positions[i].distance_squared_to(positions[enemy]) <= ATTACK_RANGE * ATTACK_RANGE and (layers[i] == SURFACE or _tunnel_line_clear(positions[i], positions[enemy], layers[i])):
+			combat_damage[enemy] += ant_rng[i].randf_range(0.85, 1.15) * bite_bonus
+			last_attackers[enemy] = i
+			attack_cooldowns[i] = 0.75
+		elif enemy < 0 and roles[i] == INVADER and layers[i] >= 0 and layers[i] != colonies[i] and queen_health[layers[i]] > 0:
+			var queen := queen_position(layers[i])
+			if positions[i].distance_squared_to(queen) <= 18 * 18 and _tunnel_line_clear(positions[i], queen, layers[i]):
+				queen_damage[layers[i]] += ant_rng[i].randf_range(0.85, 1.15) * bite_bonus
+				attack_cooldowns[i] = 0.75
+
+func _kill_ant(i: int, starved: bool = false) -> void:
+	command_system.record_loss(i, starved)
+	rival_ai.orders.record_loss(i, starved)
+	third_ai.orders.record_loss(i, starved)
+	worker_order_ids[i] = -1
+	worker_order_kinds[i] = 0
+	if selected_ant == i:
+		selected_info = ant_info(i)
+		selected_info.alive = false
+		selected_ant = -1
+		following = false
+	if not starved and last_attackers[i] >= 0:
+		worker_kills[last_attackers[i]] += 1
+		if not selected_info.is_empty() and selected_info.id == worker_ids[last_attackers[i]]:
+			selected_info.kills = worker_kills[last_attackers[i]]
+	if starved:
+		starvation_losses[colonies[i]] += 1
+	else:
+		casualties[colonies[i]] += 1
+	remains.append({"pos": positions[i], "colony": colonies[i], "layer": layers[i], "angle": headings[i], "time": 16.0})
+	if carrying[i]:
+		# A drop can revive an empty patch without changing the food-array size.
+		food_index_size = -1
+		var dropped := false
+		for patch in foods:
+			if patch.get("layer", SURFACE) == layers[i] and positions[i].distance_squared_to(patch.pos) < 20 * 20:
+				patch.amount += 1
+				dropped = true
+				break
+		if not dropped:
+			foods.append({"pos": positions[i], "amount": 1, "initial": 1, "dropped": true, "layer": layers[i]})
+	carrying[i] = 0
+	targets[i] = -1
+	paths[i] = []
+	roles[i] = 0
+	opponents[i] = -1
+	message = "Food stores are empty. Hungry workers are dying." if starved else "A skirmish in the meadow. Fallen carriers drop food that either colony can recover."
+	# A surviving queen and fed brood can rebuild even after the last worker dies.
+
+func chamber_cell(colony: int) -> Vector2i:
+	if colony == 2: return _cell(THIRD_HOME)
+	return HOME_CELL if nest_position(colony) == HOME else Vector2i(COLS - 1 - HOME_CELL.x, HOME_CELL.y)
+
+func entrance_cell(colony: int) -> Vector2i:
+	return chamber_cell(colony) + Vector2i(0, -16)
+
+func queen_position(colony: int) -> Vector2:
+	return _center(chamber_cell(colony)) + Vector2(-14, -5)
+
+func _nest_grid(colony: int) -> PackedByteArray:
+	if colony == 2: return third_earth
+	return earth if nest_position(colony) == HOME else rival_earth
+
+func invaders_in(nest: int) -> int:
+	if native_enabled and native_kernel: return native_kernel.invaders_in(self, nest)
+	var count := 0
+	for i in health.size():
+		if health[i] > 0 and layers[i] == nest and colonies[i] != nest:
+			count += 1
+	return count
+
+func launch_raid(colony: int, requested: int = 12) -> int:
+	if not invasions_enabled or not match_result.is_empty() or queen_health[colony] <= 0:
+		return 0
+	var active := 0
+	var candidates: Array[int] = []
+	for i in health.size():
+		if health[i] <= 0 or colonies[i] != colony:
+			continue
+		if roles[i] == INVADER:
+			active += 1
+		elif layers[i] == SURFACE and roles[i] == FORAGER and carrying[i] == 0 and opponents[i] < 0:
+			candidates.append(i)
+	var capacity := mini(command_system.raid_limit() if colony == 0 else 12, maxi(1, living_count(colony) / 4))
+	var count := mini(requested, maxi(0, capacity - active))
+	var enemy_entrance := nest_position(enemy_for(colony))
+	candidates.sort_custom(func(a: int, b: int) -> bool: return positions[a].distance_squared_to(enemy_entrance) < positions[b].distance_squared_to(enemy_entrance))
+	var sent := 0
+	for i in candidates:
+		if sent >= count:
+			break
+		roles[i] = INVADER
+		trips[i] = 0
+		targets[i] = -1
+		paths[i] = []
+		route_goals[i] = -1
+		sent += 1
+	if sent > 0:
+		next_raids[colony] = elapsed + 60
+		message = "%s colony sends %d workers to the enemy entrance. R orders your next raid." % ["Your" if colony == 0 else "The rival", sent]
+	elif colony == 0:
+		message = "No workers ready for a new raid. Keep foraging or wait for the current party."
+	_update_ui()
+	return sent
+
+func _update_defenses() -> void:
+	for colony in colony_count:
+		if invaders_in(colony) == 0:
+			continue
+		var active := 0
+		var candidates: Array[int] = []
+		for i in health.size():
+			if health[i] <= 0 or colonies[i] != colony:
+				continue
+			if roles[i] == GUARD:
+				active += 1
+			elif layers[i] == SURFACE and roles[i] == FORAGER and carrying[i] == 0 and opponents[i] < 0:
+				candidates.append(i)
+		var home := nest_position(colony)
+		candidates.sort_custom(func(a: int, b: int) -> bool: return positions[a].distance_squared_to(home) < positions[b].distance_squared_to(home))
+		for i in candidates:
+			if active >= 6:
+				break
+			roles[i] = GUARD
+			trips[i] = 0
+			paths[i] = []
+			route_goals[i] = -1
+			active += 1
+
+func _recover_worker(i: int, dt: float) -> void:
+	if (roles[i] == INVADER or roles[i] == GUARD or roles[i] == WARDEN) and health[i] <= 1.2 and carrying[i] == 0:
+		roles[i] = RECOVERING
+		worker_order_ids[i] = -1
+		worker_order_kinds[i] = 0
+		paths[i] = []
+		route_goals[i] = -1
+	if roles[i] != RECOVERING: return
+	var colony: int = colonies[i]
+	if layers[i] == SURFACE and positions[i].distance_squared_to(nest_position(colony)) < 30 * 30 and food_stores[colony] > 0:
+		var healed := minf(3 - health[i], minf(dt * 0.6, food_stores[colony] * 20))
+		health[i] += healed
+		food_stores[colony] -= healed / 20
+		upkeep_spent[colony] += healed / 20
+		if health[i] >= 2.99:
+			roles[i] = FORAGER
+			worker_order_ids[i] = -1
+			worker_order_kinds[i] = 0
+
+func _surface_mission(i: int, dt: float) -> void:
+	if roles[i] == RECOVERING:
+		_move_surface_worker(i, nest_position(colonies[i]), dt)
+		return
+	if roles[i] == WARDEN:
+		var patrol := worker_order_goals[i] + Vector2.from_angle(i * 2.4 + elapsed * 0.15) * 18
+		_move_surface_worker(i, patrol, dt)
+		return
+	var nest: int = enemy_for(colonies[i]) if roles[i] == INVADER else colonies[i]
+	if roles[i] == GUARD and nest_quiet[nest] > 8:
+		roles[i] = FORAGER
+		return
+	var destination := nest_position(nest)
+	if roles[i] == INVADER and worker_order_kinds[i] == command_system.RAID:
+		var target := worker_order_goals[i]
+		for candidate in colony_count:
+			if candidate != colonies[i] and queen_health[candidate] > 0 and target.distance_to(nest_position(candidate)) <= 90: nest = candidate; destination = nest_position(nest); break
+		if target.distance_to(nest_position(nest)) > 90:
+			_move_surface_worker(i, target, dt)
+			return
+	_move_surface_worker(i, destination, dt)
+	if positions[i].distance_squared_to(destination) <= 16 * 16:
+		_enter_nest(i, nest)
+
+func _move_surface_worker(i: int, destination: Vector2, dt: float) -> void:
+	var direction := destination - positions[i]
+	if colonies[i] == 0:
+		var detour: Vector2 = command_system.avoidance_direction(positions[i], destination, i)
+		if detour.length_squared() > 0.01: direction = detour * maxf(50, direction.length())
+	headings[i] = direction.angle()
+	var proposed := positions[i].move_toward(positions[i] + direction, 50 * dt)
+	positions[i] = command_system.safe_step(positions[i], proposed) if colonies[i] == 0 else proposed
+
+func _enter_nest(i: int, nest: int) -> bool:
+	if layers[i] != SURFACE or positions[i].distance_squared_to(nest_position(nest)) > 16 * 16:
+		return false
+	if _nest_grid(nest)[_idx(entrance_cell(nest))] != 1:
+		return false
+	layers[i] = nest
+	trips[i] = 0
+	positions[i] = _center(entrance_cell(nest))
+	paths[i] = []
+	route_goals[i] = -1
+	targets[i] = -1
+	if colonies[i] != nest:
+		nest_quiet[nest] = 0
+		message = "%s nest breached! Defenders are returning through the entrance. Q inspects the tunnels." % ("Your" if nest == 0 else "Rival")
+	return true
+
+func _tunnel_mission(i: int, dt: float) -> void:
+	var nest := layers[i]
+	if roles[i] == INVADER and queen_health[nest] <= 0:
+		roles[i] = RETURNING
+		paths[i] = []
+		route_goals[i] = -1
+	if roles[i] == INVADER:
+		var queen := queen_position(nest)
+		if positions[i].distance_squared_to(queen) > 16 * 16 or not _tunnel_line_clear(positions[i], queen, nest):
+			_navigate_tunnel(i, _cell(queen), dt)
+		else:
+			headings[i] = (queen - positions[i]).angle()
+	elif roles[i] == GUARD and nest_quiet[nest] <= 8:
+		var target := -1
+		var nearest := INF
+		for j in health.size():
+			if health[j] > 0 and layers[j] == nest and colonies[j] != colonies[i]:
+				var distance := positions[i].distance_squared_to(positions[j])
+				if distance < nearest:
+					nearest = distance
+					target = j
+		_navigate_tunnel(i, _cell(positions[target]) if target >= 0 else _cell(queen_position(nest)), dt)
+	else:
+		var recovering: bool = roles[i] == RECOVERING
+		if not recovering: roles[i] = RETURNING
+		_navigate_tunnel(i, entrance_cell(nest), dt)
+		if positions[i].distance_squared_to(_center(entrance_cell(nest))) < 6 * 6:
+			layers[i] = SURFACE
+			positions[i] = nest_position(nest) + Vector2(0, 18)
+			roles[i] = RECOVERING if recovering else FORAGER
+			paths[i] = []
+			route_goals[i] = -1
+			targets[i] = -1
+
+func tunnel_route(start: Vector2i, goal: Vector2i, nest: int) -> Array:
+	var grid := _nest_grid(nest)
+	if not _valid(start) or not _valid(goal) or grid[_idx(start)] != 1 or grid[_idx(goal)] != 1:
+		return []
+	var parents := PackedInt32Array()
+	parents.resize(CELLS)
+	parents.fill(-1)
+	var queue: Array[Vector2i] = [start]
+	parents[_idx(start)] = _idx(start)
+	var head := 0
+	while head < queue.size() and parents[_idx(goal)] == -1:
+		var current := queue[head]
+		head += 1
+		for n in _neighbors(current):
+			var j := _idx(n)
+			if grid[j] == 1 and parents[j] == -1:
+				parents[j] = _idx(current)
+				queue.append(n)
+	if parents[_idx(goal)] == -1:
+		return []
+	var route: Array = []
+	var cursor := _idx(goal)
+	while cursor != _idx(start):
+		route.push_front(Vector2i(cursor % COLS, cursor / COLS))
+		cursor = parents[cursor]
+	return route
+
+func _navigate_tunnel(i: int, goal: Vector2i, dt: float) -> void:
+	var grid := _nest_grid(layers[i])
+	if route_goals[i] != _idx(goal) or (not paths[i].is_empty() and grid[_idx(paths[i][0])] != 1):
+		paths[i] = []
+		route_goals[i] = _idx(goal)
+	if paths[i].is_empty() and _cell(positions[i]) != goal:
+		trips[i] -= dt
+		if trips[i] > 0:
+			return
+		paths[i] = tunnel_route(_cell(positions[i]), goal, layers[i])
+		if not paths[i].is_empty() and positions[i].distance_squared_to(_center(_cell(positions[i]))) > 2 * 2:
+			paths[i].push_front(_cell(positions[i]))
+		trips[i] = 0.3
+	var destination := _center(goal)
+	if not paths[i].is_empty():
+		destination = _center(paths[i][0])
+	elif _cell(positions[i]) != goal:
+		return
+	var direction := destination - positions[i]
+	if direction.length_squared() > 0.01:
+		headings[i] = direction.angle()
+	var next := positions[i].move_toward(destination, 47 * dt)
+	if _tunnel_line_clear(positions[i], next, layers[i]):
+		positions[i] = next
+	if not paths[i].is_empty() and positions[i].distance_squared_to(destination) < 0.5:
+		paths[i].pop_front()
+
+func _tunnel_line_clear(a: Vector2, b: Vector2, nest: int) -> bool:
+	var grid := _nest_grid(nest)
+	if not Rect2(Vector2.ZERO, SIZE).has_point(a) or not Rect2(Vector2.ZERO, SIZE).has_point(b):
+		return false
+	# Traverse every crossed tile, including both sides of an exact grid corner.
+	var current := _cell(a)
+	var goal := _cell(b)
+	var direction := b - a
+	var step_cell := Vector2i(int(signf(direction.x)), int(signf(direction.y)))
+	var delta_x := TILE / absf(direction.x) if direction.x != 0 else INF
+	var delta_y := TILE / absf(direction.y) if direction.y != 0 else INF
+	var edge_x := (current.x + (1 if direction.x > 0 else 0)) * TILE
+	var edge_y := (current.y + (1 if direction.y > 0 else 0)) * TILE
+	var next_x := (edge_x - a.x) / direction.x if direction.x != 0 else INF
+	var next_y := (edge_y - a.y) / direction.y if direction.y != 0 else INF
+	for crossed in COLS + ROWS + 4:
+		if not _valid(current) or grid[_idx(current)] != 1:
+			return false
+		if current == goal:
+			return true
+		if is_equal_approx(next_x, next_y):
+			var side_x := current + Vector2i(step_cell.x, 0)
+			var side_y := current + Vector2i(0, step_cell.y)
+			if not _valid(side_x) or not _valid(side_y) or grid[_idx(side_x)] != 1 or grid[_idx(side_y)] != 1:
+				return false
+			current += step_cell
+			next_x += delta_x
+			next_y += delta_y
+		elif next_x < next_y:
+			current.x += step_cell.x
+			next_x += delta_x
+		else:
+			current.y += step_cell.y
+			next_y += delta_y
+	return false
+
+func _check_outcome() -> void:
+	if not match_result.is_empty(): return
+	var rivals_alive := 0
+	for c in range(1, colony_count):
+		if queen_health[c] > 0: rivals_alive += 1
+	if queen_health[0] > 0 and rivals_alive > 0: return
+	if queen_health[0] <= 0 and rivals_alive == 0:
+		match_result = "draw"
+		message = "DRAW - All queens died."
+	elif rivals_alive == 0:
+		match_result = "victory"
+		message = "VICTORY - All rival queens have died."
+	else:
+		match_result = "defeat"
+		message = "DEFEAT - Your queen died: %s." % queen_death_causes[0]
+	painting = false
+	result_dismissed = false
+	_update_ui()
+	queue_redraw()
+
+func upkeep_rate(colony: int, population: int = -1) -> float:
+	if population < 0: population = living_count(colony)
+	var rate: float = (0.06 if queen_health[colony] > 0 else 0.0) + population * 0.004 + brood[colony].size() * 0.006
+	return rate * (1.15 if doctrines[colony] == 2 else 1.0)
+
+func stage_duration(colony: int, stage: int) -> float:
+	return STAGE_TIMES[stage] * (0.85 if doctrines[colony] == 1 else 1.0)
+
+func stage_feed_cost(colony: int, stage: int) -> float:
+	# One food to lay; three to feed a larva; three/four to finish pupation.
+	return 3.0 if stage == 0 or doctrines[colony] == 1 else 4.0
+
+func brood_counts(colony: int) -> Vector3i:
+	var result := Vector3i.ZERO
+	for young in brood[colony]:
+		result[young.stage] += 1
+	return result
+
+func _update_nurseries(dt: float) -> void:
+	for colony in colony_count:
+		# Count once per colony, then track the deaths/births in this update locally.
+		# External callers still get a fresh count from upkeep_rate's default path.
+		var population := living_count(colony)
+		var required := upkeep_rate(colony, population) * dt
+		var paid := minf(food_stores[colony], required)
+		food_stores[colony] = maxf(0, food_stores[colony] - paid)
+		upkeep_spent[colony] += paid
+		var shortage := maxf(0, required - paid) / maxf(required, 0.000001)
+		queen_hungry[colony] = 1 if shortage > 0.001 else 0
+		if queen_health[colony] > 0:
+			if shortage > 0:
+				queen_health[colony] = maxf(0, queen_health[colony] - dt * 0.65 * shortage)
+				if queen_health[colony] == 0:
+						queen_death_causes[colony] = "starvation"
+			else:
+				queen_health[colony] = minf(100, queen_health[colony] + dt * 0.4)
+		if shortage > 0:
+			for i in health.size():
+				if colonies[i] == colony and health[i] > 0:
+					health[i] = maxf(0, health[i] - dt * 0.04 * shortage)
+					if health[i] == 0:
+						_kill_ant(i, true)
+						population -= 1
+		# Feeding the colony takes priority. Keep a small reserve before breeding.
+		var reserve := maxf(8, upkeep_rate(colony, population) * 15)
+		for k in range(brood[colony].size() - 1, -1, -1):
+			var young: Dictionary = brood[colony][k]
+			if shortage < 0.001 or young.stage == 2:
+				young.age += dt
+			if young.age < stage_duration(colony, young.stage):
+				continue
+			if young.stage < 2:
+				var cost := stage_feed_cost(colony, young.stage)
+				if food_stores[colony] >= cost + reserve:
+					food_stores[colony] -= cost
+					brood_spent[colony] += cost
+					young.stage += 1
+					young.age = 0.0
+			elif population < POPULATION_CAP:
+				_spawn_worker(colony)
+				population += 1
+				brood[colony].remove_at(k)
+		if queen_health[colony] > 0 and shortage < 0.001 and brood[colony].size() < BROOD_CAP and population + brood[colony].size() < POPULATION_CAP:
+			var interval := EGG_INTERVAL * (0.85 if doctrines[colony] == 1 else 1.0)
+			egg_clocks[colony] = minf(interval, egg_clocks[colony] + dt)
+			if egg_clocks[colony] >= interval and food_stores[colony] >= 1 + reserve:
+				food_stores[colony] -= 1
+				brood_spent[colony] += 1
+				brood[colony].append({"stage": 0, "age": 0.0})
+				egg_clocks[colony] = 0
+
+func _spawn_worker(colony: int) -> void:
+	var slot := -1
+	for i in health.size():
+		if colonies[i] == colony and health[i] <= 0:
+			slot = i
+			break
+	if slot < 0:
+		slot = health.size()
+		colony_workers[colony].append(slot)
+		var count := slot + 1
+		positions.resize(count)
+		worker_ids.resize(count)
+		born_at.resize(count)
+		deliveries.resize(count)
+		worker_kills.resize(count)
+		walked.resize(count)
+		last_attackers.resize(count)
+		layers.resize(count)
+		route_goals.resize(count)
+		headings.resize(count)
+		carrying.resize(count)
+		roles.resize(count)
+		trips.resize(count)
+		targets.resize(count)
+		colonies.resize(count)
+		health.resize(count)
+		attack_cooldowns.resize(count)
+		worker_order_ids.resize(count)
+		worker_order_kinds.resize(count)
+		worker_order_goals.resize(count)
+		opponents.resize(count)
+		hit_flashes.resize(count)
+		combat_damage.resize(count)
+		paths.append([])
+		ant_rng.append(RandomNumberGenerator.new())
+	colonies[slot] = colony
+	worker_order_ids[slot] = -1
+	worker_order_kinds[slot] = 0
+	worker_order_goals[slot] = Vector2.ZERO
+	worker_ids[slot] = next_worker_id
+	next_worker_id += 1
+	born_at[slot] = elapsed
+	deliveries[slot] = 0
+	worker_kills[slot] = 0
+	walked[slot] = 0
+	last_attackers[slot] = -1
+	layers[slot] = SURFACE
+	route_goals[slot] = -1
+	ant_rng[slot].seed = world_seed + slot * 104729 + (births[colony] + 1) * 1000003
+	var angle := ant_rng[slot].randf() * TAU
+	if swapped_sides: angle = PI - angle
+	positions[slot] = nest_position(colony) + Vector2.from_angle(angle) * 15
+	headings[slot] = angle
+	health[slot] = 3
+	carrying[slot] = 0
+	roles[slot] = 0
+	trips[slot] = 0
+	targets[slot] = -1
+	opponents[slot] = -1
+	hit_flashes[slot] = 0
+	combat_damage[slot] = 0
+	attack_cooldowns[slot] = 0.75
+	paths[slot] = []
+	for i in opponents.size():
+		if opponents[i] == slot:
+			opponents[i] = -1
+	births[colony] += 1
+
+func _forage(i: int, dt: float) -> void:
+	var p := positions[i]
+	var worker_rng := ant_rng[i]
+	var nest := nest_for(i)
+	var own_food_scent: PackedFloat32Array = [food_scent, rival_food_scent, third_food_scent][colonies[i]]
+	var own_home_scent: PackedFloat32Array = [home_scent, rival_home_scent, third_home_scent][colonies[i]]
+	var angle := headings[i]
+	trips[i] += dt
+	var desired := Vector2.from_angle(angle)
+	var travel_goal := p + desired * 150
+	if carrying[i]:
+		travel_goal = nest
+		desired = (nest - p).normalized()
+		angle = lerp_angle(angle, desired.angle(), minf(1, dt * 6))
+		_deposit(own_food_scent, p, 0.6 / (1.0 + trips[i] * 0.018))
+		if p.distance_squared_to(nest) < 23 * 23:
+			carrying[i] = 0
+			if colonies[i] == 0:
+				delivered += 1
+			elif colonies[i] == 1:
+				rival_delivered += 1
+			else: third_delivered += 1
+			food_stores[colonies[i]] += 1
+			deliveries[i] += 1
+			trips[i] = 0
+			angle += PI + worker_rng.randf_range(-0.6, 0.6) * (-1 if swapped_sides else 1)
+			if colonies[i] == 0 and delivered == 1:
+				message = "First food delivered. Returning workers leave a trail for other scouts."
+	else:
+		_deposit(own_home_scent, p, 0.16 / (1.0 + trips[i] * 0.06))
+		var nearest := -1
+		var best_dist := 86.0 * 86.0
+		nearest = _nearest_food(p, colonies[i] == 0)
+		if nearest >= 0: best_dist = p.distance_squared_to(foods[nearest].pos)
+		if nearest >= 0:
+			var food_pos: Vector2 = foods[nearest].pos
+			travel_goal = food_pos
+			angle = lerp_angle(angle, (food_pos - p).angle(), minf(1, dt * 7))
+			if best_dist < 15 * 15:
+				foods[nearest].amount -= 1
+				carrying[i] = 1
+				trips[i] = 0
+				angle = (nest - p).angle()
+		else:
+			# Three local antenna samples. Keep heading inertia to avoid orbiting a peak.
+			var best_angle := angle
+			var forward := _sample(own_food_scent, p + Vector2.from_angle(angle) * 27) * 1.06
+			var left := _sample(own_food_scent, p + Vector2.from_angle(angle - 0.65) * 27)
+			var right := _sample(own_food_scent, p + Vector2.from_angle(angle + 0.65) * 27)
+			# Compare both antennae together; sequential thresholding favored one turn.
+			best_angle += scent_turn(forward, left, right)
+			angle = lerp_angle(angle, best_angle, dt * 3.5)
+			angle += worker_rng.randf_range(-1, 1) * 1.9 * sqrt(dt) * (-1 if swapped_sides else 1)
+			if p.distance_squared_to(nest) < 38 * 38:
+				angle = lerp_angle(angle, (p - nest).angle(), dt * 3)
+			travel_goal = p + Vector2.from_angle(angle) * 150
+			if worker_order_kinds[i] == command_system.FORAGE and p.distance_squared_to(worker_order_goals[i]) > 90 * 90:
+				travel_goal = worker_order_goals[i]
+				angle = lerp_angle(angle, (travel_goal - p).angle(), minf(1, dt * 4))
+	if colonies[i] == 0 and not avoid_points.is_empty():
+		var detour: Vector2 = command_system.avoidance_direction(p, travel_goal, i)
+		if detour.length_squared() > 0.01: angle = lerp_angle(angle, detour.angle(), minf(1, dt * 10))
+	if food_stores[colonies[i]] > 0 and p.distance_squared_to(nest) < 30 * 30:
+		health[i] = minf(3, health[i] + dt * 0.6)
+	var forage_bonus := 1.08 if doctrines[colonies[i]] == 1 else 1.0
+	var velocity := Vector2.from_angle(angle) * (43.0 if carrying[i] else 52.0) * forage_bonus
+	var proposed := p + velocity * dt
+	p = command_system.safe_step(p, proposed) if colonies[i] == 0 else proposed
+	if p.x < 9 or p.x > SIZE.x - 9:
+		angle = PI - angle
+		p.x = clampf(p.x, 9, SIZE.x - 9)
+	if p.y < 9 or p.y > SIZE.y - 9:
+		angle = -angle
+		p.y = clampf(p.y, 9, SIZE.y - 9)
+	positions[i] = p
+	headings[i] = angle
+
+func _rebuild_food_index() -> void:
+	food_buckets.clear()
+	food_neighbors.clear()
+	for f in foods.size():
+		var patch: Dictionary = foods[f]
+		if patch.amount <= 0 or patch.get("layer", SURFACE) != SURFACE: continue
+		var bucket := Vector2i(Vector2(patch.pos) / FOOD_BUCKET_SIZE)
+		if not food_buckets.has(bucket): food_buckets[bucket] = []
+		food_buckets[bucket].append(f)
+	food_index_size = foods.size()
+
+func _nearest_food(p: Vector2, respect_avoid: bool = false) -> int:
+	if food_index_size != foods.size(): _rebuild_food_index()
+	var cell := Vector2i(p / FOOD_BUCKET_SIZE)
+	if not food_neighbors.has(cell):
+		var nearby: Array = []
+		for y in range(-1, 2):
+			for x in range(-1, 2):
+				var bucket = food_buckets.get(cell + Vector2i(x, y))
+				if bucket != null: nearby.append_array(bucket)
+		food_neighbors[cell] = nearby
+	var nearest := -1
+	var best_dist := 86.0 * 86.0
+	for f in food_neighbors[cell]:
+		if foods[f].amount <= 0: continue
+		if respect_avoid and command_system.is_avoided(foods[f].pos): continue
+		var distance: float = p.distance_squared_to(foods[f].pos)
+		if distance < best_dist or (nearest >= 0 and distance == best_dist and f < nearest):
+			best_dist = distance
+			nearest = f
+	return nearest
+
+func _deposit(field: PackedFloat32Array, p: Vector2, strength: float) -> void:
+	var c := _cell(p)
+	var j := _idx(c)
+	field[j] = minf(5.0, field[j] + strength * STEP * 9)
+	if scent_active[j] == 0:
+		scent_active[j] = 1
+		active_scent.append(j)
+	trails_dirty = true
+	# Keep the same four deposits without allocating neighbor arrays or vectors.
+	var spread := strength * STEP * 2.2
+	if c.x > 0:
+		field[j - 1] = minf(5.0, field[j - 1] + spread)
+		if scent_active[j - 1] == 0:
+			scent_active[j - 1] = 1
+			active_scent.append(j - 1)
+	if c.x < COLS - 1:
+		field[j + 1] = minf(5.0, field[j + 1] + spread)
+		if scent_active[j + 1] == 0:
+			scent_active[j + 1] = 1
+			active_scent.append(j + 1)
+	if c.y > 0:
+		field[j - COLS] = minf(5.0, field[j - COLS] + spread)
+		if scent_active[j - COLS] == 0:
+			scent_active[j - COLS] = 1
+			active_scent.append(j - COLS)
+	if c.y < ROWS - 1:
+		field[j + COLS] = minf(5.0, field[j + COLS] + spread)
+		if scent_active[j + COLS] == 0:
+			scent_active[j + COLS] = 1
+			active_scent.append(j + COLS)
+
+func _sample(field: PackedFloat32Array, p: Vector2) -> float:
+	return field[clampi(int(p.y / TILE), 0, ROWS - 1) * COLS + clampi(int(p.x / TILE), 0, COLS - 1)]
+
+func scent_turn(forward: float, left: float, right: float) -> float:
+	if maxf(left, right) > forward + 0.025 and absf(left - right) > 0.025:
+		return -0.65 if left > right else 0.65
+	return 0.0
+
+func pending_count() -> int:
+	return designated_cells.size()
+
+func digger_count() -> int:
+	var result := 0
+	for i in health.size():
+		if colonies[i] == 0 and health[i] > 0:
+			result += 1 if roles[i] == DIGGER else 0
+	return result
+
+func _allocate_workers() -> void:
+	var needed := mini(command_system.digging_limit(), living_count(0)) if pending_count() > 0 else 0
+	var active := digger_count()
+	if active < needed:
+		# Recruit the nearest empty-handed ants through the shared nest entrance.
+		var available: Array[int] = []
+		for i in health.size():
+			if colonies[i] == 0 and health[i] > 0 and roles[i] == FORAGER and layers[i] == SURFACE and carrying[i] == 0 and opponents[i] == -1:
+				available.append(i)
+		available.sort_custom(func(a: int, b: int) -> bool: return positions[a].distance_squared_to(HOME) < positions[b].distance_squared_to(HOME))
+		for i in available:
+			if active >= needed:
+				break
+			roles[i] = 1
+			trips[i] = 0
+			targets[i] = -1
+			paths[i] = []
+			active += 1
+	elif active > needed:
+		for i in health.size():
+			if active <= needed: break
+			if colonies[i] == 0 and roles[i] == 1:
+				roles[i] = RETURNING if layers[i] >= 0 else FORAGER
+				trips[i] = 0
+				targets[i] = -1
+				paths[i] = []
+				active -= 1
+		message = "Excavation complete. Workers return to foraging." if needed == 0 and pending_count() == 0 else "Digging priority changed; unfinished orders remain queued."
+
+func _dig(i: int, dt: float) -> void:
+	var target := targets[i]
+	if target >= 0 and (orders[target] == 0 or earth[target] != 0):
+		targets[i] = -1
+		paths[i] = []
+		target = -1
+	if target < 0:
+		trips[i] -= dt
+		if trips[i] > 0:
+			return
+		_assign_dig_job(i)
+		trips[i] = rng.randf_range(0.3, 0.6)
+		return
+	var path: Array = paths[i]
+	if not path.is_empty():
+		var destination := _center(path[0]) + Vector2.from_angle(i * 2.4) * 2.8
+		var direction := destination - positions[i]
+		headings[i] = direction.angle()
+		positions[i] = positions[i].move_toward(destination, dt * 47)
+		if positions[i].distance_squared_to(destination) < 1:
+			path.pop_front()
+		return
+	var target_center := _center(Vector2i(target % COLS, target / COLS))
+	headings[i] = (target_center - positions[i]).angle()
+	excavation[target] += dt * 0.34
+	if excavation[target] >= 1.0:
+		earth[target] = 1
+		_set_order(target, false)
+		open_cells[0][target] = true
+		terrain_images[0].set_pixel(target % COLS, target / COLS, Color("1c201b"))
+		terrain_dirty[0] = 1
+		dug += 1
+		targets[i] = -1
+		trips[i] = 0
+
+func _assign_dig_job(i: int) -> void:
+	# One BFS through reachable tunnels finds every accessible work face.
+	var start := _cell(positions[i])
+	var parents := PackedInt32Array()
+	parents.resize(CELLS)
+	parents.fill(-1)
+	var queue: Array[Vector2i] = [start]
+	parents[_idx(start)] = _idx(start)
+	var head := 0
+	var best := -1
+	var stand := start
+	var best_score := INF
+	var assigned_counts := {}
+	for target in targets:
+		if target >= 0: assigned_counts[target] = assigned_counts.get(target, 0) + 1
+	while head < queue.size():
+		var c := queue[head]
+		head += 1
+		for n in _neighbors(c):
+			var j := _idx(n)
+			if earth[j] == 0 and orders[j] == 1:
+				var assigned: int = assigned_counts.get(j, 0)
+				# Only two ants fit at one work face; the rest wait for room.
+				if assigned >= 2:
+					continue
+				var score := positions[i].distance_squared_to(_center(c)) + assigned * 22000.0
+				if score < best_score:
+					best_score = score
+					best = j
+					stand = c
+			if earth[j] == 1 and parents[j] == -1:
+				parents[j] = _idx(c)
+				queue.append(n)
+	if best < 0:
+		return
+	targets[i] = best
+	var route: Array = []
+	var cursor := _idx(stand)
+	while cursor != _idx(start):
+		route.push_front(Vector2i(cursor % COLS, cursor / COLS))
+		cursor = parents[cursor]
+	paths[i] = route
+
+func designate(c: Vector2i, connect_to_nest: bool = true, erase: bool = false) -> void:
+	if not _valid(c) or not match_result.is_empty():
+		return
+	if connect_to_nest and not erase and earth[_idx(c)] == 0:
+		_connect_designation(c)
+	for y in range(c.y - 1, c.y + 2):
+		for x in range(c.x - 1, c.x + 2):
+			var n := Vector2i(x, y)
+			if _valid(n) and earth[_idx(n)] == 0:
+				_set_order(_idx(n), not erase)
+	message = "Designation erased. Excavated tunnels remain open." if erase else "Tunnel marked. Up to 12 workers will excavate from the nearest open tunnel."
+
+func _connect_designation(start: Vector2i) -> void:
+	# Search through soil, routing around stone, to connect a new stroke to the nest.
+	var parents := PackedInt32Array()
+	parents.resize(CELLS)
+	parents.fill(-1)
+	var queue: Array[Vector2i] = [start]
+	parents[_idx(start)] = _idx(start)
+	var head := 0
+	var goal := -1
+	while head < queue.size():
+		var c := queue[head]
+		head += 1
+		var j := _idx(c)
+		if earth[j] == 1:
+			goal = j
+			break
+		for n in _neighbors(c):
+			var k := _idx(n)
+			if earth[k] != 2 and parents[k] == -1:
+				parents[k] = j
+				queue.append(n)
+	if goal == -1:
+		return
+	var cursor := goal
+	while cursor != _idx(start):
+		if earth[cursor] == 0:
+			_set_order(cursor, true)
+		cursor = parents[cursor]
+	_set_order(_idx(start), true)
+
+func _build_map_view() -> void:
+	world_clip = Control.new()
+	world_clip.position = ORIGIN
+	world_clip.size = VIEW_SIZE
+	world_clip.clip_contents = true
+	world_clip.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(world_clip)
+	decor_canvas = Node2D.new()
+	decor_canvas.set_script(load("res://scripts/map_view.gd"))
+	decor_canvas.colony = self
+	decor_canvas.decoration = true
+	world_clip.add_child(decor_canvas)
+	world_canvas = Node2D.new()
+	world_canvas.set_script(load("res://scripts/map_view.gd"))
+	world_canvas.colony = self
+	world_canvas.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	world_clip.add_child(world_canvas)
+	mini_canvas = Node2D.new()
+	mini_canvas.set_script(load("res://scripts/map_view.gd"))
+	mini_canvas.colony = self
+	mini_canvas.minimap = true
+	mini_canvas.position = MINI_RECT.position
+	mini_canvas.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	add_child(mini_canvas)
+
+func _set_order(j: int, value: bool) -> void:
+	orders[j] = 1 if value else 0
+	if value: designated_cells[j] = true
+	else: designated_cells.erase(j)
+
+func _rebuild_map_images() -> void:
+	terrain_images.clear()
+	terrain_textures.clear()
+	open_cells = [{}, {}, {}]
+	for side in colony_count:
+		var grid := earth if side == 0 else (rival_earth if side == 1 else third_earth)
+		var picture := Image.create(COLS, ROWS, false, Image.FORMAT_RGBA8)
+		for y in ROWS:
+			for x in COLS:
+				var j := y * COLS + x
+				var color := Color("44372c") if (x * 7 + y * 11) % 13 else Color("493b2e")
+				if grid[j] == 1:
+					color = Color("1c201b")
+					open_cells[side][j] = true
+				elif grid[j] == 2: color = Color("626059")
+				picture.set_pixel(x, y, color)
+		terrain_images.append(picture)
+		terrain_textures.append(ImageTexture.create_from_image(picture))
+	terrain_dirty.fill(0)
+	trail_image = Image.create(COLS, ROWS, false, Image.FORMAT_RGBA8)
+	trail_image.fill(Color.TRANSPARENT)
+	trail_texture = ImageTexture.create_from_image(trail_image)
+	trails_dirty = true
+
+func _refresh_map_images() -> void:
+	for side in colony_count:
+		if terrain_dirty[side]:
+			terrain_textures[side].update(terrain_images[side])
+			terrain_dirty[side] = 0
+	if trails_dirty and not underground:
+		if native_enabled and native_kernel:
+			trail_image.set_data(COLS, ROWS, false, Image.FORMAT_RGBA8, native_kernel.trail_pixels(self))
+		else:
+			for j in active_scent:
+				var color := Color(0.38, 0.7, 0.85, minf(home_scent[j] * 0.065, 0.16))
+				color = color.blend(Color(0.68, 0.88, 0.4, minf(food_scent[j] * 0.115, 0.48)))
+				color = color.blend(Color(0.96, 0.43, 0.46, minf(rival_food_scent[j] * 0.115, 0.48)))
+				if colony_count == 3: color = color.blend(Color(0.35, 0.68, 0.96, minf(third_food_scent[j] * 0.115, 0.48)))
+				trail_image.set_pixel(j % COLS, j / COLS, color)
+		trail_texture.update(trail_image)
+		trails_dirty = false
+
+func screen_to_world(point: Vector2) -> Vector2:
+	return camera_center + (point - ORIGIN - VIEW_SIZE * 0.5) / camera_zoom
+
+func world_to_screen(point: Vector2) -> Vector2:
+	return ORIGIN + VIEW_SIZE * 0.5 + (point - camera_center) * camera_zoom
+
+func visible_world_rect() -> Rect2:
+	return Rect2(camera_center - VIEW_SIZE / camera_zoom * 0.5, VIEW_SIZE / camera_zoom).intersection(Rect2(Vector2.ZERO, SIZE))
+
+func _sync_camera() -> void:
+	camera_zoom = clampf(camera_zoom, 0.33333334, 3.5)
+	var half := VIEW_SIZE / camera_zoom * 0.5
+	camera_center.x = clampf(camera_center.x, minf(half.x, SIZE.x * 0.5), maxf(SIZE.x - half.x, SIZE.x * 0.5))
+	camera_center.y = clampf(camera_center.y, minf(half.y, SIZE.y * 0.5), maxf(SIZE.y - half.y, SIZE.y * 0.5))
+	world_canvas.scale = Vector2.ONE * camera_zoom
+	world_canvas.position = VIEW_SIZE * 0.5 - camera_center * camera_zoom
+	decor_canvas.scale = world_canvas.scale
+	decor_canvas.position = world_canvas.position
+	decor_canvas.visible = not underground
+	world_canvas.queue_redraw()
+	mini_canvas.queue_redraw()
+
+func _activate_camera_view() -> void:
+	var next := inspected_colony if underground else SURFACE
+	if next != active_camera_layer:
+		camera_centers[active_camera_layer + 1] = camera_center
+		camera_zooms[active_camera_layer + 1] = camera_zoom
+		active_camera_layer = next
+		camera_center = camera_centers[next + 1]
+		camera_zoom = camera_zooms[next + 1]
+		dragging = false
+		painting = false
+	_sync_camera()
+
+func zoom_at(point: Vector2, factor: float) -> void:
+	var anchor := screen_to_world(point)
+	camera_zoom = clampf(camera_zoom * factor, 0.33333334, 3.5)
+	camera_center = anchor - (point - ORIGIN - VIEW_SIZE * 0.5) / camera_zoom
+	following = false
+	_sync_camera()
+
+func focus_nest() -> void:
+	following = false
+	camera_center = _center(chamber_cell(inspected_colony)) if underground else nest_position(0)
+	camera_zoom = 1.3 if underground else 1.0
+	_sync_camera()
+	_update_ui()
+
+func fit_world() -> void:
+	following = false
+	camera_center = SIZE * 0.5
+	camera_zoom = minf(VIEW_SIZE.x / SIZE.x, VIEW_SIZE.y / SIZE.y)
+	_sync_camera()
+	_update_ui()
+
+func _toggle_dig_mode() -> void:
+	if not match_result.is_empty(): return
+	if not underground or inspected_colony != 0:
+		inspected_colony = 0
+		set_view(true)
+		dig_mode = true
+	else: dig_mode = not dig_mode
+	painting = false
+	_update_ui()
+
+func _map_ui_contains(point: Vector2) -> bool:
+	return MINI_RECT.has_point(point) or (is_instance_valid(labor_panel) and labor_panel.visible and Rect2(labor_panel.position, labor_panel.size).has_point(point)) or (is_instance_valid(rival_panel) and rival_panel.visible and Rect2(rival_panel.position, rival_panel.size).has_point(point)) or (is_instance_valid(inspector_panel) and inspector_panel.visible and Rect2(inspector_panel.position, inspector_panel.size).has_point(point)) or (is_instance_valid(result_panel) and result_panel.visible and Rect2(result_panel.position, result_panel.size).has_point(point))
+
+func set_command_tool(kind: int) -> void:
+	command_tool = clampi(kind, 0, 4)
+	if kind > 0:
+		set_view(false)
+		dig_mode = false
+		selected_ant = -1
+		selected_info.clear()
+	_update_ui()
+
+func place_surface_order(kind: int, point: Vector2) -> bool:
+	var accepted: bool = command_system.issue(kind, point)
+	_update_ui()
+	world_canvas.queue_redraw()
+	mini_canvas.queue_redraw()
+	return accepted
+
+func clear_surface_orders() -> void:
+	command_system.clear()
+	_update_ui()
+
+func set_labor_priority(category: int, value: int) -> void:
+	command_system.set_priority(category, value)
+	_update_ui()
+
+func toggle_labor_panel() -> void:
+	labor_panel.visible = not labor_panel.visible
+	if labor_panel.visible: rival_panel.visible = false
+	_update_ui()
+
+func focus_loss_hotspot() -> void:
+	if command_system.hotspot.is_empty(): return
+	var hotspot: Dictionary = command_system.hotspot
+	if hotspot.layer >= 0: inspected_colony = hotspot.layer
+	set_view(hotspot.layer >= 0)
+	camera_center = hotspot.pos
+	camera_zoom = 1.5
+	show_loss_hotspot = true
+	_sync_camera()
+
+func toggle_rival_plan() -> void:
+	rival_panel.visible = not rival_panel.visible
+	if rival_panel.visible: labor_panel.visible = false
+	_update_ui()
+
+func _pick_ant(point: Vector2) -> int:
+	var best := -1
+	var distance := pow(maxf(7, 10 / camera_zoom), 2)
+	for i in health.size():
+		if health[i] > 0 and layers[i] == active_camera_layer:
+			var d := positions[i].distance_squared_to(point)
+			if d < distance:
+				distance = d
+				best = i
+	return best
+
+func select_ant(i: int) -> void:
+	selected_ant = i
+	following = false
+	selected_info = ant_info(i) if i >= 0 else {}
+	_update_ui()
+
+func ant_info(i: int) -> Dictionary:
+	var moving_speed := 47.0 if layers[i] >= 0 else 50.0
+	if opponents[i] >= 0: moving_speed = 46.0
+	elif roles[i] == FORAGER:
+		moving_speed = (43.0 if carrying[i] else 52.0) * (1.08 if doctrines[colonies[i]] == 1 else 1.0)
+	return {"id": worker_ids[i], "colony": colonies[i], "alive": health[i] > 0, "health": health[i], "age": maxf(0, elapsed - born_at[i]), "role": roles[i], "layer": layers[i], "cargo": carrying[i], "delivered": deliveries[i], "kills": worker_kills[i], "walked": walked[i], "speed": moving_speed, "bite": 1.05 if doctrines[colonies[i]] == 2 else 1.0, "cooldown": attack_cooldowns[i], "pos": positions[i], "order": "Recover at own nest" if roles[i] == RECOVERING else ("%s #%d" % [command_system.NAMES[worker_order_kinds[i]], worker_order_ids[i]] if worker_order_ids[i] >= 0 else "Autonomous")}
+
+func _toggle_follow() -> void:
+	if selected_ant >= 0 and health[selected_ant] > 0:
+		following = not following
+	_update_ui()
+
+func _go_to_ant() -> void:
+	if selected_info.is_empty(): return
+	var layer: int = selected_info.layer
+	underground = layer >= 0
+	if underground: inspected_colony = layer
+	_activate_camera_view()
+	camera_center = selected_info.pos
+	_sync_camera()
+	_update_ui()
+
+func _draw_minimap(canvas: CanvasItem) -> void:
+	canvas.draw_style_box(_style(Color("14231d"), 8, Color("45604b")), Rect2(Vector2.ZERO, MINI_RECT.size))
+	canvas.draw_string(bold_font, Vector2(9, 18), "WORLD OVERVIEW", HORIZONTAL_ALIGNMENT_LEFT, -1, 10, MUTED)
+	canvas.draw_rect(MINI_MAP, Color("294030") if not underground else Color("44372c"))
+	if underground:
+		var side := inspected_colony if inspected_colony == 2 else (0 if nest_position(inspected_colony) == HOME else 1)
+		canvas.draw_texture_rect(terrain_textures[side], MINI_MAP, false)
+	else:
+		for patch in foods:
+			if patch.amount > 0 and patch.get("layer", SURFACE) == SURFACE:
+				canvas.draw_circle(MINI_MAP.position + patch.pos / SIZE * MINI_MAP.size, 1.7, GREEN)
+	# One primitive batch replaces a circle draw command for every worker.
+	var dots := PackedVector2Array()
+	var colors := PackedColorArray()
+	if native_enabled and native_kernel:
+		var batch: Dictionary = native_kernel.minimap_batch(self, active_camera_layer, MINI_MAP.position, MINI_MAP.size)
+		dots = batch.points
+		colors = batch.colors
+	else:
+		for i in health.size():
+			if health[i] > 0 and layers[i] == active_camera_layer:
+				var p := MINI_MAP.position + positions[i] / SIZE * MINI_MAP.size
+				dots.append(p - Vector2(0.6, 0))
+				dots.append(p + Vector2(0.6, 0))
+				var tint := colony_color(colonies[i])
+				colors.append(tint)
+	if not dots.is_empty(): canvas.draw_multiline_colors(dots, colors, 1.2)
+	if not underground:
+		for marker in command_system.markers:
+			var point: Vector2 = MINI_MAP.position + marker.pos / SIZE * MINI_MAP.size
+			canvas.draw_circle(point, 3, command_system.COLORS[marker.kind])
+	for colony in colony_count:
+		var p := queen_position(colony) if underground else nest_position(colony)
+		if not underground or colony == inspected_colony:
+			canvas.draw_circle(MINI_MAP.position + p / SIZE * MINI_MAP.size, 3, colony_color(colony))
+	var visible := visible_world_rect()
+	canvas.draw_rect(Rect2(MINI_MAP.position + visible.position / SIZE * MINI_MAP.size, visible.size / SIZE * MINI_MAP.size), Color(0.9, 0.94, 0.85, 0.12))
+	canvas.draw_rect(Rect2(MINI_MAP.position + visible.position / SIZE * MINI_MAP.size, visible.size / SIZE * MINI_MAP.size), INK, false, 1)
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo:
+		match event.keycode:
+			KEY_TAB:
+				set_view(not underground)
+				get_viewport().set_input_as_handled()
+			KEY_SPACE: _toggle_pause()
+			KEY_F: _toggle_trails()
+			KEY_Q: _inspect_nursery()
+			KEY_I: toggle_rival_plan()
+			KEY_R: place_surface_order(command_system.RAID, nest_position(enemy_for(0)))
+			KEY_4: set_command_tool(1)
+			KEY_5: set_command_tool(2)
+			KEY_6: set_command_tool(3)
+			KEY_7: set_command_tool(4)
+			KEY_L: toggle_labor_panel()
+			KEY_G: _toggle_dig_mode()
+			KEY_H, KEY_HOME: focus_nest()
+			KEY_0: fit_world()
+			KEY_C: _toggle_follow()
+			KEY_ESCAPE:
+				command_tool = 0
+				labor_panel.visible = false
+				rival_panel.visible = false
+				select_ant(-1)
+				dig_mode = false
+				painting = false
+				dragging = false
+			KEY_BRACKETLEFT: _set_speed(0.25)
+			KEY_BRACKETRIGHT: _set_speed(0.5)
+			KEY_1: _set_speed(1)
+			KEY_2: _set_speed(2)
+			KEY_3: _set_speed(4)
+	if event is InputEventMouseButton:
+		var point: Vector2 = get_global_transform_with_canvas().affine_inverse() * event.position
+		if not event.pressed:
+			if painting:
+				painting = false
+				last_painted = Vector2i(-1, -1)
+				get_viewport().set_input_as_handled()
+			if dragging and event.button_index == drag_button:
+				if not drag_moved and drag_button == MOUSE_BUTTON_LEFT and MAP_RECT.has_point(point) and not _map_ui_contains(point):
+					var world_point := screen_to_world(point)
+					if command_tool > 0 and not underground:
+						place_surface_order(command_tool, world_point)
+						dragging = false
+						get_viewport().set_input_as_handled()
+						return
+					var picked := _pick_ant(world_point)
+					if picked >= 0:
+						select_ant(picked)
+					else:
+						select_ant(-1)
+						if not underground:
+							for colony in colony_count:
+								if world_point.distance_squared_to(nest_position(colony)) < 30 * 30:
+									inspected_colony = colony
+									set_view(true)
+									break
+				if not drag_moved and drag_button == MOUSE_BUTTON_RIGHT and not underground and MAP_RECT.has_point(point) and not _map_ui_contains(point):
+					if not command_system.remove_at(screen_to_world(point), maxf(22, 20 / camera_zoom)): command_tool = 0
+					_update_ui()
+				dragging = false
+				get_viewport().set_input_as_handled()
+			return
+		if MINI_RECT.has_point(point):
+			if event.button_index == MOUSE_BUTTON_LEFT and MINI_MAP.has_point(point - MINI_RECT.position):
+				camera_center = (point - MINI_RECT.position - MINI_MAP.position) / MINI_MAP.size * SIZE
+				following = false
+				_sync_camera()
+			get_viewport().set_input_as_handled()
+			return
+		if not MAP_RECT.has_point(point) or _map_ui_contains(point): return
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP or event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			zoom_at(point, 1.15 if event.button_index == MOUSE_BUTTON_WHEEL_UP else 1.0 / 1.15)
+			_update_ui()
+			get_viewport().set_input_as_handled()
+			return
+		if dig_mode and underground and inspected_colony == 0 and match_result.is_empty() and event.button_index in [MOUSE_BUTTON_LEFT, MOUSE_BUTTON_RIGHT]:
+			painting = true
+			erasing = event.button_index == MOUSE_BUTTON_RIGHT
+			last_painted = _cell(screen_to_world(point))
+			designate(last_painted, true, erasing)
+			get_viewport().set_input_as_handled()
+		elif event.button_index in [MOUSE_BUTTON_LEFT, MOUSE_BUTTON_RIGHT, MOUSE_BUTTON_MIDDLE]:
+			dragging = true
+			following = false
+			drag_moved = false
+			drag_start = point
+			drag_last = point
+			drag_button = event.button_index
+			get_viewport().set_input_as_handled()
+	if event is InputEventMouseMotion:
+		var point: Vector2 = get_global_transform_with_canvas().affine_inverse() * event.position
+		if dragging:
+			if point.distance_to(drag_start) > 5: drag_moved = true
+			if drag_moved:
+				camera_center -= (point - drag_last) / camera_zoom
+				following = false
+				_sync_camera()
+			drag_last = point
+			get_viewport().set_input_as_handled()
+		elif painting and underground and inspected_colony == 0 and MAP_RECT.has_point(point) and not _map_ui_contains(point):
+			var world_point := screen_to_world(point)
+			if not Rect2(Vector2.ZERO, SIZE).has_point(world_point): return
+			var c := _cell(world_point)
+			if c != last_painted:
+				var distance := maxi(absi(c.x - last_painted.x), absi(c.y - last_painted.y))
+				for s in range(1, distance + 1):
+					var v := Vector2(last_painted).lerp(Vector2(c), float(s) / distance)
+					designate(Vector2i(roundi(v.x), roundi(v.y)), false, erasing)
+				last_painted = c
+			get_viewport().set_input_as_handled()
+func set_view(value: bool) -> void:
+	underground = value
+	if value: command_tool = 0
+	painting = false
+	dragging = false
+	if not value or inspected_colony != 0: dig_mode = false
+	following = false
+	_activate_camera_view()
+	_update_ui()
+	queue_redraw()
+
+func _inspect_nursery() -> void:
+	if underground:
+		inspected_colony = (inspected_colony + 1) % colony_count
+	set_view(true)
+
+func _cycle_doctrine(colony: int = 0) -> void:
+	if not match_result.is_empty():
+		return
+	doctrines[colony] = (doctrines[colony] + 1) % PROFILE_NAMES.size()
+	_update_ui()
+
+func _toggle_pause() -> void:
+	if not match_result.is_empty():
+		return
+	paused = not paused
+	_update_ui()
+
+func _toggle_trails() -> void:
+	trails_visible = not trails_visible
+	_update_ui()
+
+func _set_speed(value: float) -> void:
+	if not match_result.is_empty():
+		return
+	speed = value
+	_update_ui()
+
+func _idx(c: Vector2i) -> int:
+	return c.y * COLS + c.x
+
+func _cell(p: Vector2) -> Vector2i:
+	return Vector2i(clampi(int(p.x / TILE), 0, COLS - 1), clampi(int(p.y / TILE), 0, ROWS - 1))
+
+func _center(c: Vector2i) -> Vector2:
+	return (Vector2(c) + Vector2(0.5, 0.5)) * TILE
+
+func _valid(c: Vector2i) -> bool:
+	return c.x >= 0 and c.x < COLS and c.y >= 0 and c.y < ROWS
+
+func _neighbors(c: Vector2i) -> Array[Vector2i]:
+	var result: Array[Vector2i] = []
+	for offset in [Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP, Vector2i.DOWN]:
+		var n: Vector2i = c + offset
+		if _valid(n):
+			result.append(n)
+	return result
+
+func _draw() -> void:
+	draw_style_box(_style(Color("18251f"), 14), Rect2(300, 154, 1120, 616))
+
+func _draw_world(canvas: CanvasItem) -> void:
+	canvas.draw_set_transform(Vector2.ZERO)
+	if underground:
+		_draw_underground(canvas)
+	else:
+		_draw_surface(canvas)
+	visible_ant_count = 0
+	var visible := visible_world_rect().grow(18)
+	batch_counts.fill(0)
+	_resize_ant_batches()
+	if native_enabled and native_kernel:
+		var batch: Dictionary = native_kernel.visual_batch(self, visible, active_camera_layer, camera_zoom)
+		batch_counts = batch.counts
+		visible_ant_count = batch.visible
+		for b in 3: ant_buffers[b] = batch.buffers[b]
+	else:
+		for i in health.size():
+			if health[i] > 0 and layers[i] == active_camera_layer and visible.has_point(positions[i]):
+				_batch_ant(i)
+				visible_ant_count += 1
+	for b in 3:
+		ant_batches[b].buffer = ant_buffers[b]
+		ant_batches[b].visible_instance_count = batch_counts[b]
+		if batch_counts[b] > 0: canvas.draw_multimesh(ant_batches[b], null)
+	if camera_zoom >= 0.65:
+		for i in health.size():
+			if health[i] > 0 and layers[i] == active_camera_layer and visible.has_point(positions[i]) and (opponents[i] >= 0 or roles[i] == INVADER or roles[i] == GUARD or roles[i] == WARDEN or health[i] < 2.95):
+				_draw_ant_status(canvas, i)
+	canvas.draw_set_transform(Vector2.ZERO)
+	_draw_command_overlay(canvas)
+	if selected_ant >= 0 and health[selected_ant] > 0 and layers[selected_ant] == active_camera_layer:
+		canvas.draw_arc(positions[selected_ant], 11, 0, TAU, 28, Color.WHITE, 1.5 / camera_zoom)
+	if dig_mode and underground and inspected_colony == 0 and match_result.is_empty():
+		var pointer := get_local_mouse_position()
+		if MAP_RECT.has_point(pointer) and not _map_ui_contains(pointer):
+			var c := _cell(screen_to_world(pointer))
+			var rect := Rect2(Vector2(c - Vector2i.ONE) * TILE, Vector2.ONE * TILE * 3).intersection(Rect2(Vector2.ZERO, SIZE))
+			canvas.draw_rect(rect, Color(0.95, 0.76, 0.42, 0.10))
+			canvas.draw_rect(rect, ACCENT, false, 1.5 / camera_zoom)
+func _draw_command_overlay(canvas: CanvasItem) -> void:
+	if not underground:
+		var shown: Array = command_system.markers
+		if is_instance_valid(rival_panel) and rival_panel.visible:
+			shown = shown.duplicate()
+			for order in (rival_ai.orders.markers + third_ai.orders.markers if colony_count == 3 else rival_ai.orders.markers):
+				var copy: Dictionary = order.duplicate()
+				copy["rival"] = true
+				copy["colony"] = 2 if order.id >= 500000 else 1
+				shown.append(copy)
+		for marker in shown:
+			var p: Vector2 = marker.pos
+			var tint: Color = colony_color(marker.get("colony", 1)) if marker.get("rival", false) else command_system.COLORS[marker.kind]
+			var radius := 100.0 if marker.kind == command_system.AVOID else (90.0 if marker.kind == command_system.GUARD else 24.0)
+			if not visible_world_rect().grow(radius + 70 / camera_zoom).has_point(p): continue
+			var fill := tint
+			fill.a = 0.07
+			canvas.draw_circle(p, radius, fill)
+			canvas.draw_arc(p, radius, 0, TAU, 48, tint, 1.4 / camera_zoom)
+			canvas.draw_line(p + Vector2(-9, 0) / camera_zoom, p + Vector2(9, 0) / camera_zoom, tint, 1.5 / camera_zoom)
+			canvas.draw_line(p + Vector2(0, -9) / camera_zoom, p + Vector2(0, 9) / camera_zoom, tint, 1.5 / camera_zoom)
+			var title: String = command_system.NAMES[marker.kind].to_upper()
+			if marker.get("rival", false): title = COLONY_NAMES[marker.get("colony", 1)].to_upper() + " " + title
+			if marker.kind != command_system.AVOID: title += " %d / %s" % [marker.assigned, marker.status]
+			# Labels retain screen size at overview zoom; workers stay batched below.
+			canvas.draw_set_transform(p + Vector2(0, -radius), 0, Vector2.ONE / camera_zoom)
+			var width := regular_font.get_string_size(title, HORIZONTAL_ALIGNMENT_LEFT, -1, 11).x
+			canvas.draw_rect(Rect2(-width / 2 - 5, -21, width + 10, 18), Color("14251c"))
+			_draw_text(canvas, Vector2(-width / 2, -8), title, 11, tint)
+			canvas.draw_set_transform(Vector2.ZERO)
+	if show_loss_hotspot and not command_system.hotspot.is_empty() and command_system.hotspot.layer == active_camera_layer:
+		var spot: Dictionary = command_system.hotspot
+		canvas.draw_arc(spot.pos, 45, 0, TAU, 40, RIVAL, 2 / camera_zoom)
+		canvas.draw_set_transform(spot.pos, 0, Vector2.ONE / camera_zoom)
+		_draw_text(canvas, Vector2(-65, -74), "LOSS HOTSPOT / %d" % spot.count, 12, RIVAL)
+		canvas.draw_set_transform(Vector2.ZERO)
+
+func _draw_surface_decor(canvas: CanvasItem) -> void:
+	# These commands are cached by this separate CanvasItem until the world resets.
+	canvas.draw_rect(Rect2(Vector2.ZERO, SIZE), Color("263c30"))
+	for f in flecks:
+		var tint := Color("3e5140") if f[2] > 0.5 else Color("1d3329")
+		canvas.draw_line(f[0], f[0] + Vector2(f[1], -f[1] * 1.6), tint, 1)
+
+func _draw_surface(canvas: CanvasItem) -> void:
+	var visible := visible_world_rect().grow(75)
+	# Nest traffic has worn a small clearing into the grass.
+	canvas.draw_circle(HOME, 51, Color("364333"))
+	canvas.draw_circle(HOME, 37, Color("514d36"))
+	canvas.draw_arc(HOME, 43, 0, TAU, 40, Color("71664a"), 1)
+	if colony_count == 3:
+		canvas.draw_circle(THIRD_HOME, 45, Color("354650"))
+		canvas.draw_circle(THIRD_HOME, 17, Color("101e27"))
+		canvas.draw_arc(THIRD_HOME, 23, 0, TAU, 30, AZURE, 2)
+		_draw_text(canvas, THIRD_HOME + Vector2(-42, 64), "AZURE NEST", 12, AZURE)
+	canvas.draw_circle(RIVAL_HOME, 51, Color("443d32"))
+	canvas.draw_circle(RIVAL_HOME, 37, Color("61483b"))
+	canvas.draw_arc(RIVAL_HOME, 43, 0, TAU, 40, Color("986657"), 1)
+	if trails_visible:
+		canvas.draw_texture_rect(trail_texture, Rect2(Vector2.ZERO, SIZE), false)
+	# Fallen workers fade away; their dropped cargo stays in the shared food pool.
+	if native_enabled and native_kernel:
+		var batch: Dictionary = native_kernel.remains_batch(self, SURFACE, visible)
+		if not batch.points.is_empty(): canvas.draw_multiline_colors(batch.points, batch.colors, 1.3)
+	else:
+		for body in remains:
+			if body.layer != SURFACE or not visible.has_point(body.pos):
+				continue
+			var tint := colony_color(body.colony)
+			tint.a = minf(0.65, body.time / 8.0)
+			canvas.draw_line(body.pos - Vector2(3, 3), body.pos + Vector2(3, 3), tint, 1.3)
+			canvas.draw_line(body.pos + Vector2(-3, 3), body.pos + Vector2(3, -3), tint, 1.3)
+	for p in stones:
+		if not visible.has_point(p): continue
+		canvas.draw_circle(p + Vector2(2, 3), 12, Color("1e3026"))
+		canvas.draw_colored_polygon(PackedVector2Array([p + Vector2(-11, 3), p + Vector2(-7, -8), p + Vector2(4, -10), p + Vector2(12, -1), p + Vector2(6, 8)]), Color("627064"))
+		canvas.draw_line(p + Vector2(-6, -7), p + Vector2(3, -9), Color("819081"), 2)
+	for f in foods:
+		if f.get("layer", SURFACE) != SURFACE or not visible.has_point(f.pos):
+			continue
+		var p: Vector2 = f.pos
+		if f.get("dropped", false):
+			if f.amount > 0:
+				canvas.draw_circle(p, 3.5, GREEN)
+			continue
+		if f.amount <= 0:
+			canvas.draw_arc(p, 16, 0, TAU, 24, Color("5b654a"), 1)
+			continue
+		canvas.draw_circle(p, 26, Color(0.62, 0.8, 0.38, 0.07))
+		for k in 13:
+			var a := k * 2.39996
+			var offset := Vector2.from_angle(a) * sqrt(float(k)) * 4.5
+			var s := 3.2 if k % 2 else 4.5
+			canvas.draw_circle(p + offset, s, GREEN if k % 3 else Color("8aaf58"))
+		_draw_text(canvas, p + Vector2(-17, 42), str(f.amount), 14, GREEN)
+	canvas.draw_circle(HOME, 19, Color("9a8252"))
+	canvas.draw_circle(HOME, 13, Color("101e17"))
+	canvas.draw_arc(HOME, 22, -2.8, -0.4, 20, ACCENT, 2)
+	_draw_text(canvas, HOME + Vector2(-39, 66), "YOUR NEST", 12, ACCENT)
+	canvas.draw_circle(RIVAL_HOME, 19, Color("a36c56"))
+	canvas.draw_circle(RIVAL_HOME, 13, Color("231b18"))
+	canvas.draw_arc(RIVAL_HOME, 22, -2.8, -0.4, 20, RIVAL, 2)
+	_draw_text(canvas, RIVAL_HOME + Vector2(-40, 66), "RIVAL NEST", 12, RIVAL)
+	for colony in colony_count:
+		var intruders := invaders_in(colony)
+		if intruders > 0:
+			var entrance := nest_position(colony)
+			canvas.draw_arc(entrance, 49, 0, TAU, 40, RIVAL, 2)
+			_draw_text(canvas, entrance + Vector2(-63, -61), "BREACHED · %d INTRUDERS" % intruders, 11, RIVAL)
+	_draw_text(canvas, Vector2(18, 28), "MEADOW / SURFACE", 12, Color("8da58d"))
+	_draw_text(canvas, Vector2(SIZE.x - 147, SIZE.y - 19), "1 TILE ≈ 1 ANT LENGTH", 10, Color("8da58d"))
+
+func _draw_underground(canvas: CanvasItem) -> void:
+	var side := inspected_colony if inspected_colony == 2 else (0 if nest_position(inspected_colony) == HOME else 1)
+	var visible_earth := _nest_grid(inspected_colony)
+	var visible := visible_world_rect().grow(TILE)
+	canvas.draw_texture_rect(terrain_textures[side], Rect2(Vector2.ZERO, SIZE), false)
+	for j in open_cells[side]:
+		var c := Vector2i(j % COLS, j / COLS)
+		var a := Vector2(c) * TILE
+		if not visible.has_point(a): continue
+		for n in _neighbors(c):
+			if visible_earth[_idx(n)] != 1:
+				if n.x > c.x: canvas.draw_line(a + Vector2(TILE, 0), a + Vector2(TILE, TILE), Color("8a6d48"), 1)
+				if n.x < c.x: canvas.draw_line(a, a + Vector2(0, TILE), Color("8a6d48"), 1)
+				if n.y > c.y: canvas.draw_line(a + Vector2(0, TILE), a + Vector2(TILE, TILE), Color("8a6d48"), 1)
+				if n.y < c.y: canvas.draw_line(a, a + Vector2(TILE, 0), Color("8a6d48"), 1)
+	if inspected_colony == 0:
+		for j in designated_cells:
+			var c := Vector2i(j % COLS, j / COLS)
+			var rect := Rect2(Vector2(c) * TILE, Vector2.ONE * TILE)
+			if not visible.intersects(rect): continue
+			canvas.draw_rect(rect.grow(-0.5), Color(0.91, 0.64, 0.3, 0.21 + excavation[j] * 0.35))
+			canvas.draw_rect(rect.grow(-1.5), Color(0.93, 0.71, 0.4, 0.5), false, 0.8)
+			if excavation[j] > 0:
+				canvas.draw_rect(Rect2(rect.position + Vector2(2, 10), Vector2(10 * excavation[j], 2)), ACCENT)
+	for f in flecks:
+		if visible.has_point(f[0]) and visible_earth[_idx(_cell(f[0]))] == 0:
+			canvas.draw_line(f[0], f[0] + Vector2(f[1], 0), Color("584333"), 1)
+	var visible_chamber_cell := chamber_cell(inspected_colony)
+	var chamber := _center(visible_chamber_cell)
+	var tint := colony_color(inspected_colony)
+	var queen_color := tint if queen_health[inspected_colony] > 0 else Color("686354")
+	if queen_flashes[inspected_colony] > 0 and queen_health[inspected_colony] > 0:
+		queen_color = Color.WHITE
+	if invaders_in(inspected_colony) > 0:
+		canvas.draw_circle(queen_position(inspected_colony), 34, Color(0.9, 0.25, 0.18, 0.12 + 0.05 * sin(elapsed * 6)))
+	canvas.draw_arc(chamber, 34, 0, TAU, 32, Color("4a4933"), 1)
+	# The large stationary queen is a real fed colony entity, not a worker slot.
+	canvas.draw_set_transform(chamber + Vector2(-14, -5), -0.3)
+	canvas.draw_circle(Vector2(-7, 0), 8, queen_color)
+	canvas.draw_circle(Vector2(3, 0), 4.5, queen_color)
+	canvas.draw_circle(Vector2(10, 0), 4, queen_color)
+	for s in [-1, 1]:
+		for x in [-2, 3, 7]:
+			canvas.draw_line(Vector2(x, s * 2), Vector2(x - 4, s * 10), queen_color, 1.2)
+	canvas.draw_set_transform(Vector2.ZERO)
+	for k in brood[inspected_colony].size():
+		var young: Dictionary = brood[inspected_colony][k]
+		var p := chamber + Vector2(14 + (k % 4) * 7, -23 + (k / 4) * 10)
+		if young.stage == 0:
+			canvas.draw_circle(p, 2.5, Color("eee7c7"))
+		elif young.stage == 1:
+			canvas.draw_line(p - Vector2(2, 0), p + Vector2(2, 1), Color("bed79b"), 4)
+		else:
+			canvas.draw_line(p - Vector2(2, 0), p + Vector2(2, 0), Color("d4b77b"), 6)
+	_draw_text(canvas, chamber + Vector2(-45, 72), "QUEEN · %d%%" % int(queen_health[inspected_colony]), 12, tint)
+	var stages := brood_counts(inspected_colony)
+	_draw_text(canvas, chamber + Vector2(-74, 94), "%d EGGS / %d LARVAE / %d PUPAE" % [stages.x, stages.y, stages.z], 11, INK)
+	canvas.draw_rect(Rect2(chamber + Vector2(-37, -43), Vector2(74, 4)), Color("20271c"))
+	canvas.draw_rect(Rect2(chamber + Vector2(-37, -43), Vector2(74 * queen_health[inspected_colony] / 100, 4)), tint)
+	for body in remains:
+		if body.layer == inspected_colony:
+			var body_tint := ACCENT if body.colony == 0 else RIVAL
+			body_tint.a = minf(0.6, body.time / 8.0)
+			canvas.draw_line(body.pos - Vector2(3, 3), body.pos + Vector2(3, 3), body_tint, 1.2)
+			canvas.draw_line(body.pos + Vector2(-3, 3), body.pos + Vector2(3, -3), body_tint, 1.2)
+	for f in foods:
+		if f.get("layer", SURFACE) == inspected_colony and f.amount > 0:
+			canvas.draw_circle(f.pos, 3, GREEN)
+	var entrance := _center(entrance_cell(inspected_colony))
+	canvas.draw_arc(entrance, 13, 0, TAU, 24, GREEN, 1.5)
+	canvas.draw_line(entrance + Vector2(0, 7), entrance + Vector2(0, -6), GREEN, 1.5)
+	canvas.draw_line(entrance + Vector2(0, -6), entrance + Vector2(-4, -1), GREEN, 1.5)
+	canvas.draw_line(entrance + Vector2(0, -6), entrance + Vector2(4, -1), GREEN, 1.5)
+	_draw_text(canvas, entrance + Vector2(25, 4), "TO SURFACE", 11, GREEN)
+	_draw_text(canvas, Vector2(18, 28), "YOUR NEST / DEFEND THE QUEEN" if inspected_colony == 0 else "RIVAL NEST / INVASION VIEW", 12, Color("b09b80"))
+	_draw_text(canvas, Vector2(SIZE.x - 270, SIZE.y - 19), "DRAG TO DIG · Q TO INSPECT OTHER NURSERY" if inspected_colony == 0 else "RIVAL NURSERY · Q TO RETURN TO YOUR NEST", 10, Color("b09b80"))
+
+func _mesh_line(vertices: PackedVector3Array, a: Vector2, b: Vector2, width: float) -> void:
+	var n := (b - a).orthogonal().normalized() * width * 0.5
+	for p in [a - n, a + n, b + n, a - n, b + n, b - n]:
+		vertices.append(Vector3(p.x, p.y, 0))
+
+func _mesh_circle(vertices: PackedVector3Array, center: Vector2, radius: float) -> void:
+	for k in 16:
+		for p in [center, center + Vector2.from_angle(k * TAU / 16) * radius, center + Vector2.from_angle((k + 1) * TAU / 16) * radius]:
+			vertices.append(Vector3(p.x, p.y, 0))
+
+func _build_ant_batches() -> void:
+	# Reusable meshes contain only appearance; simulation arrays still own every ant.
+	for b in 3:
+		var vertices := PackedVector3Array()
+		if b == 0:
+			for side in [-1, 1]:
+				for k in 3:
+					var x := float(k - 1) * 2.2
+					_mesh_line(vertices, Vector2(x, side), Vector2(x - 1.8, side * 3.8), 0.85)
+			_mesh_circle(vertices, Vector2(-3, 0), 2.5)
+			_mesh_circle(vertices, Vector2.ZERO, 1.6)
+			_mesh_circle(vertices, Vector2(2.8, 0), 1.9)
+			_mesh_line(vertices, Vector2(3.5, -0.8), Vector2(6, -2.3), 0.8)
+			_mesh_line(vertices, Vector2(3.5, 0.8), Vector2(6, 2.3), 0.8)
+		elif b == 1:
+			_mesh_line(vertices, Vector2(-3, 0), Vector2(3, 0), 3)
+		else:
+			_mesh_circle(vertices, Vector2(6.5, 0), 2.8)
+		var arrays := []
+		arrays.resize(Mesh.ARRAY_MAX)
+		arrays[Mesh.ARRAY_VERTEX] = vertices
+		var mesh := ArrayMesh.new()
+		mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
+		var batch := MultiMesh.new()
+		batch.transform_format = MultiMesh.TRANSFORM_2D
+		batch.use_colors = true
+		batch.mesh = mesh
+		ant_batches.append(batch)
+		ant_buffers.append(PackedFloat32Array())
+
+func _resize_ant_batches() -> void:
+	for b in 3:
+		if ant_batches[b].instance_count != health.size():
+			ant_batches[b].instance_count = health.size()
+			ant_buffers[b].resize(health.size() * 12)
+
+func _batch_instance(b: int, p: Vector2, angle: float, color: Color) -> void:
+	var j := batch_counts[b] * 12
+	# MultiMesh's 2D buffer stores two padded transform rows then RGBA.
+	var c := cos(angle)
+	var s := sin(angle)
+	ant_buffers[b][j] = c
+	ant_buffers[b][j + 1] = -s
+	ant_buffers[b][j + 2] = 0
+	ant_buffers[b][j + 3] = p.x
+	ant_buffers[b][j + 4] = s
+	ant_buffers[b][j + 5] = c
+	ant_buffers[b][j + 6] = 0
+	ant_buffers[b][j + 7] = p.y
+	ant_buffers[b][j + 8] = color.r
+	ant_buffers[b][j + 9] = color.g
+	ant_buffers[b][j + 10] = color.b
+	ant_buffers[b][j + 11] = color.a
+	batch_counts[b] += 1
+
+func _batch_ant(i: int) -> void:
+	var color := Color("f0dcab") if roles[i] == FORAGER else ACCENT
+	if colonies[i] > 0: color = colony_color(colonies[i])
+	if hit_flashes[i] > 0: color = Color.WHITE
+	_batch_instance(1 if camera_zoom < 0.65 else 0, positions[i], headings[i], color)
+	if carrying[i]: _batch_instance(2, positions[i], headings[i], GREEN)
+
+func _draw_ant_status(canvas: CanvasItem, i: int) -> void:
+	canvas.draw_set_transform(positions[i], headings[i])
+	var color := Color("f0dcab") if roles[i] == 0 else ACCENT
+	if colonies[i] > 0:
+		color = colony_color(colonies[i])
+	if hit_flashes[i] > 0:
+		color = Color.WHITE
+	if opponents[i] >= 0:
+		canvas.draw_arc(Vector2.ZERO, 8, 0, TAU, 16, Color(0.94, 0.45, 0.3, 0.55), 1)
+	if roles[i] == INVADER:
+		canvas.draw_line(Vector2(-4, -7), Vector2(0, -10), color, 1.2)
+		canvas.draw_line(Vector2(0, -10), Vector2(4, -7), color, 1.2)
+	elif roles[i] == GUARD or roles[i] == WARDEN:
+		canvas.draw_arc(Vector2.ZERO, 7, 0, TAU, 16, Color("8cc7ca"), 1)
+	if health[i] < 2.95:
+		canvas.draw_line(Vector2(-5, -8), Vector2(5, -8), Color("263029"), 2)
+		canvas.draw_line(Vector2(-5, -8), Vector2(-5 + 10 * health[i] / 3.0, -8), color, 2)
+
+func _draw_text(canvas: CanvasItem, p: Vector2, text: String, size: int, color: Color) -> void:
+	canvas.draw_string(regular_font, p, text, HORIZONTAL_ALIGNMENT_LEFT, -1, size, color)
+
+func _style(bg: Color, radius: int = 8, border: Color = Color.TRANSPARENT) -> StyleBoxFlat:
+	var style := StyleBoxFlat.new()
+	style.bg_color = bg
+	style.set_corner_radius_all(radius)
+	style.border_color = border
+	style.set_border_width_all(1 if border.a > 0 else 0)
+	style.content_margin_left = 12
+	style.content_margin_right = 12
+	return style
+
+func _label(text: String, p: Vector2, size: int, color: Color = INK, bold: bool = false, width: float = 250) -> Label:
+	var label := Label.new()
+	label.text = text
+	label.position = p
+	label.size = Vector2(width, 30)
+	label.add_theme_font_override("font", bold_font if bold else regular_font)
+	label.add_theme_font_size_override("font_size", size)
+	label.add_theme_color_override("font_color", color)
+	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	ui.add_child(label)
+	return label
+
+func _panel(p: Vector2, s: Vector2, color: Color = Color("17251f")) -> void:
+	var panel := Panel.new()
+	panel.position = p
+	panel.size = s
+	panel.add_theme_stylebox_override("panel", _style(color, 12, Color("293a30")))
+	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	ui.add_child(panel)
+
+func _button(text: String, p: Vector2, s: Vector2, callback: Callable) -> Button:
+	var button := Button.new()
+	button.text = text
+	button.position = p
+	button.size = s
+	button.focus_mode = Control.FOCUS_NONE
+	button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	button.add_theme_font_override("font", bold_font)
+	button.add_theme_font_size_override("font_size", 14)
+	button.add_theme_color_override("font_color", INK)
+	button.add_theme_color_override("font_hover_color", Color.WHITE)
+	button.add_theme_stylebox_override("normal", _style(Color("22342a"), 7))
+	button.add_theme_stylebox_override("hover", _style(Color("344b39"), 7, Color("6b8061")))
+	button.add_theme_stylebox_override("pressed", _style(Color("526342"), 7))
+	button.pressed.connect(callback)
+	ui.add_child(button)
+	return button
+
+func _active(button: Button, value: bool) -> void:
+	button.add_theme_stylebox_override("normal", _style(Color("e9b574") if value else Color("22342a"), 7))
+	button.add_theme_color_override("font_color", Color("20271c") if value else INK)
+	button.add_theme_color_override("font_hover_color", Color("20271c") if value else Color.WHITE)
+
+func _build_ui() -> void:
+	ui = Control.new()
+	ui.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(ui)
+	_label("F O R M I C", Vector2(28, 19), 34, INK, true, 370)
+	_label("Invade the nest. Protect your queen.", Vector2(30, 66), 15, MUTED, false, 450)
+	rival_plan_button = _button("Rival: Scouting [I]", Vector2(1170, 37), Vector2(250, 38), toggle_rival_plan)
+	rival_plan_button.add_theme_font_size_override("font_size", 13)
+	_button("Focus nest [H]", Vector2(470, 37), Vector2(112, 38), focus_nest)
+	_button("Overview [0]", Vector2(590, 37), Vector2(106, 38), fit_world)
+	dig_button = _button("Navigate [G]", Vector2(704, 37), Vector2(124, 38), _toggle_dig_mode)
+	dig_button.tooltip_text = "G toggles tunnel designation. Navigate: drag to pan, click an ant. Dig: left-drag mark, right-drag erase. Middle-drag always pans."
+	stats.fps = _label("— FPS", Vector2(1072, 27), 19, GREEN, true, 96)
+	stats.frame_time = _label("", Vector2(1072, 57), 10, MUTED, false, 100)
+	raid_button = _button("Raid rival nest  [R]", Vector2(840, 37), Vector2(220, 38), func() -> void: place_surface_order(command_system.RAID, nest_position(enemy_for(0))))
+	raid_button.tooltip_text = "Place or move the persistent Raid marker to the rival entrance. Security priority controls party size (0/6/12/24). Carriers finish delivery first; home defense stays automatic."
+	_panel(Vector2(24, 111), Vector2(262, 659))
+	_label("YOUR COLONY", Vector2(44, 128), 12, MUTED, true)
+	stats.population = _label("100", Vector2(42, 151), 50, INK, true)
+	stats.rival_population = _label("Rival: 100 workers", Vector2(44, 213), 15, RIVAL)
+	_label("FOOD / AMBER : CORAL : AZURE", Vector2(44, 251), 11, MUTED, true)
+	stats.food = _label("30", Vector2(42, 271), 33, GREEN, true, 100)
+	_label(":", Vector2(142, 274), 28, MUTED, false, 24)
+	stats.rival_food = _label("30", Vector2(174, 271), 33, RIVAL, true, 100)
+	stats.harvest = _label("Harvested 0 / 0", Vector2(44, 314), 12, MUTED)
+	stats.harvest.size = Vector2(220, 76)
+	stats.queens = _label("Queens 100% / 100%", Vector2(44, 390), 13, INK)
+	stats.brood = _label("Brood 0 / 0", Vector2(44, 413), 15, GREEN)
+	stats.births = _label("Hatched 0 / 0", Vector2(44, 438), 12, MUTED)
+	_label("YOUR WORKERS & TUNNELS", Vector2(44, 466), 11, MUTED, true)
+	stats.foragers = _label("Above ground", Vector2(44, 487), 11)
+	stats.diggers = _label("Excavating", Vector2(44, 509), 11, ACCENT)
+	var work_background := ColorRect.new()
+	work_background.position = Vector2(44, 530)
+	work_background.size = Vector2(220, 5)
+	work_background.color = GREEN
+	work_background.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	ui.add_child(work_background)
+	work_bar = ColorRect.new()
+	work_bar.position = work_background.position
+	work_bar.size = Vector2(0, 5)
+	work_bar.color = ACCENT
+	work_bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	ui.add_child(work_bar)
+	stats.dug = _label("0 tiles excavated", Vector2(44, 544), 13)
+	stats.pending = _label("No digging queued", Vector2(44, 566), 12, MUTED)
+	_label("TRAITS / YOURS : RIVAL", Vector2(44, 601), 11, MUTED, true)
+	doctrine_button = _button("Stewards", Vector2(44, 630), Vector2(106, 32), _cycle_doctrine)
+	rival_doctrine_button = _button("Raiders", Vector2(158, 630), Vector2(106, 32), func() -> void: _cycle_doctrine(1))
+	doctrine_button.tooltip_text = "Cycle your traits: Balanced, Stewards, Raiders. Set both colonies to Balanced for a neutral comparison."
+	rival_doctrine_button.tooltip_text = "Cycle rival traits. Raiders: security roles gain +5% bite and 34px pursuit; collectors use standard combat. +15% upkeep. Stewards: +8% forage speed, 15% faster laying/development, 7 food/worker; carriers defend on contact but favor home. Balanced: standard rules, 8 food/worker."
+	profile_details = _label("", Vector2(44, 667), 12, MUTED, false, 225)
+	profile_details.size.y = 18
+	profile_details.add_theme_font_size_override("font_size", 10)
+	stats.losses = _label("Combat 0 / Hunger 0", Vector2(44, 690), 11, MUTED, false, 226)
+	stats.combat = _label("No recent losses", Vector2(44, 711), 11, RIVAL, false, 226)
+	surface_button = _button("01   Surface", Vector2(300, 106), Vector2(165, 36), func() -> void: set_view(false))
+	underground_button = _button("02   Underground", Vector2(473, 106), Vector2(185, 36), func() -> void: set_view(true))
+	trail_button = _button("Trails  ON", Vector2(682, 106), Vector2(119, 36), _toggle_trails)
+	trail_button.tooltip_text = "Toggle surface scent trails [F]"
+	inspect_button = _button("Inspect nurseries  [Q]", Vector2(813, 106), Vector2(203, 36), _inspect_nursery)
+	pause_button = _button("Pause", Vector2(1028, 106), Vector2(94, 36), _toggle_pause)
+	pause_button.tooltip_text = "Pause or resume [Space]"
+	for n in SPEEDS.size():
+		var factor: float = SPEEDS[n]
+		var b := _button(["¼×", "½×", "1×", "2×", "4×"][n], Vector2(1128 + n * 36, 106), Vector2(33, 36), func() -> void: _set_speed(factor))
+		b.add_theme_font_size_override("font_size", 13)
+		b.tooltip_text = "%s times normal speed" % str(factor)
+		speed_buttons.append(b)
+	var reset_button := _button("New seed", Vector2(1312, 106), Vector2(108, 36), func() -> void: reset_colony(randi()))
+	reset_button.tooltip_text = "Restart all colonies with a new random seed; keep the selected traits."
+	_panel(Vector2(300, 786), Vector2(1120, 108))
+	scene_title = _label("THE MEADOW", Vector2(320, 842), 12, ACCENT, true, 155)
+	stats.camera = _label("100%", Vector2(1190, 848), 10, MUTED, false, 220)
+	scene_subtitle = _label("", Vector2(475, 841), 12, INK, false, 710)
+	hint_label = _label("", Vector2(320, 870), 11, MUTED, false, 1050)
+	stats.time = _label("00:00", Vector2(1293, 796), 23, INK, true, 100)
+	_label("SIM TIME", Vector2(1301, 831), 10, MUTED, true, 90)
+	status_label = _label("", Vector2(26, 797), 13, GREEN, true, 250)
+	_label("TAB   Switch view\nSPACE   Pause / resume\n[ / ]   Quarter / half speed\n1 / 2 / 3   Normal / fast speed", Vector2(26, 823), 11, MUTED, false, 260)
+	inspector_panel = Panel.new()
+	inspector_panel.position = Vector2(1016, 510)
+	inspector_panel.size = Vector2(374, 232)
+	inspector_panel.add_theme_stylebox_override("panel", _style(Color("15261e"), 12, Color("58765c")))
+	ui.add_child(inspector_panel)
+	var inspector_root := ui
+	ui = inspector_panel
+	inspector_title = _label("WORKER", Vector2(18, 12), 13, ACCENT, true, 300)
+	inspector_text = _label("", Vector2(18, 45), 13, INK, false, 338)
+	inspector_text.size.y = 130
+	_button("×", Vector2(325, 10), Vector2(32, 30), func() -> void: select_ant(-1))
+	follow_button = _button("Follow ant [C]", Vector2(18, 182), Vector2(164, 34), _toggle_follow)
+	_button("Go to ant", Vector2(192, 182), Vector2(164, 34), _go_to_ant)
+	ui = inspector_root
+	inspector_panel.visible = false
+	preload("res://scripts/command_ui.gd").build(self)
+	# Result card is created last so it sits above the world and can be dismissed
+	# for inspection without restarting or resuming a finished match.
+	result_panel = Panel.new()
+	result_panel.position = Vector2(550, 290)
+	result_panel.size = Vector2(620, 312)
+	result_panel.add_theme_stylebox_override("panel", _style(Color("122119"), 16, ACCENT))
+	ui.add_child(result_panel)
+	var root_ui := ui
+	ui = result_panel
+	result_title = _label("VICTORY", Vector2(34, 20), 44, ACCENT, true, 552)
+	result_detail = _label("", Vector2(34, 97), 17, INK, false, 552)
+	result_detail.size.y = 120
+	result_detail.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_button("Inspect battlefield", Vector2(34, 242), Vector2(260, 42), func() -> void:
+		result_dismissed = true
+		_update_ui())
+	_button("New colony / new seed", Vector2(310, 242), Vector2(276, 42), func() -> void: reset_colony(randi()))
+	ui = root_ui
+	result_panel.visible = false
+	rival_ai.build_ui()
+
+func _layout_ui() -> void:
+	# Fit the entire board in any aspect ratio without exposing an unusable edge.
+	var viewport := get_viewport_rect().size
+	var factor := minf(viewport.x / 1440.0, viewport.y / 900.0)
+	scale = Vector2.ONE * factor
+	position = (viewport - Vector2(1440, 900) * factor) * 0.5
+
+func _update_ui() -> void:
+	if not is_instance_valid(ui):
+		return
+	if camera_centers.size() == 4: _activate_camera_view()
+	_refresh_map_images()
+	rival_ai.update_ui()
+	if selected_ant >= 0 and health[selected_ant] > 0:
+		selected_info = ant_info(selected_ant)
+	inspector_panel.visible = not selected_info.is_empty() and (match_result.is_empty() or result_dismissed)
+	if inspector_panel.visible:
+		var data := selected_info
+		inspector_title.text = "WORKER #%04d / %s" % [data.id, COLONY_NAMES[data.colony].to_upper()]
+		var place: String = "Surface" if data.layer == SURFACE else (COLONY_NAMES[data.layer] + " tunnels")
+		inspector_text.text = "%s · %s\nHealth %.1f / 3 · Age %02d:%02d\nSpeed %.1f px/s · Bite ×%.2f\nDelivered %d · Worker kills %d\nWalked %.0f px · Cargo: %s\nOrder: %s" % [["Foraging", "Excavating", "Raiding", "Defending", "Returning", "Guard post", "Recovering"][data.role] if data.alive else "FALLEN", place, data.health if data.alive else 0, int(data.age) / 60, int(data.age) % 60, data.speed if data.alive else 0, data.bite, data.delivered, data.kills, data.walked, "food" if data.cargo else "empty", data.get("order", "Autonomous")]
+		follow_button.text = "Following  [C]" if following else "Follow ant  [C]"
+		follow_button.disabled = not data.alive
+	var fps := Engine.get_frames_per_second()
+	stats.fps.text = "%d FPS" % fps if fps > 0 and is_processing() else "— FPS"
+	stats.fps.add_theme_color_override("font_color", (GREEN if fps >= 60 else (ACCENT if fps >= 30 else RIVAL)) if is_processing() else MUTED)
+	stats.frame_time.text = "%.1f ms · sim %.1f" % [smoothed_frame_ms, last_sim_ms] if is_processing() else "Live counter"
+	stats.camera.text = "%d%% · %d × %d tiles" % [roundi(camera_zoom * 100), COLS, ROWS]
+	dig_button.text = "Dig mode  [G]" if dig_mode else "Navigate  [G]"
+	_active(dig_button, dig_mode)
+	var diggers := digger_count()
+	var raiders := 0
+	var guards := 0
+	var surface_workers := 0
+	for i in health.size():
+		if health[i] > 0 and colonies[i] == 0:
+			raiders += 1 if roles[i] == INVADER else 0
+			guards += 1 if roles[i] == GUARD else 0
+			surface_workers += 1 if layers[i] == SURFACE else 0
+	stats.population.text = str(living_count(0))
+	stats.rival_population.text = "Coral %d / Azure %d" % [living_count(1), living_count(2)] if colony_count == 3 else "Rival: %d" % living_count(1)
+	stats.rival_food.text = str(int(food_stores[1]))
+	stats.losses.text = "Lost: %d yours / %d rival" % [casualties[0] + starvation_losses[0], casualties[1] + starvation_losses[1]]
+	stats.harvest.text = "Harvested %d / %d\nUpkeep %.0f / %.0f food per min" % [delivered, rival_delivered, upkeep_rate(0) * 60, upkeep_rate(1) * 60]
+	stats.harvest.add_theme_font_size_override("font_size", 11)
+	stats.queens.text = "Queens %d%% / %d%%%s" % [int(queen_health[0]), int(queen_health[1]), " · HUNGRY" if queen_hungry[0] or queen_hungry[1] else ""]
+	stats.queens.add_theme_color_override("font_color", RIVAL if queen_hungry[0] or queen_hungry[1] else INK)
+	if colony_count == 3:
+		stats.queens.text = "Queens %d%% / %d%% / %d%%" % [queen_health[0], queen_health[1], queen_health[2]]
+		stats.rival_food.text = "%d / %d" % [food_stores[1], food_stores[2]]
+		stats.rival_food.add_theme_font_size_override("font_size", 18)
+	stats.brood.text = "Brood %d / %d" % [brood[0].size(), brood[1].size()]
+	if colony_count == 3: stats.brood.text += " / %d" % brood[2].size()
+	stats.births.text = "Hatched %d / %d · cap %d each" % [births[0], births[1], POPULATION_CAP]
+	if colony_count == 3: stats.births.text = "Hatched %d / %d / %d - cap %d" % [births[0], births[1], births[2], POPULATION_CAP]
+	doctrine_button.text = PROFILE_NAMES[doctrines[0]]
+	rival_doctrine_button.text = PROFILE_NAMES[doctrines[1]]
+	profile_details.text = ["Standard economy / normal bite", "Fast forage / cheaper, faster brood", "Combat specialists / higher upkeep"][doctrines[0]]
+	var fighting := 0
+	for i in health.size():
+		if health[i] > 0 and opponents[i] >= 0:
+			fighting += 1
+	stats.combat.text = "%d workers in combat" % fighting if fighting else "No active skirmishes"
+	stats.food.text = str(int(food_stores[0]))
+	stats.foragers.text = "%d surface · %d raiding" % [surface_workers, raiders]
+	stats.diggers.text = "%d digging · %d defending" % [diggers, guards]
+	stats.dug.text = "%d tiles excavated" % dug
+	var pending := pending_count()
+	stats.pending.text = "%d tiles designated" % pending if pending else "No digging queued"
+	work_bar.size.x = 220.0 * diggers / maxi(1, living_count(0))
+	stats.time.text = "%02d:%02d" % [int(elapsed) / 60, int(elapsed) % 60]
+	_active(surface_button, not underground)
+	_active(underground_button, underground)
+	_active(trail_button, trails_visible)
+	inspect_button.text = ("Nursery: YOURS  ↔" if inspected_colony == 0 else "Nursery: %s" % COLONY_NAMES[inspected_colony]) if underground else "Inspect nurseries  [Q]"
+	_active(inspect_button, underground)
+	trail_button.text = "Trails  ON" if trails_visible else "Trails  OFF"
+	pause_button.text = "Resume" if paused else "Pause"
+	_active(pause_button, paused)
+	raid_button.text = "Raid: %d active  [R]" % raiders if raiders else "Launch raid  [R]"
+	raid_button.disabled = not match_result.is_empty()
+	doctrine_button.disabled = not match_result.is_empty()
+	rival_doctrine_button.disabled = not match_result.is_empty()
+	pause_button.disabled = not match_result.is_empty()
+	for n in SPEEDS.size():
+		_active(speed_buttons[n], speed == SPEEDS[n])
+		for state in ["normal", "hover", "pressed"]:
+			var box: StyleBoxFlat = speed_buttons[n].get_theme_stylebox(state)
+			box.content_margin_left = 3
+			box.content_margin_right = 3
+		speed_buttons[n].disabled = not match_result.is_empty()
+	scene_title.text = ("YOUR NURSERY" if inspected_colony == 0 else COLONY_NAMES[inspected_colony].to_upper() + " NURSERY") if underground else "THE MEADOW"
+	var stages := brood_counts(inspected_colony)
+	scene_subtitle.text = "Queen %d%% · %d eggs → %d larvae → %d pupae · Food supports upkeep and each stage of growth." % [int(queen_health[inspected_colony]), stages.x, stages.y, stages.z] if underground else message
+	var intruders := invaders_in(inspected_colony)
+	if underground and intruders > 0:
+		scene_subtitle.text = "%d intruders in this nest · Queen %d%% · Defenders fight in open tunnels." % [intruders, int(queen_health[inspected_colony])]
+	hint_label.text = "DIG MODE · Left-drag mark · Right-drag erase · Middle-drag pan · Wheel zoom · G navigate" if dig_mode and underground and inspected_colony == 0 else "DRAG pan · WHEEL zoom · CLICK ant · H focus nest · 0 overview · G dig · Q nests · Seed %d" % world_seed
+	status_label.text = "PAUSED  /  take your time" if paused else "LIVE  /  %s× simulation" % str(speed)
+	if invaders_in(0) > 0:
+		status_label.text = "YOUR NEST IS UNDER ATTACK"
+	result_panel.visible = not match_result.is_empty() and not result_dismissed
+	if not match_result.is_empty():
+		status_label.text = "MATCH OVER / " + match_result.to_upper()
+		scene_subtitle.text = message
+		raid_button.text = match_result.to_upper()
+		result_title.text = match_result.to_upper()
+		result_title.add_theme_color_override("font_color", RIVAL if match_result == "defeat" else ACCENT)
+		result_detail.text = message + "\nTime %s · Workers %d yours / %d rival.\nThe simulation has stopped. Inspect the battlefield or start again." % [stats.time.text, living_count(0), living_count(1)]
+		if colony_count == 3: result_detail.text = message + "\nTime %s - Workers: Amber %d / Coral %d / Azure %d.\nThe simulation has stopped. Inspect or start again." % [stats.time.text, living_count(0), living_count(1), living_count(2)]
+	preload("res://scripts/command_ui.gd").update(self)

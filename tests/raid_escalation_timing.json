@@ -1,0 +1,49 @@
+{
+  "note": "Staged 80-worker attacker with one actual forward scout and an undefended approach. Full individual simulation in both kernels; values are simulated seconds, not guaranteed lead time in unseen attacks.",
+  "cases": [
+    {
+      "mode": "skirmish",
+      "native": false,
+      "first_scout_warning": 110.0,
+      "probe_withdrawal": 120.8,
+      "invasion_start": 167.5,
+      "warning_lead_sim_seconds": 57.5,
+      "response_interval_sim_seconds": 46.7,
+      "probe_workers": 2,
+      "invasion_workers": 16
+    },
+    {
+      "mode": "skirmish",
+      "native": true,
+      "first_scout_warning": 110.0,
+      "probe_withdrawal": 120.8,
+      "invasion_start": 167.5,
+      "warning_lead_sim_seconds": 57.5,
+      "response_interval_sim_seconds": 46.7,
+      "probe_workers": 2,
+      "invasion_workers": 16
+    },
+    {
+      "mode": "founding",
+      "native": false,
+      "first_scout_warning": 335.0,
+      "probe_withdrawal": 347.5,
+      "invasion_start": 394.2,
+      "warning_lead_sim_seconds": 59.2,
+      "response_interval_sim_seconds": 46.7,
+      "probe_workers": 2,
+      "invasion_workers": 16
+    },
+    {
+      "mode": "founding",
+      "native": true,
+      "first_scout_warning": 335.0,
+      "probe_withdrawal": 347.5,
+      "invasion_start": 394.2,
+      "warning_lead_sim_seconds": 59.2,
+      "response_interval_sim_seconds": 46.7,
+      "probe_workers": 2,
+      "invasion_workers": 16
+    }
+  ]
+}

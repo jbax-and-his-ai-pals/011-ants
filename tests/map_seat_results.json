@@ -1,0 +1,1293 @@
+{
+	"complete": true,
+	"note": "Surface-only 300s controls. Equal AI, Balanced traits, no invasions or births. Colors/RNG streams rotate over physical seats; this is not an additional full-match balance batch.",
+	"runs": [
+		{
+			"offset": 0,
+			"seed": 81923,
+			"state": {
+				"ai_targets": [
+					2,
+					2,
+					1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1454,
+					1340,
+					1522
+				],
+				"fighting": [
+					4,
+					8,
+					8
+				],
+				"food_remaining": 5634,
+				"harvest": [
+					24272,
+					25126,
+					23183
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"Recovering",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					546,
+					660,
+					478
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					1,
+					5,
+					3
+				],
+				"scent_cells": 27946,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					24864.6799341125,
+					25719.6044867235,
+					23778.7969194399
+				],
+				"target_reasons": [
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Coral: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[
+						{
+							"colony": 2,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.8212090217516,
+							"strength": 0.132978723404255,
+							"threat": 0.0000636316806776449,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 1,
+							"food": 0.15,
+							"queen": 0.0,
+							"score": 0.360872391433326,
+							"strength": 0.11326194398682,
+							"threat": 0.00944378077983856,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 2,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.872802843321976,
+							"strength": 0.144599303135889,
+							"threat": 0.0400368735194206,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 0,
+							"food": 0.175,
+							"queen": 0.0,
+							"score": 0.400174488942346,
+							"strength": 0.13673805601318,
+							"threat": 0.000269766262499616,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 1,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.81002701407709,
+							"strength": 0.105400696864111,
+							"threat": 0.0164596505463123,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.805489412205191,
+							"strength": 0.117021276595745,
+							"threat": 0.000301468942780048,
+							"travel": 0.0881666666666667
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 1,
+			"seed": 81923,
+			"state": {
+				"ai_targets": [
+					1,
+					2,
+					1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1364,
+					1327,
+					1498
+				],
+				"fighting": [
+					15,
+					9,
+					5
+				],
+				"food_remaining": 4765,
+				"harvest": [
+					25143,
+					25317,
+					22751
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"Recovering",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					636,
+					673,
+					502
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					1,
+					6,
+					2
+				],
+				"scent_cells": 28572,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					25738.2280401559,
+					25912.7300089384,
+					23347.1707584421
+				],
+				"target_reasons": [
+					"Holding Coral: no challenger leads by 0.18.",
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Coral: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[
+						{
+							"colony": 1,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.838644368450117,
+							"strength": 0.12179003021148,
+							"threat": 0.02868767157197,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 2,
+							"food": 0.275,
+							"queen": 0.0,
+							"score": 0.504041708786639,
+							"strength": 0.13973136915078,
+							"threat": 0.00114367296919227,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 2,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.833543225211452,
+							"strength": 0.142887205387205,
+							"threat": 0.0024893531575799,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.816376636455186,
+							"strength": 0.12820996978852,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.821406589355963,
+							"strength": 0.11026863084922,
+							"threat": 0.0229712918400764,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 1,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.810008204117367,
+							"strength": 0.107112794612795,
+							"threat": 0.0147287428379059,
+							"travel": 0.0881666666666667
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 2,
+			"seed": 81923,
+			"state": {
+				"ai_targets": [
+					1,
+					0,
+					0
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1464,
+					1352,
+					1285
+				],
+				"fighting": [
+					5,
+					2,
+					6
+				],
+				"food_remaining": 5376,
+				"harvest": [
+					23738,
+					23726,
+					25297
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"Recovering",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					536,
+					648,
+					715
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					4,
+					4,
+					3
+				],
+				"scent_cells": 28542,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					24333.729590169,
+					24319.6199101974,
+					25889.4166856483
+				],
+				"target_reasons": [
+					"Holding Coral: no challenger leads by 0.18.",
+					"Holding Amber: no challenger leads by 0.18.",
+					"Holding Amber: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[
+						{
+							"colony": 1,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.820595728019612,
+							"strength": 0.114035087719298,
+							"threat": 0.018393973633647,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 2,
+							"food": 0.575,
+							"queen": 0.0,
+							"score": 0.774901134479713,
+							"strength": 0.107395751376869,
+							"threat": 0.00433871643617749,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.857050880039993,
+							"strength": 0.135964912280702,
+							"threat": 0.0329193010926247,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 2,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.806444282945736,
+							"strength": 0.11827761627907,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.831686697024309,
+							"strength": 0.142604248623131,
+							"threat": 0.000915781734511256,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 1,
+							"food": 0.225,
+							"queen": 0.0,
+							"score": 0.444925559281715,
+							"strength": 0.13172238372093,
+							"threat": 0.0000365088941180147,
+							"travel": 0.0881666666666667
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 0,
+			"seed": 7,
+			"state": {
+				"ai_targets": [
+					2,
+					2,
+					0
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1867,
+					1562,
+					1598
+				],
+				"fighting": [
+					3,
+					2,
+					8
+				],
+				"food_remaining": 8792,
+				"harvest": [
+					22477,
+					22458,
+					24895
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"Recovering",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					133,
+					438,
+					402
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					2,
+					4
+				],
+				"scent_cells": 27405,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					23071.8911570348,
+					23052.0129426534,
+					25491.1979546644
+				],
+				"target_reasons": [
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Amber: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[
+						{
+							"colony": 2,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.750437728937729,
+							"strength": 0.0622710622710623,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 1,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.179253464993503,
+							"strength": 0.0590277777777778,
+							"threat": 0.0320590205490589,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 2,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.846266102944519,
+							"strength": 0.129411764705882,
+							"threat": 0.02868767157197,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.282613061466151,
+							"strength": 0.190972222222222,
+							"threat": 0.00347417257726192,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.875932113289722,
+							"strength": 0.187728937728938,
+							"threat": 0.0000365088941180147,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 1,
+							"food": 0.15,
+							"queen": 0.0,
+							"score": 0.398791775480205,
+							"strength": 0.120588235294118,
+							"threat": 0.0400368735194206,
+							"travel": 0.0881666666666667
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 1,
+			"seed": 7,
+			"state": {
+				"ai_targets": [
+					1,
+					2,
+					0
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1415,
+					1404,
+					1320
+				],
+				"fighting": [
+					1,
+					1,
+					2
+				],
+				"food_remaining": 6274,
+				"harvest": [
+					23210,
+					24635,
+					24471
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"Recovering",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					585,
+					596,
+					680
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					5,
+					3,
+					3
+				],
+				"scent_cells": 28609,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					23801.5129080908,
+					25227.6626650581,
+					25062.8109531529
+				],
+				"target_reasons": [
+					"Holding Coral: no challenger leads by 0.18.",
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Amber: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[
+						{
+							"colony": 1,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.901709181693641,
+							"strength": 0.124058577405858,
+							"threat": 0.0894839376211166,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 2,
+							"food": 0.15,
+							"queen": 0.0,
+							"score": 0.355764355942429,
+							"strength": 0.116001564945227,
+							"threat": 0.00159612433053553,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 2,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.821564934151596,
+							"strength": 0.116938616938617,
+							"threat": 0.0164596505463123,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 0,
+							"food": 0.2,
+							"queen": 0.0,
+							"score": 0.414409558203589,
+							"strength": 0.125941422594142,
+							"threat": 0.000301468942780048,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.857991669281874,
+							"strength": 0.133998435054773,
+							"threat": 0.0358265675604343,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 1,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.82122804972805,
+							"strength": 0.133061383061383,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 2,
+			"seed": 7,
+			"state": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1557,
+					1528,
+					1235
+				],
+				"fighting": [
+					105,
+					4,
+					2
+				],
+				"food_remaining": 5595,
+				"harvest": [
+					23671,
+					23636,
+					25531
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"Recovering",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					443,
+					472,
+					765
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					2,
+					3,
+					1
+				],
+				"scent_cells": 28569,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					24266.1084160933,
+					24231.0923703947,
+					26124.9854127819
+				],
+				"target_reasons": [
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Amber: no challenger leads by 0.18.",
+					"Holding Amber: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[
+						{
+							"colony": 1,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.828034452149004,
+							"strength": 0.119312169312169,
+							"threat": 0.0205556161701679,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 2,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.812795473751029,
+							"strength": 0.0925697865353038,
+							"threat": 0.0320590205490589,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.854681064914932,
+							"strength": 0.130687830687831,
+							"threat": 0.0358265675604343,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 2,
+							"food": 0.05,
+							"queen": 0.0,
+							"score": 0.282047394676716,
+							"strength": 0.0979381443298969,
+							"threat": 0.0459425836801529,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.5,
+							"queen": 0.0,
+							"score": 0.748086233288943,
+							"strength": 0.157430213464696,
+							"threat": 0.0024893531575799,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 1,
+							"food": 0.15,
+							"queen": 0.0,
+							"score": 0.390243531591409,
+							"strength": 0.152061855670103,
+							"threat": 0.0000150092546391534,
+							"travel": 0.0881666666666667
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 0,
+			"seed": 42,
+			"state": {
+				"ai_targets": [
+					2,
+					2,
+					1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1397,
+					1258,
+					1580
+				],
+				"fighting": [
+					1,
+					9,
+					7
+				],
+				"food_remaining": 4457,
+				"harvest": [
+					23638,
+					26853,
+					23535
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"Recovering",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					603,
+					742,
+					420
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					7,
+					2,
+					3
+				],
+				"scent_cells": 28159,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					24231.9120457027,
+					27446.6186857969,
+					24130.3544178596
+				],
+				"target_reasons": [
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Coral: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[
+						{
+							"colony": 2,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.834560897435897,
+							"strength": 0.146394230769231,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 1,
+							"food": 0.275,
+							"queen": 0.0,
+							"score": 0.609176709597156,
+							"strength": 0.111784140969163,
+							"threat": 0.134225901961327,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 2,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.879220619648158,
+							"strength": 0.158994932432432,
+							"threat": 0.0320590205490589,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.842842176243816,
+							"strength": 0.138215859030837,
+							"threat": 0.0164596505463123,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.82759900345787,
+							"strength": 0.103605769230769,
+							"threat": 0.0358265675604343,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 1,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.782645906811496,
+							"strength": 0.0910050675675676,
+							"threat": 0.00347417257726192,
+							"travel": 0.0881666666666667
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 1,
+			"seed": 42,
+			"state": {
+				"ai_targets": [
+					1,
+					2,
+					1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1346,
+					1392,
+					1457
+				],
+				"fighting": [
+					3,
+					6,
+					3
+				],
+				"food_remaining": 5276,
+				"harvest": [
+					25164,
+					24559,
+					23229
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"Recovering",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					654,
+					608,
+					543
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					1,
+					3,
+					5
+				],
+				"scent_cells": 28493,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					25756.3989974412,
+					25154.8656568886,
+					23823.7040114006
+				],
+				"target_reasons": [
+					"Holding Coral: no challenger leads by 0.18.",
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Coral: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[
+						{
+							"colony": 1,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.81864948811278,
+							"strength": 0.129826635145784,
+							"threat": 0.000656186300329864,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 2,
+							"food": 0.1,
+							"queen": 0.0,
+							"score": 0.324775290215589,
+							"strength": 0.136608623548922,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 2,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.819978003458932,
+							"strength": 0.13180639585134,
+							"threat": 0.00000494094092573505,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 0,
+							"food": 0.5,
+							"queen": 0.0,
+							"score": 0.708369265558239,
+							"strength": 0.120173364854216,
+							"threat": 0.0000292340373562183,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.851558044607861,
+							"strength": 0.113391376451078,
+							"threat": 0.0500000014901161,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 1,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.806360270815327,
+							"strength": 0.11819360414866,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		},
+		{
+			"offset": 2,
+			"seed": 42,
+			"state": {
+				"ai_targets": [
+					1,
+					0,
+					0
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					1399,
+					1406,
+					1341
+				],
+				"fighting": [
+					9,
+					10,
+					8
+				],
+				"food_remaining": 4971,
+				"harvest": [
+					24705,
+					23668,
+					25108
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"Recovering",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					601,
+					594,
+					659
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					3,
+					3,
+					2
+				],
+				"scent_cells": 28807,
+				"seconds": 300.0,
+				"slots": 6000,
+				"stores": [
+					25298.4048909651,
+					24261.973854069,
+					25701.0357170444
+				],
+				"target_reasons": [
+					"Holding Coral: 30-second commitment.",
+					"Holding Amber: no challenger leads by 0.18.",
+					"Holding Amber: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[
+						{
+							"colony": 1,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.837169311642057,
+							"strength": 0.126031353135314,
+							"threat": 0.0229712918400764,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 2,
+							"food": 0.5,
+							"queen": 0.0,
+							"score": 0.708066086300476,
+							"strength": 0.119429241594996,
+							"threat": 0.000470178038813174,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.830529287165,
+							"strength": 0.123968646864686,
+							"threat": 0.018393973633647,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 2,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.807154163180074,
+							"strength": 0.118400315208826,
+							"threat": 0.000587181304581463,
+							"travel": 0.0881666666666667
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.868737426561787,
+							"strength": 0.130570758405004,
+							"threat": 0.0500000014901161,
+							"travel": 0.0881666666666667
+						},
+						{
+							"colony": 1,
+							"food": 0.275,
+							"queen": 0.0,
+							"score": 0.494766351457841,
+							"strength": 0.131599684791174,
+							"threat": 0.0,
+							"travel": 0.0881666666666667
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+  "before": {
+    "wins": [
+      0,
+      8,
+      1
+    ],
+    "unresolved": 6,
+    "draws": 0,
+    "first_eliminated": {
+      "Amber": 6,
+      "Azure": 5
+    },
+    "games_with_elimination": 11
+  },
+  "after": {
+    "wins": [
+      4,
+      9,
+      2
+    ],
+    "unresolved": 0,
+    "draws": 0,
+    "first_eliminated": {
+      "Azure": 10,
+      "Amber": 4,
+      "Coral": 1
+    },
+    "games_with_elimination": 15
+  },
+  "previously_stalled_now_resolved": 6,
+  "previously_resolved_now_stalled": 0,
+  "mean_horizon_capped_seconds_before": 1243.1746666666666,
+  "mean_horizon_capped_seconds_after": 622.9300000000001,
+  "raid_activity": {
+    "campaigns_started": 58,
+    "queen_progress_observations": 117,
+    "recalls": {
+      "Party losses": 25,
+      "Target eliminated": 16,
+      "Party exhausted": 2
+    }
+  },
+  "performance_pass": true
+}

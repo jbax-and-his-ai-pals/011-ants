@@ -1,0 +1,17 @@
+{
+  "passed_suites": 24,
+  "passed_renderer_windows": 14,
+  "additional_targeted_escalation_checks_passed": true,
+  "scouting_panel_open_in_every_window": true,
+  "individual_worker_and_inventory_invariants_passed": true,
+  "raid_roster_budgets_passed": true,
+  "sampled_probe_tunnel_entries": 0,
+  "skirmish_dense_battle_mean_fps": [
+    91.1,
+    89.5
+  ],
+  "founding_mean_fps_range": [
+    440.2,
+    922.4
+  ]
+}

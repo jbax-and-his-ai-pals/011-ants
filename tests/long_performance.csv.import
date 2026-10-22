@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bjcdq30addsde"
+
+[deps]
+
+files=["res://tests/long_performance.synthetic.translation", "res://tests/long_performance.mean.translation", "res://tests/long_performance.p95.translation", "res://tests/long_performance.p99.translation", "res://tests/long_performance.max.translation", "res://tests/long_performance.actual.translation", "res://tests/long_performance.target.translation"]
+
+source_file="res://tests/long_performance.csv"
+dest_files=["res://tests/long_performance.synthetic.translation", "res://tests/long_performance.mean.translation", "res://tests/long_performance.p95.translation", "res://tests/long_performance.p99.translation", "res://tests/long_performance.max.translation", "res://tests/long_performance.actual.translation", "res://tests/long_performance.target.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

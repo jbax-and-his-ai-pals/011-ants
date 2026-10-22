@@ -1,0 +1,16 @@
+group,seed,traits,winner,seconds,amber,coral,azure,first_queen_lost
+default_unattended,81923,"[1, 2, 0]",1,1017.87,4,417,0,2
+equal_ai_neutral,81923,"[0, 0, 0]",0,1266.53,104,7,0,2
+default_unattended,7,"[1, 2, 0]",1,923.0,21,450,0,2
+equal_ai_neutral,7,"[0, 0, 0]",-2,1800.0,166,43,0,2
+default_unattended,42,"[1, 2, 0]",1,726.17,126,517,0,2
+equal_ai_neutral,42,"[0, 0, 0]",1,1692.73,8,65,0,2
+equal_ai_rotated_traits,7,"[1, 2, 0]",-2,1800.0,200,127,0,2
+equal_ai_rotated_traits,7,"[0, 1, 2]",1,1242.83,1,184,0,2
+equal_ai_rotated_traits,7,"[2, 0, 1]",-2,1800.0,231,97,0,2
+equal_ai_rotated_traits,42,"[1, 2, 0]",0,1079.47,89,2,0,2
+equal_ai_rotated_traits,42,"[0, 1, 2]",-2,1800.0,56,140,15,
+equal_ai_rotated_traits,42,"[2, 0, 1]",0,1706.03,289,71,0,2
+equal_ai_neutral_mirrored,81923,"[0, 0, 0]",1,1126.73,4,62,0,2
+equal_ai_neutral_mirrored,7,"[0, 0, 0]",-2,1800.0,81,101,0,2
+equal_ai_neutral_mirrored,42,"[0, 0, 0]",1,1238.53,5,102,0,2

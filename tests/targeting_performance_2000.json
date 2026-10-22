@@ -1,0 +1,2542 @@
+{
+	"all_targets_met": true,
+	"complete": true,
+	"eliminations": [
+		{
+			"cause": "invaders",
+			"colony": 2,
+			"seconds": 693.53,
+			"workers": 6
+		},
+		{
+			"cause": "invaders",
+			"colony": 0,
+			"seconds": 951.9,
+			"workers": 26
+		}
+	],
+	"growth_start": {
+		"ai_targets": [
+			2,
+			-1,
+			-1
+		],
+		"births": [
+			0,
+			0,
+			0
+		],
+		"combat_losses": [
+			0,
+			0,
+			0
+		],
+		"fighting": [
+			0,
+			0,
+			0
+		],
+		"food_remaining": 438800,
+		"harvest": [
+			0,
+			0,
+			0
+		],
+		"hunger_losses": [
+			0,
+			0,
+			0
+		],
+		"invalid_state": 0,
+		"modes": [
+			"player_autonomous",
+			"Scouting",
+			"Scouting"
+		],
+		"population": [
+			2000,
+			2000,
+			2000
+		],
+		"queens": [
+			100.0,
+			100.0,
+			100.0
+		],
+		"raiders": [
+			0,
+			0,
+			0
+		],
+		"recovering": [
+			0,
+			0,
+			0
+		],
+		"scent_cells": 0,
+		"seconds": 0.0,
+		"slots": 6000,
+		"stores": [
+			60000.0,
+			60000.0,
+			60000.0
+		],
+		"target_reasons": [
+			"Legacy nearest-nest automation",
+			"Waiting for scouts.",
+			"Waiting for scouts."
+		],
+		"target_scores": [
+			[],
+			[],
+			[]
+		],
+		"underground": [
+			0,
+			0,
+			0
+		]
+	},
+	"growth_target_per_colony": 2000,
+	"natural_final": {
+		"ai_targets": [
+			1,
+			0,
+			1
+		],
+		"births": [
+			307,
+			259,
+			196
+		],
+		"combat_losses": [
+			2281,
+			1846,
+			2196
+		],
+		"fighting": [
+			1,
+			1,
+			0
+		],
+		"food_remaining": 17228,
+		"harvest": [
+			15557,
+			25456,
+			20421
+		],
+		"hunger_losses": [
+			0,
+			0,
+			0
+		],
+		"invalid_state": 0,
+		"modes": [
+			"player_autonomous",
+			"Raiding",
+			"Eliminated"
+		],
+		"population": [
+			26,
+			413,
+			0
+		],
+		"queens": [
+			0.0,
+			100.0,
+			0.0
+		],
+		"raiders": [
+			0,
+			24,
+			0
+		],
+		"recovering": [
+			2,
+			6,
+			0
+		],
+		"scent_cells": 17951,
+		"seconds": 951.9,
+		"slots": 6000,
+		"stores": [
+			11884.2520131009,
+			20214.6223135554,
+			17911.184439813
+		],
+		"target_reasons": [
+			"Legacy nearest-nest automation",
+			"Holding Amber until the current raid ends.",
+			"Holding Coral: no challenger leads by 0.18."
+		],
+		"target_scores": [
+			[],
+			[
+				{
+					"colony": 0,
+					"food": 0.025,
+					"queen": 0.168086733136576,
+					"score": 0.492618884961855,
+					"strength": 0.23469387755102,
+					"threat": 0.00000494094092573505,
+					"travel": 0.0648333333333333
+				}
+			],
+			[
+				{
+					"colony": 1,
+					"food": 0.0,
+					"queen": 0.0,
+					"score": 1.29225822981577,
+					"strength": 0.00248015873015873,
+					"threat": 1.2,
+					"travel": 0.089778071085612
+				},
+				{
+					"colony": 0,
+					"food": 0.0,
+					"queen": 0.0,
+					"score": 0.127207001398841,
+					"strength": 0.00874125874125874,
+					"threat": 0.02868767157197,
+					"travel": 0.089778071085612
+				}
+			]
+		],
+		"underground": [
+			5,
+			15,
+			0
+		]
+	},
+	"natural_winner": 1,
+	"note": "Natural checkpoints are reached by full fixed ticks between live 4x renderer windows, not continuous real-time playback of the whole match. Observer may continue after player defeat, labeled in each row. Growth-cap and battle fixtures explicitly add workers through the real spawn path and food to isolate capacity; these are not naturally achieved populations. No aggregate ants or skipped off-screen updates.",
+	"renderer": "GL Compatibility",
+	"resolution": "1440x900",
+	"seed": 81923,
+	"starting_workers_per_colony": 2000,
+	"vsync_requested": "disabled",
+	"window_min_wall_seconds": 5,
+	"windows": [
+		{
+			"actual_speed": 4.0,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					149,
+					83,
+					296
+				],
+				"fighting": [
+					22,
+					22,
+					55
+				],
+				"food_remaining": 68096,
+				"harvest": [
+					1585,
+					2051,
+					4476
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Defending"
+				],
+				"population": [
+					1851,
+					1917,
+					1704
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 16670,
+				"seconds": 21.83,
+				"slots": 6000,
+				"stores": [
+					1986.66193333333,
+					2435.38019999999,
+					4894.4864
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: 30-second commitment.",
+					"Holding Amber: 30-second commitment."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.222066299908494,
+							"strength": 0.132288228822882,
+							"threat": 0.0,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 0,
+							"food": 0.025,
+							"queen": 0.0,
+							"score": 0.216712784665436,
+							"strength": 0.126879451332102,
+							"threat": 0.0,
+							"travel": 0.0648333333333333
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 1.90936471464808,
+							"strength": 0.119586476669461,
+							"threat": 1.10000016689301,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 1,
+							"food": 0.5,
+							"queen": 0.0,
+							"score": 1.55758730777787,
+							"strength": 0.117711771177118,
+							"threat": 0.850097465515137,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"frames": 538,
+			"max_frame_ms": 26.72,
+			"mean_fps": 107.4,
+			"mean_frame_ms": 9.31,
+			"p95_ms": 13.65,
+			"p99_ms": 21.0,
+			"percent_frames_over_16_67ms": 1.5,
+			"post_player_game_end": false,
+			"scenario": "natural_0s",
+			"start": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					0,
+					0,
+					0
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 78800,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Gathering"
+				],
+				"population": [
+					2000,
+					2000,
+					2000
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 790,
+				"seconds": 1.8,
+				"slots": 6000,
+				"stores": [
+					585.491999999997,
+					583.315799999997,
+					585.491999999997
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Selected Amber: seeded choice within 0.08.",
+					"Selected Amber: seeded choice within 0.08."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.214778071085612,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.189833333333333,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0648333333333333
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.214778071085612,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 1,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.214778071085612,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"synthetic": false,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.334,
+				"movement": 1.898,
+				"resolution_and_nursery": 0.302,
+				"scent_and_jobs": 0.306
+			},
+			"visible_ants": 5472,
+			"wall_seconds": 5.011,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.01,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					2,
+					0
+				],
+				"births": [
+					17,
+					13,
+					13
+				],
+				"combat_losses": [
+					561,
+					407,
+					677
+				],
+				"fighting": [
+					18,
+					8,
+					14
+				],
+				"food_remaining": 47957,
+				"harvest": [
+					6592,
+					9622,
+					13790
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					1456,
+					1606,
+					1336
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					7
+				],
+				"scent_cells": 27239,
+				"seconds": 82.23,
+				"slots": 6000,
+				"stores": [
+					6449.44413333333,
+					9370.19357000007,
+					13687.1100459725
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Azure: 30-second commitment.",
+					"Holding Amber: 30-second commitment."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.346229327982969,
+							"strength": 0.136340640809444,
+							"threat": 0.120110616087914,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.196168615984405,
+							"strength": 0.131335282651072,
+							"threat": 0.0,
+							"travel": 0.0648333333333333
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.958618441073074,
+							"strength": 0.11997152011392,
+							"threat": 0.148868849873543,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 1,
+							"food": 0.4,
+							"queen": 0.0,
+							"score": 0.718485636128677,
+							"strength": 0.113659359190556,
+							"threat": 0.115048205852509,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"frames": 550,
+			"max_frame_ms": 28.11,
+			"mean_fps": 109.8,
+			"mean_frame_ms": 9.11,
+			"p95_ms": 13.88,
+			"p99_ms": 21.08,
+			"percent_frames_over_16_67ms": 1.8,
+			"post_player_game_end": false,
+			"scenario": "natural_60s",
+			"start": {
+				"ai_targets": [
+					2,
+					0,
+					1
+				],
+				"births": [
+					11,
+					7,
+					7
+				],
+				"combat_losses": [
+					413,
+					280,
+					477
+				],
+				"fighting": [
+					14,
+					9,
+					12
+				],
+				"food_remaining": 51647,
+				"harvest": [
+					5194,
+					8044,
+					13123
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					1598,
+					1727,
+					1530
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 26634,
+				"seconds": 62.17,
+				"slots": 6000,
+				"stores": [
+					5225.23566666667,
+					7997.13959000003,
+					13186.9531333333
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: no challenger leads by 0.18.",
+					"Holding Coral: 30-second commitment."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 0,
+							"food": 0.075,
+							"queen": 0.0,
+							"score": 0.269629496402878,
+							"strength": 0.129796163069544,
+							"threat": 0.0,
+							"travel": 0.0648333333333333
+						},
+						{
+							"colony": 2,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.222234479773284,
+							"strength": 0.132456408687672,
+							"threat": 0.0,
+							"travel": 0.089778071085612
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 1.10206867393025,
+							"strength": 0.122333651703279,
+							"threat": 0.289956951141357,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 1,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 1.03140497276362,
+							"strength": 0.117543591312328,
+							"threat": 0.224083310365677,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"synthetic": false,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.314,
+				"movement": 1.799,
+				"resolution_and_nursery": 0.38,
+				"scent_and_jobs": 0.382
+			},
+			"visible_ants": 4398,
+			"wall_seconds": 5.009,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.01,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					2,
+					0
+				],
+				"births": [
+					57,
+					47,
+					47
+				],
+				"combat_losses": [
+					1124,
+					943,
+					1373
+				],
+				"fighting": [
+					4,
+					9,
+					6
+				],
+				"food_remaining": 34445,
+				"harvest": [
+					11576,
+					14876,
+					16998
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					933,
+					1104,
+					674
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					4
+				],
+				"scent_cells": 28277,
+				"seconds": 201.97,
+				"slots": 6000,
+				"stores": [
+					10580.1833468233,
+					13610.6742100002,
+					16158.3658845083
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Amber: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.309092741397213,
+							"strength": 0.155196629213483,
+							"threat": 0.0641180410981178,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.222824175515541,
+							"strength": 0.135019550342131,
+							"threat": 0.0229712918400764,
+							"travel": 0.0648333333333333
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.4,
+							"queen": 0.0,
+							"score": 0.653171853179585,
+							"strength": 0.104424504950495,
+							"threat": 0.0589692771434784,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 1,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.186688623132491,
+							"strength": 0.0948033707865169,
+							"threat": 0.00210718126036227,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"frames": 836,
+			"max_frame_ms": 17.44,
+			"mean_fps": 167.2,
+			"mean_frame_ms": 5.98,
+			"p95_ms": 9.31,
+			"p99_ms": 11.98,
+			"percent_frames_over_16_67ms": 0.4,
+			"post_player_game_end": false,
+			"scenario": "natural_180s",
+			"start": {
+				"ai_targets": [
+					2,
+					2,
+					0
+				],
+				"births": [
+					50,
+					41,
+					41
+				],
+				"combat_losses": [
+					1057,
+					878,
+					1297
+				],
+				"fighting": [
+					17,
+					7,
+					8
+				],
+				"food_remaining": 35809,
+				"harvest": [
+					11000,
+					14123,
+					16529
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					993,
+					1163,
+					744
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					1
+				],
+				"scent_cells": 28294,
+				"seconds": 181.93,
+				"slots": 6000,
+				"stores": [
+					10133.2582801567,
+					13005.5493833335,
+					15789.4938147156
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Amber: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.291889647132558,
+							"strength": 0.15211157455683,
+							"threat": 0.0500000014901161,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.244332807917564,
+							"strength": 0.134757505773672,
+							"threat": 0.0447419688105583,
+							"travel": 0.0648333333333333
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 0.911981590216606,
+							"strength": 0.107347055460263,
+							"threat": 0.114856463670731,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 1,
+							"food": 0.075,
+							"queen": 0.0,
+							"score": 0.266770725032784,
+							"strength": 0.09788842544317,
+							"threat": 0.00410422850400209,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"synthetic": false,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.2,
+				"movement": 1.206,
+				"resolution_and_nursery": 0.299,
+				"scent_and_jobs": 0.269
+			},
+			"visible_ants": 2711,
+			"wall_seconds": 5.001,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.01,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					2,
+					0
+				],
+				"births": [
+					117,
+					98,
+					98
+				],
+				"combat_losses": [
+					1747,
+					1337,
+					1861
+				],
+				"fighting": [
+					2,
+					3,
+					10
+				],
+				"food_remaining": 26286,
+				"harvest": [
+					13868,
+					18799,
+					19396
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					370,
+					761,
+					237
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					7
+				],
+				"scent_cells": 27984,
+				"seconds": 381.63,
+				"slots": 6000,
+				"stores": [
+					11988.7412724793,
+					16340.807991306,
+					17800.1874015939
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Amber: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.293457928741972,
+							"strength": 0.1905,
+							"threat": 0.0131798576563597,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.233027961016476,
+							"strength": 0.168137687555163,
+							"threat": 0.0000569401279790327,
+							"travel": 0.0648333333333333
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.175,
+							"queen": 0.0,
+							"score": 0.431393096031129,
+							"strength": 0.0977011494252874,
+							"threat": 0.0689138755202293,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 1,
+							"food": 0.15,
+							"queen": 0.0,
+							"score": 0.34402003989617,
+							"strength": 0.0595,
+							"threat": 0.0447419688105583,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"frames": 1100,
+			"max_frame_ms": 13.61,
+			"mean_fps": 219.9,
+			"mean_frame_ms": 4.55,
+			"p95_ms": 6.81,
+			"p99_ms": 10.2,
+			"percent_frames_over_16_67ms": 0.0,
+			"post_player_game_end": false,
+			"scenario": "natural_360s",
+			"start": {
+				"ai_targets": [
+					2,
+					2,
+					0
+				],
+				"births": [
+					110,
+					92,
+					92
+				],
+				"combat_losses": [
+					1698,
+					1297,
+					1798
+				],
+				"fighting": [
+					4,
+					1,
+					5
+				],
+				"food_remaining": 26954,
+				"harvest": [
+					13731,
+					18459,
+					19163
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					412,
+					795,
+					294
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					5
+				],
+				"scent_cells": 28229,
+				"seconds": 361.6,
+				"slots": 6000,
+				"stores": [
+					11928.4834058127,
+					16116.4017446393,
+					17632.1603284592
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Amber: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.297788377609366,
+							"strength": 0.182339449541284,
+							"threat": 0.0256708569824696,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.229336297112996,
+							"strength": 0.16439205955335,
+							"threat": 0.000110904226312414,
+							"travel": 0.0648333333333333
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.475,
+							"queen": 0.0,
+							"score": 0.803023719168236,
+							"strength": 0.104019746121298,
+							"threat": 0.134225901961327,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 1,
+							"food": 0.15,
+							"queen": 0.0,
+							"score": 0.347475495063748,
+							"strength": 0.0676605504587156,
+							"threat": 0.0400368735194206,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"synthetic": false,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.132,
+				"movement": 0.782,
+				"resolution_and_nursery": 0.234,
+				"scent_and_jobs": 0.215
+			},
+			"visible_ants": 1368,
+			"wall_seconds": 5.003,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.0,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					2,
+					1
+				],
+				"births": [
+					197,
+					166,
+					166
+				],
+				"combat_losses": [
+					2005,
+					1624,
+					2117
+				],
+				"fighting": [
+					3,
+					3,
+					2
+				],
+				"food_remaining": 21472,
+				"harvest": [
+					14933,
+					21799,
+					20379
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Defending"
+				],
+				"population": [
+					192,
+					542,
+					49
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					1,
+					0
+				],
+				"scent_cells": 24504,
+				"seconds": 621.63,
+				"slots": 6000,
+				"stores": [
+					12209.5150805764,
+					18062.2177074789,
+					18084.6009735186
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Coral: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.321347969330105,
+							"strength": 0.229342327150084,
+							"threat": 0.00222757109440863,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.249952400662338,
+							"strength": 0.184531886024423,
+							"threat": 0.000587181304581463,
+							"travel": 0.0648333333333333
+						}
+					],
+					[
+						{
+							"colony": 1,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.970273347504558,
+							"strength": 0.0206576728499157,
+							"threat": 0.859837603569031,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 0,
+							"food": 0.05,
+							"queen": 0.0,
+							"score": 0.289155804603881,
+							"strength": 0.0506198347107438,
+							"threat": 0.0987578988075256,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"frames": 1256,
+			"max_frame_ms": 15.21,
+			"mean_fps": 251.1,
+			"mean_frame_ms": 3.98,
+			"p95_ms": 5.83,
+			"p99_ms": 8.9,
+			"percent_frames_over_16_67ms": 0.0,
+			"post_player_game_end": false,
+			"scenario": "natural_600s",
+			"start": {
+				"ai_targets": [
+					2,
+					2,
+					1
+				],
+				"births": [
+					190,
+					160,
+					160
+				],
+				"combat_losses": [
+					1991,
+					1605,
+					2107
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 21746,
+				"harvest": [
+					14852,
+					21625,
+					20339
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Recovering"
+				],
+				"population": [
+					199,
+					555,
+					53
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					2,
+					0
+				],
+				"scent_cells": 25096,
+				"seconds": 601.63,
+				"slots": 6000,
+				"stores": [
+					12189.5440139097,
+					17981.8944800507,
+					18091.4951753173
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Azure: no challenger leads by 0.18.",
+					"Holding Coral: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.32194929983706,
+							"strength": 0.227832512315271,
+							"threat": 0.00433871643617749,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.249995573941783,
+							"strength": 0.184018567639257,
+							"threat": 0.00114367296919227,
+							"travel": 0.0648333333333333
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.125,
+							"queen": 0.0,
+							"score": 0.460491873704084,
+							"strength": 0.0533596837944664,
+							"threat": 0.192354118824005,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 1,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.388722563965959,
+							"strength": 0.0221674876847291,
+							"threat": 0.276777005195618,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					6
+				]
+			},
+			"synthetic": false,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.09,
+				"movement": 0.568,
+				"resolution_and_nursery": 0.184,
+				"scent_and_jobs": 0.174
+			},
+			"visible_ants": 783,
+			"wall_seconds": 5.003,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.0,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					1,
+					0,
+					1
+				],
+				"births": [
+					297,
+					251,
+					196
+				],
+				"combat_losses": [
+					2254,
+					1832,
+					2196
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 17510,
+				"harvest": [
+					15533,
+					25185,
+					20421
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Eliminated"
+				],
+				"population": [
+					43,
+					419,
+					0
+				],
+				"queens": [
+					23.6010218622292,
+					100.0,
+					0.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 19474,
+				"seconds": 921.77,
+				"slots": 6000,
+				"stores": [
+					11941.2696797677,
+					20077.8649807786,
+					17911.184439813
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: no challenger leads by 0.18.",
+					"Holding Coral: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.153571289608875,
+							"score": 0.445099181796186,
+							"strength": 0.226681127982646,
+							"threat": 0.0000134308713313658,
+							"travel": 0.0648333333333333
+						}
+					],
+					[
+						{
+							"colony": 1,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 1.29225822981577,
+							"strength": 0.00248015873015873,
+							"threat": 1.2,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.127207001398841,
+							"strength": 0.00874125874125874,
+							"threat": 0.02868767157197,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"frames": 1298,
+			"max_frame_ms": 10.7,
+			"mean_fps": 259.6,
+			"mean_frame_ms": 3.85,
+			"p95_ms": 5.35,
+			"p99_ms": 8.37,
+			"percent_frames_over_16_67ms": 0.0,
+			"post_player_game_end": false,
+			"scenario": "natural_900s",
+			"start": {
+				"ai_targets": [
+					1,
+					0,
+					1
+				],
+				"births": [
+					290,
+					245,
+					196
+				],
+				"combat_losses": [
+					2253,
+					1831,
+					2196
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 17740,
+				"harvest": [
+					15519,
+					24953,
+					20421
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Eliminated"
+				],
+				"population": [
+					37,
+					414,
+					0
+				],
+				"queens": [
+					15.60102186223,
+					100.0,
+					0.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					4,
+					0
+				],
+				"scent_cells": 20547,
+				"seconds": 901.77,
+				"slots": 6000,
+				"stores": [
+					11978.8694131011,
+					19934.1415320348,
+					17911.184439813
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: no challenger leads by 0.18.",
+					"Holding Coral: no challenger leads by 0.18."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.169571289608873,
+							"score": 0.463920804882159,
+							"strength": 0.229490022172949,
+							"threat": 0.0000261597670032643,
+							"travel": 0.0648333333333333
+						}
+					],
+					[
+						{
+							"colony": 1,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 1.29225822981577,
+							"strength": 0.00248015873015873,
+							"threat": 1.2,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.127207001398841,
+							"strength": 0.00874125874125874,
+							"threat": 0.02868767157197,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					6,
+					0,
+					0
+				]
+			},
+			"synthetic": false,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.066,
+				"movement": 0.682,
+				"resolution_and_nursery": 0.154,
+				"scent_and_jobs": 0.129
+			},
+			"visible_ants": 462,
+			"wall_seconds": 5.001,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.01,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					157,
+					83,
+					298
+				],
+				"fighting": [
+					22,
+					24,
+					31
+				],
+				"food_remaining": 427989,
+				"harvest": [
+					1603,
+					2063,
+					4495
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Defending"
+				],
+				"population": [
+					1843,
+					1917,
+					1702
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 16790,
+				"seconds": 22.07,
+				"slots": 6000,
+				"stores": [
+					61402.9141333339,
+					61845.2968599999,
+					64311.8742666671
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: 30-second commitment.",
+					"Holding Amber: 30-second commitment."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.222066299908494,
+							"strength": 0.132288228822882,
+							"threat": 0.0,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 0,
+							"food": 0.025,
+							"queen": 0.0,
+							"score": 0.216712784665436,
+							"strength": 0.126879451332102,
+							"threat": 0.0,
+							"travel": 0.0648333333333333
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 1.90936471464808,
+							"strength": 0.119586476669461,
+							"threat": 1.10000016689301,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 1,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 1.65758730777787,
+							"strength": 0.117711771177118,
+							"threat": 0.850097465515137,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"frames": 510,
+			"max_frame_ms": 28.57,
+			"mean_fps": 102.0,
+			"mean_frame_ms": 9.81,
+			"p95_ms": 13.96,
+			"p99_ms": 22.25,
+			"percent_frames_over_16_67ms": 1.8,
+			"post_player_game_end": false,
+			"scenario": "growth_cap_overview",
+			"start": {
+				"ai_targets": [
+					2,
+					0,
+					0
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					0,
+					0,
+					0
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 438800,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Gathering",
+					"Gathering"
+				],
+				"population": [
+					2000,
+					2000,
+					2000
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 933,
+				"seconds": 2.03,
+				"slots": 6000,
+				"stores": [
+					59983.6113333335,
+					59981.1530333335,
+					59983.6113333335
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Selected Amber: seeded choice within 0.08.",
+					"Selected Amber: seeded choice within 0.08."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 2,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.214778071085612,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.189833333333333,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.0648333333333333
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.214778071085612,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 1,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.214778071085612,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"synthetic": true,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.347,
+				"movement": 1.865,
+				"resolution_and_nursery": 0.308,
+				"scent_and_jobs": 0.308
+			},
+			"visible_ants": 5462,
+			"wall_seconds": 5.001,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 4.0,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					0,
+					1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					667,
+					502,
+					691
+				],
+				"fighting": [
+					10,
+					2,
+					141
+				],
+				"food_remaining": 481312,
+				"harvest": [
+					1116,
+					2223,
+					2526
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Defending"
+				],
+				"population": [
+					1333,
+					1498,
+					1309
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 14149,
+				"seconds": 21.43,
+				"slots": 6000,
+				"stores": [
+					60957.8587333334,
+					62039.6479733334,
+					62379.3333333337
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: 30-second commitment.",
+					"Holding Coral: 30-second commitment."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 0,
+							"food": 0.075,
+							"queen": 0.0,
+							"score": 0.887986069208924,
+							"strength": 0.132052186177715,
+							"threat": 0.616100549697876,
+							"travel": 0.0648333333333333
+						},
+						{
+							"colony": 2,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.223099537799745,
+							"strength": 0.133321466714133,
+							"threat": 0.0,
+							"travel": 0.089778071085612
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 1.61350402924231,
+							"strength": 0.123725934314836,
+							"threat": 0.800000023841858,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 1,
+							"food": 0.15,
+							"queen": 0.0,
+							"score": 1.21629420794051,
+							"strength": 0.116678533285867,
+							"threat": 0.859837603569031,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"frames": 377,
+			"max_frame_ms": 32.88,
+			"mean_fps": 75.3,
+			"mean_frame_ms": 13.27,
+			"p95_ms": 21.56,
+			"p99_ms": 27.15,
+			"percent_frames_over_16_67ms": 14.3,
+			"post_player_game_end": false,
+			"scenario": "growth_cap_battle_overview",
+			"start": {
+				"ai_targets": [
+					2,
+					0,
+					1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					5,
+					5,
+					0
+				],
+				"fighting": [
+					42,
+					45,
+					0
+				],
+				"food_remaining": 488497,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Defending",
+					"Defending"
+				],
+				"population": [
+					1995,
+					1995,
+					2000
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 1311,
+				"seconds": 1.4,
+				"slots": 6000,
+				"stores": [
+					59988.7194666668,
+					59987.0272333334,
+					59988.7160000001
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Selected Amber: highest score.",
+					"Selected Coral: highest score."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 1.38983333333333,
+							"strength": 0.125,
+							"threat": 1.2,
+							"travel": 0.0648333333333333
+						},
+						{
+							"colony": 2,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.214778071085612,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.089778071085612
+						}
+					],
+					[
+						{
+							"colony": 1,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 2.01477807108561,
+							"strength": 0.125,
+							"threat": 1.2,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 0,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.214778071085612,
+							"strength": 0.125,
+							"threat": 0.0,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"synthetic": true,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.897,
+				"movement": 1.612,
+				"resolution_and_nursery": 0.64,
+				"scent_and_jobs": 0.329
+			},
+			"visible_ants": 4140,
+			"wall_seconds": 5.004,
+			"zoom": 0.33333334
+		},
+		{
+			"actual_speed": 3.99,
+			"complete_window": true,
+			"end": {
+				"ai_targets": [
+					2,
+					0,
+					1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					662,
+					501,
+					689
+				],
+				"fighting": [
+					7,
+					5,
+					141
+				],
+				"food_remaining": 481597,
+				"harvest": [
+					1083,
+					2215,
+					2522
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Recovering",
+					"Defending"
+				],
+				"population": [
+					1338,
+					1499,
+					1311
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 13833,
+				"seconds": 20.73,
+				"slots": 6000,
+				"stores": [
+					60929.6684000001,
+					62037.5455933334,
+					62380.0660000004
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Holding Amber: 30-second commitment.",
+					"Holding Coral: 30-second commitment."
+				],
+				"target_scores": [
+					[],
+					[
+						{
+							"colony": 0,
+							"food": 0.05,
+							"queen": 0.0,
+							"score": 0.935031517883455,
+							"strength": 0.131694084704235,
+							"threat": 0.688504099845886,
+							"travel": 0.0648333333333333
+						},
+						{
+							"colony": 2,
+							"food": 0.0,
+							"queen": 0.0,
+							"score": 0.223247386445669,
+							"strength": 0.133469315360057,
+							"threat": 0.0,
+							"travel": 0.089778071085612
+						}
+					],
+					[
+						{
+							"colony": 0,
+							"food": 0.6,
+							"queen": 0.0,
+							"score": 1.56299637566176,
+							"strength": 0.123218304576144,
+							"threat": 0.75,
+							"travel": 0.089778071085612
+						},
+						{
+							"colony": 1,
+							"food": 0.3,
+							"queen": 0.0,
+							"score": 1.46719368442886,
+							"strength": 0.116530684639943,
+							"threat": 0.960884928703308,
+							"travel": 0.089778071085612
+						}
+					]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"frames": 428,
+			"max_frame_ms": 36.49,
+			"mean_fps": 85.5,
+			"mean_frame_ms": 11.69,
+			"p95_ms": 22.45,
+			"p99_ms": 32.81,
+			"percent_frames_over_16_67ms": 14.5,
+			"post_player_game_end": false,
+			"scenario": "growth_cap_battle_detail",
+			"start": {
+				"ai_targets": [
+					2,
+					-1,
+					-1
+				],
+				"births": [
+					0,
+					0,
+					0
+				],
+				"combat_losses": [
+					0,
+					0,
+					0
+				],
+				"fighting": [
+					0,
+					0,
+					0
+				],
+				"food_remaining": 488668,
+				"harvest": [
+					0,
+					0,
+					0
+				],
+				"hunger_losses": [
+					0,
+					0,
+					0
+				],
+				"invalid_state": 0,
+				"modes": [
+					"player_autonomous",
+					"Scouting",
+					"Scouting"
+				],
+				"population": [
+					2000,
+					2000,
+					2000
+				],
+				"queens": [
+					100.0,
+					100.0,
+					100.0
+				],
+				"raiders": [
+					0,
+					0,
+					0
+				],
+				"recovering": [
+					0,
+					0,
+					0
+				],
+				"scent_cells": 950,
+				"seconds": 0.77,
+				"slots": 6000,
+				"stores": [
+					59993.8206666667,
+					59992.8937666667,
+					59993.8206666667
+				],
+				"target_reasons": [
+					"Legacy nearest-nest automation",
+					"Waiting for scouts.",
+					"Waiting for scouts."
+				],
+				"target_scores": [
+					[],
+					[],
+					[]
+				],
+				"underground": [
+					0,
+					0,
+					0
+				]
+			},
+			"synthetic": true,
+			"target_met": true,
+			"tick_ms_by_phase": {
+				"encounters": 0.909,
+				"movement": 1.65,
+				"resolution_and_nursery": 0.633,
+				"scent_and_jobs": 0.356
+			},
+			"visible_ants": 622,
+			"wall_seconds": 5.005,
+			"zoom": 1.3
+		}
+	]
+}

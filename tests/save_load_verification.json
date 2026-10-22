@@ -1,0 +1,38 @@
+{
+	"complete": true,
+	"passed": true,
+	"round_trips": [
+		{
+			"bytes": 279410,
+			"capture_ms": 9.737,
+			"mode": 0,
+			"native": false,
+			"workers": 6000,
+			"write_ms": 20.863
+		},
+		{
+			"bytes": 101088,
+			"capture_ms": 5.719,
+			"mode": 1,
+			"native": false,
+			"workers": 36,
+			"write_ms": 18.751
+		},
+		{
+			"bytes": 279398,
+			"capture_ms": 9.608,
+			"mode": 0,
+			"native": true,
+			"workers": 6000,
+			"write_ms": 19.454
+		},
+		{
+			"bytes": 101072,
+			"capture_ms": 5.878,
+			"mode": 1,
+			"native": true,
+			"workers": 36,
+			"write_ms": 18.125
+		}
+	]
+}

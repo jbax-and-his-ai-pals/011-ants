@@ -1,0 +1,522 @@
+[
+	{
+		"choice_at": 182.999999999992,
+		"daughters": [
+			{
+				"cell": 7061,
+				"clock": 0,
+				"complete": true,
+				"progress": 240.0,
+				"status": "Daughter queen launched"
+			},
+			{
+				"cell": 6979,
+				"clock": 2.86666666666667,
+				"complete": false,
+				"progress": 160.0,
+				"status": "Growing: nurses supplying protein"
+			},
+			{}
+		],
+		"path": 1,
+		"queen_start": 345.000000000059,
+		"result": "victory",
+		"seconds": 634.333333333414,
+		"snapshots": [
+			{
+				"capacity": [
+					18,
+					18,
+					18
+				],
+				"daughters": [
+					{},
+					{},
+					{}
+				],
+				"paths": [
+					0,
+					0,
+					0
+				],
+				"population": [
+					12,
+					12,
+					12
+				],
+				"protein": [
+					96.0,
+					96.0,
+					96.0
+				],
+				"seconds": 0.0333333333333333,
+				"sugar": [
+					79.9964,
+					79.99586,
+					79.9964
+				]
+			},
+			{
+				"capacity": [
+					18,
+					18,
+					18
+				],
+				"daughters": [
+					{},
+					{},
+					{}
+				],
+				"paths": [
+					0,
+					0,
+					0
+				],
+				"population": [
+					25,
+					27,
+					26
+				],
+				"protein": [
+					176.0,
+					148.0,
+					65.0
+				],
+				"seconds": 120.033333333329,
+				"sugar": [
+					218.039733333323,
+					230.929886666661,
+					421.259000000028
+				]
+			},
+			{
+				"capacity": [
+					18,
+					18,
+					18
+				],
+				"daughters": [
+					{},
+					{},
+					{}
+				],
+				"paths": [
+					1,
+					1,
+					2
+				],
+				"population": [
+					55,
+					52,
+					45
+				],
+				"protein": [
+					384.0,
+					267.0,
+					386.0
+				],
+				"seconds": 240.033333333322,
+				"sugar": [
+					367.894399999953,
+					263.117889999981,
+					351.923866666726
+				]
+			},
+			{
+				"capacity": [
+					36,
+					18,
+					18
+				],
+				"daughters": [
+					{
+						"cell": 7061,
+						"clock": 6.99999999999998,
+						"complete": false,
+						"progress": 8.0,
+						"status": "Growing: nurses supplying protein"
+					},
+					{},
+					{}
+				],
+				"paths": [
+					1,
+					1,
+					2
+				],
+				"population": [
+					89,
+					80,
+					65
+				],
+				"protein": [
+					110.0,
+					97.0,
+					131.0
+				],
+				"seconds": 360.033333333404,
+				"sugar": [
+					613.387599999959,
+					570.762233333316,
+					670.383800000046
+				]
+			},
+			{
+				"capacity": [
+					36,
+					36,
+					18
+				],
+				"daughters": [
+					{
+						"cell": 7061,
+						"clock": 8.0,
+						"complete": false,
+						"progress": 96.0,
+						"status": "Waiting for 4 protein at daughter tile"
+					},
+					{
+						"cell": 6979,
+						"clock": 8.0,
+						"complete": false,
+						"progress": 16.0,
+						"status": "Waiting for 4 protein at daughter tile"
+					},
+					{}
+				],
+				"paths": [
+					1,
+					1,
+					2
+				],
+				"population": [
+					75,
+					74,
+					69
+				],
+				"protein": [
+					63.0,
+					23.0,
+					3.0
+				],
+				"seconds": 480.0333333335,
+				"sugar": [
+					858.694466666657,
+					803.944493333318,
+					978.916333333324
+				]
+			},
+			{
+				"capacity": [
+					36,
+					36,
+					18
+				],
+				"daughters": [
+					{
+						"cell": 7061,
+						"clock": 6.93333333333332,
+						"complete": false,
+						"progress": 200.0,
+						"status": "Growing: nurses supplying protein"
+					},
+					{
+						"cell": 6979,
+						"clock": 0.7,
+						"complete": false,
+						"progress": 128.0,
+						"status": "Growing: nurses supplying protein"
+					},
+					{}
+				],
+				"paths": [
+					1,
+					1,
+					2
+				],
+				"population": [
+					67,
+					47,
+					72
+				],
+				"protein": [
+					70.0,
+					310.0,
+					138.0
+				],
+				"seconds": 600.033333333445,
+				"sugar": [
+					747.69539999986,
+					680.402564490005,
+					942.890316507388
+				]
+			}
+		]
+	},
+	{
+		"choice_at": 182.999999999992,
+		"daughters": [
+			{
+				"cell": 6828,
+				"clock": 5.53333333333332,
+				"complete": false,
+				"progress": 232.0,
+				"status": "Growing: nurses supplying protein"
+			},
+			{
+				"cell": 6979,
+				"clock": 0,
+				"complete": true,
+				"progress": 240.0,
+				"status": "Daughter queen launched"
+			},
+			{
+				"cell": 24221,
+				"clock": 6.26666666666665,
+				"complete": false,
+				"progress": 144.0,
+				"status": "Growing: nurses supplying protein"
+			}
+		],
+		"path": 2,
+		"queen_start": 348.000000000061,
+		"result": "defeat",
+		"seconds": 708.033333333347,
+		"snapshots": [
+			{
+				"capacity": [
+					18,
+					18,
+					18
+				],
+				"daughters": [
+					{},
+					{},
+					{}
+				],
+				"paths": [
+					0,
+					0,
+					0
+				],
+				"population": [
+					12,
+					12,
+					12
+				],
+				"protein": [
+					96.0,
+					96.0,
+					96.0
+				],
+				"seconds": 0.0333333333333333,
+				"sugar": [
+					79.9964,
+					79.99586,
+					79.9964
+				]
+			},
+			{
+				"capacity": [
+					18,
+					18,
+					18
+				],
+				"daughters": [
+					{},
+					{},
+					{}
+				],
+				"paths": [
+					0,
+					0,
+					0
+				],
+				"population": [
+					25,
+					27,
+					26
+				],
+				"protein": [
+					176.0,
+					148.0,
+					65.0
+				],
+				"seconds": 120.033333333329,
+				"sugar": [
+					218.039733333323,
+					230.929886666661,
+					421.259000000028
+				]
+			},
+			{
+				"capacity": [
+					18,
+					18,
+					18
+				],
+				"daughters": [
+					{},
+					{},
+					{}
+				],
+				"paths": [
+					2,
+					1,
+					2
+				],
+				"population": [
+					55,
+					52,
+					45
+				],
+				"protein": [
+					385.0,
+					267.0,
+					386.0
+				],
+				"seconds": 240.033333333322,
+				"sugar": [
+					367.907399999957,
+					263.117889999981,
+					351.923866666726
+				]
+			},
+			{
+				"capacity": [
+					36,
+					18,
+					18
+				],
+				"daughters": [
+					{
+						"cell": 6828,
+						"clock": 4.0,
+						"complete": false,
+						"progress": 8.0,
+						"status": "Growing: nurses supplying protein"
+					},
+					{},
+					{}
+				],
+				"paths": [
+					2,
+					1,
+					2
+				],
+				"population": [
+					89,
+					80,
+					65
+				],
+				"protein": [
+					73.0,
+					97.0,
+					139.0
+				],
+				"seconds": 360.033333333404,
+				"sugar": [
+					610.67193333331,
+					571.009013333309,
+					670.395266666719
+				]
+			},
+			{
+				"capacity": [
+					36,
+					36,
+					18
+				],
+				"daughters": [
+					{
+						"cell": 6828,
+						"clock": 8.0,
+						"complete": false,
+						"progress": 40.0,
+						"status": "Waiting for 4 protein at daughter tile"
+					},
+					{
+						"cell": 6979,
+						"clock": 8.0,
+						"complete": false,
+						"progress": 16.0,
+						"status": "Waiting for 4 protein at daughter tile"
+					},
+					{}
+				],
+				"paths": [
+					2,
+					1,
+					2
+				],
+				"population": [
+					85,
+					78,
+					69
+				],
+				"protein": [
+					44.0,
+					23.0,
+					2.0
+				],
+				"seconds": 480.0333333335,
+				"sugar": [
+					890.877933333365,
+					802.176841906002,
+					978.914600000018
+				]
+			},
+			{
+				"capacity": [
+					36,
+					36,
+					36
+				],
+				"daughters": [
+					{
+						"cell": 6828,
+						"clock": 0.4,
+						"complete": false,
+						"progress": 136.0,
+						"status": "Growing: nurses supplying protein"
+					},
+					{
+						"cell": 6979,
+						"clock": 4.46666666666666,
+						"complete": false,
+						"progress": 128.0,
+						"status": "Growing: nurses supplying protein"
+					},
+					{
+						"cell": 24221,
+						"clock": 4.79999999999999,
+						"complete": false,
+						"progress": 40.0,
+						"status": "Growing: nurses supplying protein"
+					}
+				],
+				"paths": [
+					2,
+					1,
+					2
+				],
+				"population": [
+					76,
+					75,
+					90
+				],
+				"protein": [
+					58.0,
+					292.0,
+					158.0
+				],
+				"seconds": 600.033333333445,
+				"sugar": [
+					780.70086666667,
+					672.086727296883,
+					836.085670006088
+				]
+			}
+		]
+	}
+]

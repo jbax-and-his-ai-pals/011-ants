@@ -1,0 +1,266 @@
+{
+	"after": {
+		"census": {
+			"ai_targets": [
+				1,
+				2,
+				0
+			],
+			"births": [
+				30,
+				24,
+				24
+			],
+			"combat_losses": [
+				690,
+				737,
+				886
+			],
+			"fighting": [
+				13,
+				8,
+				6
+			],
+			"food_remaining": 28167,
+			"harvest": [
+				16234,
+				17053,
+				16537
+			],
+			"hunger_losses": [
+				0,
+				0,
+				0
+			],
+			"invalid_state": 0,
+			"modes": [
+				"player_autonomous",
+				"Recovering",
+				"Recovering"
+			],
+			"population": [
+				1340,
+				1287,
+				1138
+			],
+			"queens": [
+				100.0,
+				100.0,
+				100.0
+			],
+			"raiders": [
+				0,
+				0,
+				0
+			],
+			"recovering": [
+				0,
+				1,
+				0
+			],
+			"scent_cells": 24313,
+			"seconds": 120.0,
+			"slots": 6000,
+			"stores": [
+				15786.340599515,
+				16532.7015933333,
+				16167.9584
+			],
+			"target_reasons": [
+				"Legacy nearest-nest automation",
+				"Holding Azure: no challenger leads by 0.18.",
+				"Holding Amber: no challenger leads by 0.18."
+			],
+			"target_scores": [
+				[],
+				[
+					{
+						"colony": 2,
+						"food": 0.5,
+						"queen": 0.0,
+						"score": 0.720688156638013,
+						"strength": 0.132521489971347,
+						"threat": 0.0,
+						"travel": 0.0881666666666667
+					},
+					{
+						"colony": 0,
+						"food": 0.1,
+						"queen": 0.0,
+						"score": 0.361816654148795,
+						"strength": 0.122308273517189,
+						"threat": 0.0513417139649391,
+						"travel": 0.0881666666666667
+					}
+				],
+				[
+					{
+						"colony": 0,
+						"food": 0.0,
+						"queen": 0.0,
+						"score": 0.238793234227101,
+						"strength": 0.1148,
+						"threat": 0.0358265675604343,
+						"travel": 0.0881666666666667
+					},
+					{
+						"colony": 1,
+						"food": 0.0,
+						"queen": 0.0,
+						"score": 0.20564517669532,
+						"strength": 0.117478510028653,
+						"threat": 0.0,
+						"travel": 0.0881666666666667
+					}
+				]
+			],
+			"underground": [
+				0,
+				0,
+				0
+			]
+		},
+		"sampled_foreign_carrier_seconds_near_nest": [
+			0,
+			0,
+			0
+		],
+		"sampled_foreign_forager_seconds_near_nest": [
+			0,
+			10,
+			20
+		]
+	},
+	"before": {
+		"census": {
+			"ai_targets": [
+				2,
+				2,
+				0
+			],
+			"births": [
+				30,
+				24,
+				24
+			],
+			"combat_losses": [
+				778,
+				603,
+				973
+			],
+			"fighting": [
+				13,
+				17,
+				20
+			],
+			"food_remaining": 41803,
+			"harvest": [
+				9020,
+				12218,
+				14745
+			],
+			"hunger_losses": [
+				0,
+				0,
+				0
+			],
+			"invalid_state": 0,
+			"modes": [
+				"player_autonomous",
+				"Recovering",
+				"Recovering"
+			],
+			"population": [
+				1252,
+				1421,
+				1051
+			],
+			"queens": [
+				100.0,
+				100.0,
+				100.0
+			],
+			"raiders": [
+				0,
+				0,
+				0
+			],
+			"recovering": [
+				0,
+				0,
+				3
+			],
+			"scent_cells": 28098,
+			"seconds": 120.0,
+			"slots": 6000,
+			"stores": [
+				8582.13147700047,
+				11618.8749200001,
+				14377.8490295036
+			],
+			"target_reasons": [
+				"Legacy nearest-nest automation",
+				"Holding Azure: no challenger leads by 0.18.",
+				"Holding Amber: no challenger leads by 0.18."
+			],
+			"target_scores": [
+				[],
+				[
+					{
+						"colony": 2,
+						"food": 0.0,
+						"queen": 0.0,
+						"score": 0.267988239021578,
+						"strength": 0.142828605673192,
+						"threat": 0.0353815622627735,
+						"travel": 0.089778071085612
+					},
+					{
+						"colony": 0,
+						"food": 0.0,
+						"queen": 0.0,
+						"score": 0.197142733777449,
+						"strength": 0.132309400444115,
+						"threat": 0.0,
+						"travel": 0.0648333333333333
+					}
+				],
+				[
+					{
+						"colony": 0,
+						"food": 0.45,
+						"queen": 0.0,
+						"score": 0.754170398159661,
+						"strength": 0.114392324093817,
+						"threat": 0.100000002980232,
+						"travel": 0.089778071085612
+					},
+					{
+						"colony": 1,
+						"food": 0.475,
+						"queen": 0.0,
+						"score": 0.705839764166397,
+						"strength": 0.107171394326808,
+						"threat": 0.0338902987539768,
+						"travel": 0.089778071085612
+					}
+				]
+			],
+			"underground": [
+				0,
+				0,
+				0
+			]
+		},
+		"sampled_foreign_carrier_seconds_near_nest": [
+			0,
+			5,
+			0
+		],
+		"sampled_foreign_forager_seconds_near_nest": [
+			0,
+			15,
+			760
+		]
+	}
+}

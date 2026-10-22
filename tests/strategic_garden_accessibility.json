@@ -1,0 +1,1374 @@
+{
+	"checks_passed": true,
+	"complete": true,
+	"samples": [
+		{
+			"colony": 0,
+			"long": {
+				"distance": 366.496002197266,
+				"effective_distance": 362.014394094164,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 14.2414395079447
+			},
+			"mode": 0,
+			"seed": 81923,
+			"short": {
+				"distance": 242.65055847168,
+				"effective_distance": 211.00049000202,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.30063876887958
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 364.661560058594,
+				"effective_distance": 360.202383989414,
+				"shade": 100.0,
+				"soil": 9.375,
+				"trip_seconds": 15.3037685505341
+			},
+			"mode": 0,
+			"seed": 81923,
+			"short": {
+				"distance": 228.839569091797,
+				"effective_distance": 198.990933770531,
+				"shade": 12.5,
+				"soil": 100.0,
+				"trip_seconds": 8.45444486055475
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 345.636627197266,
+				"effective_distance": 341.410092937986,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 14.5053483135548
+			},
+			"mode": 0,
+			"seed": 81923,
+			"short": {
+				"distance": 239.505722045898,
+				"effective_distance": 208.265849575081,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.84850434241176
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 368.3642578125,
+				"effective_distance": 363.859804195522,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 14.314036887371
+			},
+			"mode": 0,
+			"seed": 404,
+			"short": {
+				"distance": 231.638305664063,
+				"effective_distance": 201.424617796869,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 7.92392942535554
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 370.604461669922,
+				"effective_distance": 366.072614259561,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 15.5531745772175
+			},
+			"mode": 0,
+			"seed": 404,
+			"short": {
+				"distance": 229.966812133789,
+				"effective_distance": 199.971145131715,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.49609069208987
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 354.706329345703,
+				"effective_distance": 350.368888417872,
+				"shade": 96.875,
+				"soil": 9.375,
+				"trip_seconds": 14.8859769229418
+			},
+			"mode": 0,
+			"seed": 404,
+			"short": {
+				"distance": 232.104766845703,
+				"effective_distance": 201.830236224096,
+				"shade": 9.375,
+				"soil": 100.0,
+				"trip_seconds": 8.57507712043344
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 353.636047363281,
+				"effective_distance": 349.311694120926,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 13.7417225458358
+			},
+			"mode": 0,
+			"seed": 9973,
+			"short": {
+				"distance": 237.853866577148,
+				"effective_distance": 206.829453485519,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.13655257450652
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 347.132720947266,
+				"effective_distance": 342.887892065854,
+				"shade": 96.875,
+				"soil": 9.375,
+				"trip_seconds": 14.5681349491306
+			},
+			"mode": 0,
+			"seed": 9973,
+			"short": {
+				"distance": 236.610961914063,
+				"effective_distance": 205.748666799559,
+				"shade": 6.25,
+				"soil": 100.0,
+				"trip_seconds": 8.74155784702957
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 347.826477050781,
+				"effective_distance": 343.573164739928,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 14.5972498436016
+			},
+			"mode": 0,
+			"seed": 9973,
+			"short": {
+				"distance": 226.923950195313,
+				"effective_distance": 197.325178173836,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.38367259683113
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 346.669097900391,
+				"effective_distance": 342.429938321758,
+				"shade": 100.0,
+				"soil": 9.375,
+				"trip_seconds": 13.470998203044
+			},
+			"mode": 0,
+			"seed": 17,
+			"short": {
+				"distance": 231.656539916992,
+				"effective_distance": 201.440473669311,
+				"shade": 12.5,
+				"soil": 100.0,
+				"trip_seconds": 7.92455318632169
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 357.979278564453,
+				"effective_distance": 353.601815165294,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 15.0233329341247
+			},
+			"mode": 0,
+			"seed": 17,
+			"short": {
+				"distance": 226.432922363281,
+				"effective_distance": 196.898197441478,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.36553164442775
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 356.277221679688,
+				"effective_distance": 351.920571473253,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 14.9519026341498
+			},
+			"mode": 0,
+			"seed": 17,
+			"short": {
+				"distance": 225.380416870117,
+				"effective_distance": 195.982975254535,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.32664698085011
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 350.985992431641,
+				"effective_distance": 346.694044747829,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 13.638745714505
+			},
+			"mode": 0,
+			"seed": 73,
+			"short": {
+				"distance": 229.272659301758,
+				"effective_distance": 199.367533960913,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 7.84300492210244
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 361.841979980469,
+				"effective_distance": 357.417282467261,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 15.1854391030366
+			},
+			"mode": 0,
+			"seed": 73,
+			"short": {
+				"distance": 227.827133178711,
+				"effective_distance": 198.110554697421,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.41704056183141
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 367.079864501953,
+				"effective_distance": 362.591116779265,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 15.4052576449151
+			},
+			"mode": 0,
+			"seed": 73,
+			"short": {
+				"distance": 240.670867919922,
+				"effective_distance": 209.279019921324,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.89155048860723
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 349.457092285156,
+				"effective_distance": 345.183840388596,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 13.5793351375292
+			},
+			"mode": 0,
+			"seed": 2026,
+			"short": {
+				"distance": 242.046279907227,
+				"effective_distance": 210.475030369863,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.279967487054
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 363.926940917969,
+				"effective_distance": 359.476747962039,
+				"shade": 100.0,
+				"soil": 9.375,
+				"trip_seconds": 15.2729387550956
+			},
+			"mode": 0,
+			"seed": 2026,
+			"short": {
+				"distance": 225.674957275391,
+				"effective_distance": 196.239097351387,
+				"shade": 12.5,
+				"soil": 100.0,
+				"trip_seconds": 8.33752873362334
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 371.037445068359,
+				"effective_distance": 366.500303024782,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 15.571345611518
+			},
+			"mode": 0,
+			"seed": 2026,
+			"short": {
+				"distance": 238.173065185547,
+				"effective_distance": 207.107017498576,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.79926952699676
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 362.235046386719,
+				"effective_distance": 357.805542355621,
+				"shade": 93.75,
+				"soil": 9.375,
+				"trip_seconds": 14.0758656843338
+			},
+			"mode": 0,
+			"seed": 1337,
+			"short": {
+				"distance": 233.063385009766,
+				"effective_distance": 202.663817253607,
+				"shade": 9.375,
+				"soil": 100.0,
+				"trip_seconds": 7.97267882424494
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 349.925537109375,
+				"effective_distance": 345.646556948093,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 14.6853411941274
+			},
+			"mode": 0,
+			"seed": 1337,
+			"short": {
+				"distance": 239.601181030273,
+				"effective_distance": 208.348857389302,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.8520310608156
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 364.686767578125,
+				"effective_distance": 360.227283264863,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 15.3048264356717
+			},
+			"mode": 0,
+			"seed": 1337,
+			"short": {
+				"distance": 236.759201049805,
+				"effective_distance": 205.877570398529,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.74703452050996
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 351.630706787109,
+				"effective_distance": 347.330875369063,
+				"shade": 100.0,
+				"soil": 9.375,
+				"trip_seconds": 13.663798267434
+			},
+			"mode": 0,
+			"seed": 9001,
+			"short": {
+				"distance": 229.632705688477,
+				"effective_distance": 199.680617781942,
+				"shade": 12.5,
+				"soil": 100.0,
+				"trip_seconds": 7.85532146081151
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 345.829986572266,
+				"effective_distance": 341.601087864433,
+				"shade": 100.0,
+				"soil": 9.375,
+				"trip_seconds": 14.5134630353851
+			},
+			"mode": 0,
+			"seed": 9001,
+			"short": {
+				"distance": 228.070541381836,
+				"effective_distance": 198.322214008875,
+				"shade": 12.5,
+				"soil": 100.0,
+				"trip_seconds": 8.4260332427742
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 368.118347167969,
+				"effective_distance": 363.616900610087,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 15.4488396949724
+			},
+			"mode": 0,
+			"seed": 9001,
+			"short": {
+				"distance": 237.334594726563,
+				"effective_distance": 206.377912736518,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.76829235687351
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 353.752899169922,
+				"effective_distance": 349.427117033389,
+				"shade": 100.0,
+				"soil": 9.375,
+				"trip_seconds": 13.7462632172911
+			},
+			"mode": 0,
+			"seed": 42,
+			"short": {
+				"distance": 242.48486328125,
+				"effective_distance": 210.856407224746,
+				"shade": 15.625,
+				"soil": 100.0,
+				"trip_seconds": 8.29497063471101
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 350.286071777344,
+				"effective_distance": 346.002682904698,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 14.7004717692068
+			},
+			"mode": 0,
+			"seed": 42,
+			"short": {
+				"distance": 243.000518798828,
+				"effective_distance": 211.304803336284,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.97761910418025
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 371.219635009766,
+				"effective_distance": 366.680265100365,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 15.5789915852123
+			},
+			"mode": 0,
+			"seed": 42,
+			"short": {
+				"distance": 232.330200195313,
+				"effective_distance": 202.026265227821,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.5834057230067
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 359.921813964844,
+				"effective_distance": 355.520596739343,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 13.9859772287806
+			},
+			"mode": 0,
+			"seed": 12345,
+			"short": {
+				"distance": 232.037826538086,
+				"effective_distance": 201.772027259744,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 7.93759631521057
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 359.547332763672,
+				"effective_distance": 355.150694791357,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 15.0891395371999
+			},
+			"mode": 0,
+			"seed": 12345,
+			"short": {
+				"distance": 228.519989013672,
+				"effective_distance": 198.713038044661,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.44263802068102
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 366.4267578125,
+				"effective_distance": 361.945996447682,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 15.3778486862835
+			},
+			"mode": 0,
+			"seed": 12345,
+			"short": {
+				"distance": 242.839416503906,
+				"effective_distance": 211.164714381274,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.97166720314
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 364.316558837891,
+				"effective_distance": 359.861601533055,
+				"shade": 100.0,
+				"soil": 9.375,
+				"trip_seconds": 14.1567498781058
+			},
+			"mode": 0,
+			"seed": 7,
+			"short": {
+				"distance": 241.951797485352,
+				"effective_distance": 210.392871740442,
+				"shade": 15.625,
+				"soil": 100.0,
+				"trip_seconds": 8.27673541349549
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 371.014770507813,
+				"effective_distance": 366.477905734638,
+				"shade": 100.0,
+				"soil": 9.375,
+				"trip_seconds": 15.5703940271872
+			},
+			"mode": 0,
+			"seed": 7,
+			"short": {
+				"distance": 240.943832397461,
+				"effective_distance": 209.516380341496,
+				"shade": 12.5,
+				"soil": 100.0,
+				"trip_seconds": 8.90163512184353
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 362.58154296875,
+				"effective_distance": 358.147801887642,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 15.2164763771583
+			},
+			"mode": 0,
+			"seed": 7,
+			"short": {
+				"distance": 242.105728149414,
+				"effective_distance": 210.526724494576,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.94456119274808
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 370.482147216797,
+				"effective_distance": 365.95179549927,
+				"shade": 96.875,
+				"soil": 9.375,
+				"trip_seconds": 14.3963346304705
+			},
+			"mode": 0,
+			"seed": 81,
+			"short": {
+				"distance": 235.562744140625,
+				"effective_distance": 204.837173064629,
+				"shade": 12.5,
+				"soil": 100.0,
+				"trip_seconds": 8.05817740059124
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 362.077087402344,
+				"effective_distance": 357.649514934647,
+				"shade": 90.625,
+				"soil": 9.375,
+				"trip_seconds": 15.1953058670802
+			},
+			"mode": 0,
+			"seed": 81,
+			"short": {
+				"distance": 242.400054931641,
+				"effective_distance": 210.782660832253,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 8.95543505324867
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 348.671051025391,
+				"effective_distance": 344.40741104508,
+				"shade": 93.75,
+				"soil": 9.375,
+				"trip_seconds": 14.6326941186416
+			},
+			"mode": 0,
+			"seed": 81,
+			"short": {
+				"distance": 229.078201293945,
+				"effective_distance": 199.198440037571,
+				"shade": 9.375,
+				"soil": 100.0,
+				"trip_seconds": 8.46326109283059
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 529.956298828125,
+				"effective_distance": 525.636003510889,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 20.6782201738945
+			},
+			"mode": 1,
+			"seed": 81923,
+			"short": {
+				"distance": 351.523254394531,
+				"effective_distance": 305.672401462895,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 12.0249776961899
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 509.783111572266,
+				"effective_distance": 505.62727156319,
+				"shade": 100.0,
+				"soil": 6.25,
+				"trip_seconds": 21.4823751334987
+			},
+			"mode": 1,
+			"seed": 81923,
+			"short": {
+				"distance": 359.639099121094,
+				"effective_distance": 312.729657893174,
+				"shade": 9.375,
+				"soil": 100.0,
+				"trip_seconds": 13.2868146242627
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 501.735900878906,
+				"effective_distance": 497.645663121851,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 21.1432638625115
+			},
+			"mode": 1,
+			"seed": 81923,
+			"short": {
+				"distance": 346.252014160156,
+				"effective_distance": 301.08871420754,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 12.7922307020198
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 495.282867431641,
+				"effective_distance": 491.245235918243,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 19.3253070182506
+			},
+			"mode": 1,
+			"seed": 404,
+			"short": {
+				"distance": 341.287322998047,
+				"effective_distance": 296.771591368376,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 11.6748249105528
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 490.066864013672,
+				"effective_distance": 486.071754261391,
+				"shade": 100.0,
+				"soil": 6.25,
+				"trip_seconds": 20.6515280209446
+			},
+			"mode": 1,
+			"seed": 404,
+			"short": {
+				"distance": 359.076171875,
+				"effective_distance": 312.2401559299,
+				"shade": 9.375,
+				"soil": 100.0,
+				"trip_seconds": 13.2660173583813
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 507.528106689453,
+				"effective_distance": 503.390649869816,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 21.3873487198714
+			},
+			"mode": 1,
+			"seed": 404,
+			"short": {
+				"distance": 341.087310791016,
+				"effective_distance": 296.597667706483,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 12.6014214812683
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 509.278198242188,
+				"effective_distance": 505.126474373821,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 19.8713870111612
+			},
+			"mode": 1,
+			"seed": 9973,
+			"short": {
+				"distance": 357.809967041016,
+				"effective_distance": 311.139108225348,
+				"shade": 3.125,
+				"soil": 100.0,
+				"trip_seconds": 12.2400348180481
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 515.441467285156,
+				"effective_distance": 511.239499382623,
+				"shade": 100.0,
+				"soil": 6.25,
+				"trip_seconds": 21.720819517598
+			},
+			"mode": 1,
+			"seed": 9973,
+			"short": {
+				"distance": 346.454193115234,
+				"effective_distance": 301.264521998209,
+				"shade": 9.375,
+				"soil": 100.0,
+				"trip_seconds": 12.7997001743425
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 516.694580078125,
+				"effective_distance": 512.482396583583,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 21.7736259729161
+			},
+			"mode": 1,
+			"seed": 9973,
+			"short": {
+				"distance": 341.026733398438,
+				"effective_distance": 296.544991711844,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 12.5991834582403
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 528.482543945313,
+				"effective_distance": 524.174262932526,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 20.6207161343793
+			},
+			"mode": 1,
+			"seed": 17,
+			"short": {
+				"distance": 332.140411376953,
+				"effective_distance": 288.817755011222,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 11.3619255309026
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 501.434631347656,
+				"effective_distance": 497.346849591875,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 21.1305682966136
+			},
+			"mode": 1,
+			"seed": 17,
+			"short": {
+				"distance": 359.606414794922,
+				"effective_distance": 312.701236739392,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 13.2856071065484
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 509.777801513672,
+				"effective_distance": 505.622004793111,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 21.4821513664336
+			},
+			"mode": 1,
+			"seed": 17,
+			"short": {
+				"distance": 334.115203857422,
+				"effective_distance": 290.534965899404,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 12.3438379966205
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 510.141357421875,
+				"effective_distance": 505.982596930733,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 19.9050663835966
+			},
+			"mode": 1,
+			"seed": 73,
+			"short": {
+				"distance": 337.6181640625,
+				"effective_distance": 293.581018314797,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 11.5493095888432
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 517.880432128906,
+				"effective_distance": 513.658581363547,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 21.8235980454101
+			},
+			"mode": 1,
+			"seed": 73,
+			"short": {
+				"distance": 352.536346435547,
+				"effective_distance": 306.553351082042,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 13.0244044511601
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 496.482574462891,
+				"effective_distance": 492.435162730481,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 20.921887504202
+			},
+			"mode": 1,
+			"seed": 73,
+			"short": {
+				"distance": 354.049438476563,
+				"effective_distance": 307.869083318899,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 13.0803054182895
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 494.601501464844,
+				"effective_distance": 490.569424564538,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 19.2987209855691
+			},
+			"mode": 1,
+			"seed": 2026,
+			"short": {
+				"distance": 348.664459228516,
+				"effective_distance": 303.186492571343,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 11.9271834601627
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 518.192443847656,
+				"effective_distance": 513.968049508854,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 21.8367462895086
+			},
+			"mode": 1,
+			"seed": 2026,
+			"short": {
+				"distance": 351.703399658203,
+				"effective_distance": 305.829049521509,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 12.993631352658
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 520.969299316406,
+				"effective_distance": 518.845783444213,
+				"shade": 96.875,
+				"soil": 3.125,
+				"trip_seconds": 22.0439845381039
+			},
+			"mode": 1,
+			"seed": 2026,
+			"short": {
+				"distance": 354.387786865234,
+				"effective_distance": 308.163299315148,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 13.0928056506883
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 498.876617431641,
+				"effective_distance": 494.809689047292,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 19.4655305685967
+			},
+			"mode": 1,
+			"seed": 1337,
+			"short": {
+				"distance": 357.074127197266,
+				"effective_distance": 310.499247478387,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 12.2148630617036
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 505.211303710938,
+				"effective_distance": 501.092733869493,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 21.2897181205733
+			},
+			"mode": 1,
+			"seed": 1337,
+			"short": {
+				"distance": 339.879272460938,
+				"effective_distance": 295.547199571593,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 12.5567906794729
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 491.934112548828,
+				"effective_distance": 487.923780663854,
+				"shade": 100.0,
+				"soil": 6.25,
+				"trip_seconds": 20.7302142947523
+			},
+			"mode": 1,
+			"seed": 1337,
+			"short": {
+				"distance": 354.723388671875,
+				"effective_distance": 308.455126979146,
+				"shade": 6.25,
+				"soil": 100.0,
+				"trip_seconds": 13.1052044110102
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 520.473876953125,
+				"effective_distance": 516.230883977447,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 20.3082281429543
+			},
+			"mode": 1,
+			"seed": 9001,
+			"short": {
+				"distance": 348.693542480469,
+				"effective_distance": 303.211782356175,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 11.9281783458543
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 527.768798828125,
+				"effective_distance": 523.466336388859,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 22.2402960451438
+			},
+			"mode": 1,
+			"seed": 9001,
+			"short": {
+				"distance": 353.224945068359,
+				"effective_distance": 307.152132514293,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 13.0498446282906
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 522.534851074219,
+				"effective_distance": 518.275056681397,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 22.01973630802
+			},
+			"mode": 1,
+			"seed": 9001,
+			"short": {
+				"distance": 339.076019287109,
+				"effective_distance": 294.848718536392,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 12.5271146068682
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 492.1640625,
+				"effective_distance": 488.151856023292,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 19.203615219892
+			},
+			"mode": 1,
+			"seed": 42,
+			"short": {
+				"distance": 335.962738037109,
+				"effective_distance": 292.141517393309,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 11.4926804447279
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 514.844482421875,
+				"effective_distance": 512.745931832486,
+				"shade": 100.0,
+				"soil": 3.125,
+				"trip_seconds": 21.7848226851906
+			},
+			"mode": 1,
+			"seed": 42,
+			"short": {
+				"distance": 330.059448242188,
+				"effective_distance": 287.008221813041,
+				"shade": 9.375,
+				"soil": 100.0,
+				"trip_seconds": 12.1939986906256
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 508.161010742188,
+				"effective_distance": 504.018394379356,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 21.4140194391944
+			},
+			"mode": 1,
+			"seed": 42,
+			"short": {
+				"distance": 335.418975830078,
+				"effective_distance": 291.66868068174,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 12.3920056640274
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 499.059020996094,
+				"effective_distance": 494.990605626371,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 19.4726477234915
+			},
+			"mode": 1,
+			"seed": 12345,
+			"short": {
+				"distance": 359.226043701172,
+				"effective_distance": 312.370479259708,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 12.2884762512722
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 492.376983642578,
+				"effective_distance": 488.363041395926,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 20.748876982385
+			},
+			"mode": 1,
+			"seed": 12345,
+			"short": {
+				"distance": 339.311248779297,
+				"effective_distance": 295.053265925143,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 12.5358051265155
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 511.278015136719,
+				"effective_distance": 507.109988415487,
+				"shade": 100.0,
+				"soil": 6.25,
+				"trip_seconds": 21.5453707063825
+			},
+			"mode": 1,
+			"seed": 12345,
+			"short": {
+				"distance": 340.595733642578,
+				"effective_distance": 296.170209307675,
+				"shade": 9.375,
+				"soil": 100.0,
+				"trip_seconds": 12.5832602344495
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 490.213592529297,
+				"effective_distance": 486.217286620804,
+				"shade": 100.0,
+				"soil": 6.25,
+				"trip_seconds": 19.1275103644804
+			},
+			"mode": 1,
+			"seed": 7,
+			"short": {
+				"distance": 332.502899169922,
+				"effective_distance": 289.132961794251,
+				"shade": 9.375,
+				"soil": 100.0,
+				"trip_seconds": 11.3743255857243
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 518.414184570313,
+				"effective_distance": 514.187982562826,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 21.8460904935011
+			},
+			"mode": 1,
+			"seed": 7,
+			"short": {
+				"distance": 357.442962646484,
+				"effective_distance": 310.819973962617,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 13.2056786790915
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 498.130340576172,
+				"effective_distance": 494.069495969696,
+				"shade": 100.0,
+				"soil": 6.25,
+				"trip_seconds": 20.9913247393207
+			},
+			"mode": 1,
+			"seed": 7,
+			"short": {
+				"distance": 347.505065917969,
+				"effective_distance": 302.178324454314,
+				"shade": 6.25,
+				"soil": 100.0,
+				"trip_seconds": 12.8385245184078
+			}
+		},
+		{
+			"colony": 0,
+			"long": {
+				"distance": 492.651123046875,
+				"effective_distance": 488.634945968431,
+				"shade": 100.0,
+				"soil": 6.25,
+				"trip_seconds": 19.2226197024287
+			},
+			"mode": 1,
+			"seed": 81,
+			"short": {
+				"distance": 341.340576171875,
+				"effective_distance": 296.817898477013,
+				"shade": 9.375,
+				"soil": 100.0,
+				"trip_seconds": 11.6766466057594
+			}
+		},
+		{
+			"colony": 1,
+			"long": {
+				"distance": 517.9013671875,
+				"effective_distance": 513.679345755926,
+				"shade": 100.0,
+				"soil": 6.25,
+				"trip_seconds": 21.8244802534942
+			},
+			"mode": 1,
+			"seed": 81,
+			"short": {
+				"distance": 345.079406738281,
+				"effective_distance": 300.069055558683,
+				"shade": 9.375,
+				"soil": 100.0,
+				"trip_seconds": 12.7489088900156
+			}
+		},
+		{
+			"colony": 2,
+			"long": {
+				"distance": 519.191955566406,
+				"effective_distance": 514.959413035371,
+				"shade": 93.75,
+				"soil": 6.25,
+				"trip_seconds": 21.8788659384438
+			},
+			"mode": 1,
+			"seed": 81,
+			"short": {
+				"distance": 335.054656982422,
+				"effective_distance": 291.35188167721,
+				"shade": 0.0,
+				"soil": 100.0,
+				"trip_seconds": 12.3785459567688
+			}
+		}
+	]
+}

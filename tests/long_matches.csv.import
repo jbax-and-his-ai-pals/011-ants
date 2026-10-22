@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://de1pdxbkhqfvn"
+
+[deps]
+
+files=["res://tests/long_matches.seed.translation", "res://tests/long_matches.traits.translation", "res://tests/long_matches.winner.translation", "res://tests/long_matches.seconds.translation", "res://tests/long_matches.amber.translation", "res://tests/long_matches.coral.translation", "res://tests/long_matches.azure.translation", "res://tests/long_matches.first.translation"]
+
+source_file="res://tests/long_matches.csv"
+dest_files=["res://tests/long_matches.seed.translation", "res://tests/long_matches.traits.translation", "res://tests/long_matches.winner.translation", "res://tests/long_matches.seconds.translation", "res://tests/long_matches.amber.translation", "res://tests/long_matches.coral.translation", "res://tests/long_matches.azure.translation", "res://tests/long_matches.first.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

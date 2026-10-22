@@ -1,0 +1,101 @@
+{
+  "duration_sim_seconds": 360,
+  "starting_workers_per_colony": 12,
+  "seeds": [
+    81923,
+    404,
+    9973
+  ],
+  "opening": [
+    {
+      "seed": 81923,
+      "first_combat_loss_seconds": 133.4,
+      "combat_losses_at_120_seconds": 0
+    },
+    {
+      "seed": 404,
+      "first_combat_loss_seconds": 212.2,
+      "combat_losses_at_120_seconds": 0
+    },
+    {
+      "seed": 9973,
+      "first_combat_loss_seconds": 122.2,
+      "combat_losses_at_120_seconds": 0
+    }
+  ],
+  "colonies": [
+    {
+      "births": 10,
+      "colony": 0,
+      "combat_losses": 8,
+      "hunger_losses": 0,
+      "population": 14,
+      "seed": 81923
+    },
+    {
+      "births": 23,
+      "colony": 1,
+      "combat_losses": 4,
+      "hunger_losses": 0,
+      "population": 31,
+      "seed": 81923
+    },
+    {
+      "births": 22,
+      "colony": 2,
+      "combat_losses": 6,
+      "hunger_losses": 0,
+      "population": 28,
+      "seed": 81923
+    },
+    {
+      "births": 11,
+      "colony": 0,
+      "combat_losses": 2,
+      "hunger_losses": 0,
+      "population": 21,
+      "seed": 404
+    },
+    {
+      "births": 23,
+      "colony": 1,
+      "combat_losses": 2,
+      "hunger_losses": 0,
+      "population": 33,
+      "seed": 404
+    },
+    {
+      "births": 20,
+      "colony": 2,
+      "combat_losses": 3,
+      "hunger_losses": 0,
+      "population": 29,
+      "seed": 404
+    },
+    {
+      "births": 12,
+      "colony": 0,
+      "combat_losses": 4,
+      "hunger_losses": 0,
+      "population": 20,
+      "seed": 9973
+    },
+    {
+      "births": 20,
+      "colony": 1,
+      "combat_losses": 7,
+      "hunger_losses": 0,
+      "population": 25,
+      "seed": 9973
+    },
+    {
+      "births": 21,
+      "colony": 2,
+      "combat_losses": 2,
+      "hunger_losses": 0,
+      "population": 31,
+      "seed": 9973
+    }
+  ],
+  "note": "Real individual simulation, no added workers or ongoing artificial resource income; standard founding initial supplies and replenishment."
+}

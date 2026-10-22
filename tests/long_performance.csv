@@ -1,0 +1,16 @@
+scenario,synthetic,mean_fps,p95_ms,p99_ms,max_frame_ms,actual_speed,target_met
+natural_0s,False,99.6,14.11,20.71,29.63,4.0,True
+natural_60s,False,104.8,14.55,19.91,26.53,4.0,True
+natural_180s,False,148.6,10.46,14.78,17.4,4.0,True
+natural_360s,False,206.9,7.07,10.7,13.64,4.0,True
+natural_600s,False,251.7,5.67,9.15,10.53,4.01,True
+natural_900s,False,240.4,6.19,9.09,10.99,3.99,True
+growth_cap_overview,True,59.2,23.66,38.27,43.62,4.01,False
+growth_cap_battle_overview,True,42.7,36.38,46.99,60.5,4.02,False
+growth_cap_battle_detail,True,54.6,38.63,51.25,52.18,4.01,False
+growth_cap_overview (2000/colony),True,103.2,14.37,19.86,26.1,4.0,True
+growth_cap_battle_overview (2000/colony),True,81.4,20.58,26.08,31.95,3.99,True
+growth_cap_battle_detail (2000/colony),True,90.5,20.4,26.45,33.18,4.01,True
+growth_cap_overview (2400/colony),True,96.0,15.19,22.85,29.22,4.0,True
+growth_cap_battle_overview (2400/colony),True,68.9,20.81,30.47,31.77,4.01,True
+growth_cap_battle_detail (2400/colony),True,78.6,25.75,31.98,35.66,4.0,True

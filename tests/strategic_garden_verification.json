@@ -1,0 +1,92 @@
+{
+  "complete": true,
+  "rule_suites_passed": 28,
+  "rule_errors": 0,
+  "founding_360s": [
+    {
+      "births": 81,
+      "colony": 0,
+      "combat_losses": 8,
+      "hunger_losses": 0,
+      "population": 85,
+      "seed": 81923
+    },
+    {
+      "births": 71,
+      "colony": 1,
+      "combat_losses": 2,
+      "hunger_losses": 0,
+      "population": 81,
+      "seed": 81923
+    },
+    {
+      "births": 62,
+      "colony": 2,
+      "combat_losses": 8,
+      "hunger_losses": 0,
+      "population": 66,
+      "seed": 81923
+    },
+    {
+      "births": 80,
+      "colony": 0,
+      "combat_losses": 8,
+      "hunger_losses": 0,
+      "population": 84,
+      "seed": 404
+    },
+    {
+      "births": 64,
+      "colony": 1,
+      "combat_losses": 2,
+      "hunger_losses": 0,
+      "population": 74,
+      "seed": 404
+    },
+    {
+      "births": 64,
+      "colony": 2,
+      "combat_losses": 3,
+      "hunger_losses": 0,
+      "population": 73,
+      "seed": 404
+    },
+    {
+      "births": 83,
+      "colony": 0,
+      "combat_losses": 11,
+      "hunger_losses": 0,
+      "population": 84,
+      "seed": 9973
+    },
+    {
+      "births": 64,
+      "colony": 1,
+      "combat_losses": 3,
+      "hunger_losses": 0,
+      "population": 73,
+      "seed": 9973
+    },
+    {
+      "births": 71,
+      "colony": 2,
+      "combat_losses": 1,
+      "hunger_losses": 0,
+      "population": 82,
+      "seed": 9973
+    }
+  ],
+  "opening_contact_reports": [
+    "FOUNDING OPENING seed=81923 first combat loss=189.3s losses at 120s=0",
+    "FOUNDING OPENING seed=404 first combat loss=319.6s losses at 120s=0",
+    "FOUNDING OPENING seed=9973 first combat loss=319.0s losses at 120s=0"
+  ],
+  "native_max_position_error_px": 0.00025165,
+  "renderer_windows_passed": 12,
+  "renderer_accounting_passed": true,
+  "renderer_worst_p95_ms": 16.71,
+  "renderer_actual_speed_range": [
+    3.99,
+    4.02
+  ]
+}

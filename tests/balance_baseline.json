@@ -1,0 +1,50 @@
+[
+	{
+		"amber_alive": 0,
+		"amber_food": 578,
+		"red_alive": 38,
+		"red_food": 702,
+		"seconds": 360,
+		"seed": 81923
+	},
+	{
+		"amber_alive": 0,
+		"amber_food": 572,
+		"red_alive": 22,
+		"red_food": 708,
+		"seconds": 360,
+		"seed": 81924
+	},
+	{
+		"amber_alive": 6,
+		"amber_food": 652,
+		"red_alive": 6,
+		"red_food": 628,
+		"seconds": 360,
+		"seed": 7
+	},
+	{
+		"amber_alive": 0,
+		"amber_food": 554,
+		"red_alive": 34,
+		"red_food": 726,
+		"seconds": 360,
+		"seed": 42
+	},
+	{
+		"amber_alive": 0,
+		"amber_food": 565,
+		"red_alive": 30,
+		"red_food": 715,
+		"seconds": 360,
+		"seed": 137
+	},
+	{
+		"amber_alive": 0,
+		"amber_food": 531,
+		"red_alive": 30,
+		"red_food": 749,
+		"seconds": 360,
+		"seed": 2026
+	}
+]

@@ -1,0 +1,253 @@
+{
+  "before": {
+    "wins": [
+      3,
+      7,
+      0
+    ],
+    "unresolved": 5,
+    "draws": 0,
+    "first_eliminated": {
+      "Azure": 14
+    },
+    "games_with_elimination": 14
+  },
+  "after": {
+    "wins": [
+      7,
+      5,
+      0
+    ],
+    "unresolved": 3,
+    "draws": 0,
+    "first_eliminated": {
+      "Azure": 9,
+      "Amber": 3,
+      "Coral": 2
+    },
+    "games_with_elimination": 14
+  },
+  "groups": {
+    "default_unattended": {
+      "before": {
+        "wins": [
+          0,
+          3,
+          0
+        ],
+        "unresolved": 0,
+        "draws": 0,
+        "first_eliminated": {
+          "Azure": 3
+        },
+        "games_with_elimination": 3
+      },
+      "after": {
+        "wins": [
+          0,
+          3,
+          0
+        ],
+        "unresolved": 0,
+        "draws": 0,
+        "first_eliminated": {
+          "Azure": 2,
+          "Amber": 1
+        },
+        "games_with_elimination": 3
+      }
+    },
+    "equal_ai_neutral": {
+      "before": {
+        "wins": [
+          1,
+          1,
+          0
+        ],
+        "unresolved": 1,
+        "draws": 0,
+        "first_eliminated": {
+          "Azure": 3
+        },
+        "games_with_elimination": 3
+      },
+      "after": {
+        "wins": [
+          3,
+          0,
+          0
+        ],
+        "unresolved": 0,
+        "draws": 0,
+        "first_eliminated": {
+          "Azure": 3
+        },
+        "games_with_elimination": 3
+      }
+    },
+    "equal_ai_rotated_traits": {
+      "before": {
+        "wins": [
+          2,
+          1,
+          0
+        ],
+        "unresolved": 3,
+        "draws": 0,
+        "first_eliminated": {
+          "Azure": 5
+        },
+        "games_with_elimination": 5
+      },
+      "after": {
+        "wins": [
+          3,
+          1,
+          0
+        ],
+        "unresolved": 2,
+        "draws": 0,
+        "first_eliminated": {
+          "Azure": 2,
+          "Amber": 1,
+          "Coral": 2
+        },
+        "games_with_elimination": 5
+      }
+    },
+    "equal_ai_neutral_mirrored": {
+      "before": {
+        "wins": [
+          0,
+          2,
+          0
+        ],
+        "unresolved": 1,
+        "draws": 0,
+        "first_eliminated": {
+          "Azure": 3
+        },
+        "games_with_elimination": 3
+      },
+      "after": {
+        "wins": [
+          1,
+          1,
+          0
+        ],
+        "unresolved": 1,
+        "draws": 0,
+        "first_eliminated": {
+          "Amber": 1,
+          "Azure": 2
+        },
+        "games_with_elimination": 3
+      }
+    }
+  },
+  "first_census_targets": {
+    "both_upper_prefer_azure_before": 15,
+    "both_upper_prefer_azure_after": 7,
+    "azure_prefers_amber_after": 3,
+    "azure_prefers_coral_after": 12
+  },
+  "performance": [
+    {
+      "target": 2000,
+      "scenario": "natural_0s",
+      "mean_fps": 107.4,
+      "p95_ms": 13.65,
+      "actual_speed": 4.0,
+      "target_met": true
+    },
+    {
+      "target": 2000,
+      "scenario": "natural_60s",
+      "mean_fps": 109.8,
+      "p95_ms": 13.88,
+      "actual_speed": 4.01,
+      "target_met": true
+    },
+    {
+      "target": 2000,
+      "scenario": "natural_180s",
+      "mean_fps": 167.2,
+      "p95_ms": 9.31,
+      "actual_speed": 4.01,
+      "target_met": true
+    },
+    {
+      "target": 2000,
+      "scenario": "natural_360s",
+      "mean_fps": 219.9,
+      "p95_ms": 6.81,
+      "actual_speed": 4.01,
+      "target_met": true
+    },
+    {
+      "target": 2000,
+      "scenario": "natural_600s",
+      "mean_fps": 251.1,
+      "p95_ms": 5.83,
+      "actual_speed": 4.0,
+      "target_met": true
+    },
+    {
+      "target": 2000,
+      "scenario": "natural_900s",
+      "mean_fps": 259.6,
+      "p95_ms": 5.35,
+      "actual_speed": 4.0,
+      "target_met": true
+    },
+    {
+      "target": 2000,
+      "scenario": "growth_cap_overview",
+      "mean_fps": 102.0,
+      "p95_ms": 13.96,
+      "actual_speed": 4.01,
+      "target_met": true
+    },
+    {
+      "target": 2000,
+      "scenario": "growth_cap_battle_overview",
+      "mean_fps": 75.3,
+      "p95_ms": 21.56,
+      "actual_speed": 4.0,
+      "target_met": true
+    },
+    {
+      "target": 2000,
+      "scenario": "growth_cap_battle_detail",
+      "mean_fps": 85.5,
+      "p95_ms": 22.45,
+      "actual_speed": 3.99,
+      "target_met": true
+    },
+    {
+      "target": 2400,
+      "scenario": "growth_cap_overview",
+      "mean_fps": 86.6,
+      "p95_ms": 17.18,
+      "actual_speed": 4.01,
+      "target_met": true
+    },
+    {
+      "target": 2400,
+      "scenario": "growth_cap_battle_overview",
+      "mean_fps": 59.8,
+      "p95_ms": 24.97,
+      "actual_speed": 4.01,
+      "target_met": false
+    },
+    {
+      "target": 2400,
+      "scenario": "growth_cap_battle_detail",
+      "mean_fps": 69.7,
+      "p95_ms": 25.86,
+      "actual_speed": 4.01,
+      "target_met": true
+    }
+  ],
+  "default_population_performance_pass": true
+}

@@ -1,0 +1,10 @@
+{
+  "passed_suites": 22,
+  "method": "20 existing suites passed in full runner; the revised mode suite was rerun successfully after its stock-top-up expectation was corrected; dedicated founding logistics suite also passed.",
+  "skirmish_exact_trace_matches": 3,
+  "long_matches_before": 6,
+  "long_matches_after": 6,
+  "long_sample_worker_and_inventory_invariants_passed": true,
+  "founding_renderer_windows_passed": 5,
+  "all_sampled_renderer_population_and_inventory_invariants_passed": true
+}
